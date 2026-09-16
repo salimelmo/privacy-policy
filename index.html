@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق مسك المسلم (Misk Muslim) — رفيقك الإيماني الشامل</title>
+    <!-- Google Fonts: Cairo & Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #064e3b;
+            --primary-dark: #022c22;
+            --primary-light: #047857;
+            --gold: #d4af37;
+            --gold-light: #f6e05e;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #edd587 50%, #aa841e 100%);
+            --bg-body: #f8faf9;
+            --card-bg: #ffffff;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+            --shadow-lux: 0 10px 25px -5px rgba(6, 78, 59, 0.08), 0 8px 10px -6px rgba(6, 78, 59, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Top Islamic Pattern Bar */
+        .top-pattern {
+            height: 6px;
+            background: var(--gold-gradient);
+            width: 100%;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(2, 44, 34, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #d1fae5;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            padding: 6px 14px;
+            border-radius: 8px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--gold-light);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: radial-gradient(circle at top center, #065f46 0%, #022c22 100%);
+            color: white;
+            padding: 80px 24px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "﷽";
+            font-family: 'Amiri', serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 0 auto 30px;
+            font-size: 1.15rem;
+            color: #ecfdf5;
+            font-weight: 400;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #fef3c7;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1050px;
+            margin: -35px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Section Tabs */
+        .tab-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 12px;
+        }
+
+        .tab-btn {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--text-muted);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 14px rgba(6, 78, 59, 0.3);
+        }
+
+        /* Cards and Sections */
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: var(--shadow-lux);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: #fafdfb;
+            border: 1px solid #e6f0eb;
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(6, 78, 59, 0.08);
+            border-color: #a7f3d0;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #ecfdf5;
+            color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            border: 1px solid #d1fae5;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Privacy Policy Styling */
+        .policy-section {
+            display: none;
+        }
+
+        .policy-section.active {
+            display: block;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #ecfdf5;
+            padding-bottom: 18px;
+            margin-bottom: 28px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .meta-tag {
+            display: inline-block;
+            background: #ecfdf5;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .policy-block {
+            margin-bottom: 32px;
+        }
+
+        .policy-block h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-block h4 {
+            font-size: 1.1rem;
+            color: #1f2937;
+            margin: 16px 0 8px;
+        }
+
+        .policy-box {
+            background: #f0fdf4;
+            border-right: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 18px 0;
+        }
+
+        ul {
+            padding-right: 22px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 35px;
+            border: 1px solid var(--gold);
+        }
+
+        .contact-box h3 {
+            color: var(--gold-light);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .contact-box a {
+            color: #fef08a;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: #022c22;
+            color: #9ca3af;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer p {
+            color: #d1d5db;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.1rem; }
+            .content-card { padding: 24px; }
+            .nav-container { flex-direction: column; gap: 12px; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-pattern"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🕌</span>
+                <span>مسك المسلم | Misk Muslim</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" onclick="switchTab('features')">مميزات التطبيق</a>
+                <a href="#privacy" onclick="switchTab('privacy')">سياسة الخصوصية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>«مسك المسلم» (Misk Muslim)</h1>
+        <p>رفيقك الإيماني الشامل في كل زمان ومكان — يجمع بين دقة المواعيد، سهولة الاستخدام، وجمالية التصميم الإسلامي العصري ليعينك على ذكر الله وأداء عباداتك بخشوع.</p>
+        <div class="hero-badges">
+            <span class="hero-badge">✨ مجاني وبدون قيود</span>
+            <span class="hero-badge">🔒 خصوصية وأمان تام 100%</span>
+            <span class="hero-badge">🕋 يعمل بدون إنترنت (Offline)</span>
+            <span class="hero-badge">👨‍💻 المطور: slmdroid (Salim Elmo)</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Navigation Tabs -->
+        <div class="tab-box">
+            <button class="tab-btn active" id="tab-btn-privacy" onclick="switchTab('privacy')">📜 سياسة الخصوصية الرسمية</button>
+            <button class="tab-btn" id="tab-btn-features" onclick="switchTab('features')">✨ خدمات ومميزات التطبيق</button>
+        </div>
+
+        <!-- 1. PRIVACY POLICY SECTION (Google Play Ready) -->
+        <section id="section-privacy" class="content-card policy-section active">
+            <div class="section-header">
+                <h2>سياسة الخصوصية لتطبيق «مسك المسلم» (Misk Muslim)</h2>
+                <span class="meta-tag">تاريخ السريان وآخر تحديث: سبتمبر 2026</span>
+                <span class="meta-tag">المطور: slmdroid</span>
+            </div>
+
+            <div class="policy-box">
+                <strong>عهد الخصوصية:</strong> تطبيق «مسك المسلم» لا يتطلب أي تسجيل دخول ولا يطلب ولا يجمع أياً من معلوماتكم أو أرقامكم الشخصية على الإطلاق. تم بناء التطبيق بهدف الأجر وخدمة المسلمين بأعلى معايير الأمان والأمانة.
+            </div>
+
+            <div class="policy-block">
+                <h3>📌 1. المعلومات والبيانات الشخصية</h3>
+                <ul>
+                    <li><strong>عدم جمع البيانات الشخصية:</strong> لا يطلب التطبيق تسجيل حساب، ولا يطلب اسمك، ولا بريدك الإلكتروني، ولا رقم هاتفك، ولا أي معلومات اتصال.</li>
+                    <li><strong>حفظ البيانات محلياً (Local Storage):</strong> كافة تفضيلاتكم داخل التطبيق (مثل: الإشارات المرجعية للقرآن الكريم، تفضيلات أصوات الأذان، إحصائيات السبحة والأذكار، والثيمات المختارة) تُخزّن محلياً فقط على ذاكرة جهازكم، ولا يتم إرسالها أو مزامنتها مع أي خوادم خارجية تابعة لنا.</li>
+                </ul>
+            </div>
+
+            <div class="policy-block">
+                <h3>⚙️ 2. الصلاحيات والأذونات وأسباب استخدامها</h3>
+                <p>يطلب التطبيق بعض الأذونات الحيوية لتقديم وظائفه الأساسية بأعلى كفاءة ودقة:</p>
+
+                <h4>أ. إذن الموقع الجغرافي (ACCESS_FINE_LOCATION و ACCESS_COARSE_LOCATION):</h4>
+                <ul>
+                    <li><strong>الغرض:</strong> يُستخدم لتحديد إحداثيات موقعك لحساب أوقات الصلوات الخمس بدقة متناهية وفق المعادلات الفلكية المعتمدة، وحساب زاوية انحراف القبلة نحو الكعبة المشرفة.</li>
+                    <li><strong>محلي وخاص:</strong> تتم جميع هذه الحسابات مباشرة داخل جهازك، ولا نقوم بتتبع موقعك ولا حفظه على خوادم أو مشاركته مع أي طرف ثالث.</li>
+                    <li><strong>الخيار اليدوي:</strong> يتيح لك التطبيق حرية تامة لاختيار مدينتك يدوياً من قاعدة بيانات تضم أكثر من 54,000 مدينة عالمية دون الحاجة لتفعيل الـ GPS.</li>
+                </ul>
+
+                <h4>ب. إذن التنبيهات الدقيقة والإشعارات (POST_NOTIFICATIONS و SCHEDULE_EXACT_ALARM):</h4>
+                <ul>
+                    <li><strong>الغرض:</strong> لتمكين التطبيق من إطلاق أذان وتنبيهات الصلوات في موعدها الدقيق بالثانية حسب التوقيت المحلي لجهازك، حتى وإن كان التطبيق مغلقاً.</li>
+                    <li><strong>إيقاظ الجهاز (WAKE_LOCK):</strong> يُستخدم للحظات وجيزة لإطلاق صوت الأذان وتنبيه الشاشة وقت الصلاة.</li>
+                </ul>
+
+                <h4>ج. تشغيل الوسائط في الخلفية (FOREGROUND_SERVICE و MEDIA_PLAYBACK):</h4>
+                <ul>
+                    <li><strong>الغرض:</strong> يتيح لك مواصلة الاستماع إلى تلاوات القرآن الكريم، إذاعات الراديو المباشرة، أو صوت الأذان أثناء قفل الشاشة أو استخدام تطبيقات أخرى، مع شريط تحكم كامل بالصوت من شاشة القفل والإشعارات.</li>
+                </ul>
+
+                <h4>د. التخزين المحلي (Storage Access):</h4>
+                <ul>
+                    <li><strong>الغرض:</strong> يُستخدم لحفظ التلاوات والسور القرآنية التي تختار تحميلها للاستماع إليها بدون إنترنت (Offline).</li>
+                </ul>
+            </div>
+
+            <div class="policy-block">
+                <h3>🌐 3. خدمات ومكتبات الطرف الثالث (Third-Party Services)</h3>
+                <p>يستخدم التطبيق بعض الخدمات الموثوقة لتأمين استمراريته مجاناً:</p>
+                <ul>
+                    <li><strong>شبكة إعلانات جوجل (Google AdMob):</strong> قد يعرض التطبيق إعلانات عبر منصة Google AdMob للمساهمة في تغطية تكاليف التطوير والصيانة. قد تجمع Google معرفات إعلانية قياسية مجهولة الهوية وفقاً لـ <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</li>
+                    <li><strong>خرائط OpenStreetMap (Nominatim):</strong> للترميز الجغرافي العكسي عند استعلامك عن اسم مدينتك عبر الخريطة.</li>
+                    <li><strong>المكتبات الصوتية المفتوحة (MP3Quran و AlQuran Cloud):</strong> لجلب التلاوات القرآنية الخاشعة وإذاعات الراديو الإسلامية.</li>
+                </ul>
+            </div>
+
+            <div class="policy-block">
+                <h3>🛡️ 4. أمان البيانات (Data Security)</h3>
+                <p>نحن نطبق أعلى المعايير البرمجية لحماية أمان التطبيق. وبما أن التطبيق لا يقوم بإنشاء حسابات أو رفع بياناتك لأي خوادم خارجية، فإن بياناتك آمنة ومحفوظة بيدك على جهازك فقط.</p>
+            </div>
+
+            <div class="policy-block">
+                <h3>👶 5. خصوصية الأطفال (Children's Privacy)</h3>
+                <p>تطبيق «مسك المسلم» آمن لجميع أفراد الأسرة، وخالٍ تماماً من أي محتوى غير لائق، ولا يقوم بجمع أي معلومات من الأطفال دون سن 13 عاماً.</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>📩 التواصل والدعم الفني</h3>
+                <p>إذا كان لديكم أي استفسار أو اقتراح بخصوص سياسة الخصوصية أو وظائف التطبيق، يسعدنا تواصلكم الدائم معنا:</p>
+                <p style="margin-top: 10px;">• المطور: <strong>slmdroid (Salim Elmo)</strong></p>
+                <p>• البريد الإلكتروني: <a href="mailto:salimelmokadem@gmail.com">salimelmokadem@gmail.com</a></p>
+            </div>
+        </section>
+
+        <!-- 2. APP FEATURES SECTION -->
+        <section id="section-features" class="content-card policy-section">
+            <div class="section-header">
+                <h2>✨ حقيبة المسلم اليومية المتكاملة</h2>
+                <p class="meta-tag">كل ما يحتاجه المسلم في تطبيق واحد فاخر وعصري</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🕋</div>
+                    <h3>مواقيت الصلاة والأذان بدقة فائقة</h3>
+                    <p>حسابات فلكية دقيقة، تحديد الموقع عبر الـ GPS أو يدوياً عبر 54,000 مدينة، مع تنبيهات بأصوات كبار المؤذنين وعداد تنازلي ذكي.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>القرآن الكريم كاملاً</h3>
+                    <p>مصحف المدينة المنورة بخط عثماني أصيل، بحث سريع في السور والآيات، فواصل مرجعية، ومتابعة الورد القرآني اليومي بدون إنترنت.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>مكتبة التفاسير الخمسة المعتمدة</h3>
+                    <p>تفسير ابن كثير، السعدي، الميسر، الجلالين، والطبري، مع إمكانية تفسير كل آية بنقرة واحدة ومشاركتها.</p>
+                </div>
+
+                <div class="feature-card">
+             
