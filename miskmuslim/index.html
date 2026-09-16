@@ -3,37 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misk Muslim (مسك المسلم) — Official Privacy Policy & Showcase</title>
+    <title>Misk Muslim (مسك المسلم) — Official Privacy Policy & Features</title>
     
-    <!-- Google Fonts: Cairo, Amiri, & Outfit/Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* Exact Colors sampled from App Screenshot */
+            /* Authentic App Color Palette */
             --bg-deep: #021a13;
             --bg-emerald: #063124;
             --bg-radial-center: #0a4c38;
-            --emerald-card: rgba(5, 38, 28, 0.88);
-            --emerald-card-border: rgba(213, 187, 99, 0.28);
+            --emerald-card: rgba(5, 38, 28, 0.92);
+            --emerald-card-border: rgba(213, 187, 99, 0.32);
             --emerald-inner: #04241b;
 
-            /* Metallic Gold Palette */
+            /* Metallic Gold */
             --gold-light: #fae8a5;
             --gold-primary: #d5bb63;
             --gold-dark: #977427;
             --gold-gradient: linear-gradient(135deg, #fae8a5 0%, #d5bb63 45%, #977427 100%);
             --gold-card-gradient: linear-gradient(145deg, #dfc77b 0%, #c5a956 50%, #9e7f2b 100%);
-            
-            /* Text Colors */
+
+            /* Mint / Teal Icons from App UI */
+            --mint-badge-bg: #e6f7f0;
+            --mint-badge-border: #a7f3d0;
+            --mint-icon-color: #059669;
+
+            /* Texts */
             --text-gold: #f5e4a8;
             --text-light: #e8f5ee;
             --text-muted: #8fae9f;
             --text-dark: #08241b;
 
-            --shadow-lux: 0 15px 35px rgba(0, 0, 0, 0.55), 0 0 25px rgba(213, 187, 99, 0.12);
+            --shadow-lux: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 25px rgba(213, 187, 99, 0.12);
         }
 
         * {
@@ -45,10 +50,9 @@
 
         body {
             background-color: var(--bg-deep);
-            /* Authentic Islamic Geometric Rosette Overlay + Deep Emerald Radial Glow */
             background-image: 
                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' fill='none' stroke='%23d5bb63' stroke-opacity='0.08' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='28' fill='none' stroke='%23d5bb63' stroke-opacity='0.05' stroke-width='1'/%3E%3Ccircle cx='0' cy='0' r='28' fill='none' stroke='%23d5bb63' stroke-opacity='0.05' stroke-width='1'/%3E%3Ccircle cx='80' cy='0' r='28' fill='none' stroke='%23d5bb63' stroke-opacity='0.05' stroke-width='1'/%3E%3Ccircle cx='0' cy='80' r='28' fill='none' stroke='%23d5bb63' stroke-opacity='0.05' stroke-width='1'/%3E%3Ccircle cx='80' cy='80' r='28' fill='none' stroke='%23d5bb63' stroke-opacity='0.05' stroke-width='1'/%3E%3Cpolygon points='40,16 64,40 40,64 16,40' fill='none' stroke='%23d5bb63' stroke-opacity='0.07' stroke-width='0.8'/%3E%3Ccircle cx='40' cy='40' r='4' fill='none' stroke='%23d5bb63' stroke-opacity='0.15' stroke-width='0.8'/%3E%3C/svg%3E"),
-                radial-gradient(circle at 50% 20%, var(--bg-radial-center) 0%, var(--bg-emerald) 45%, var(--bg-deep) 100%);
+                radial-gradient(circle at 50% 18%, var(--bg-radial-center) 0%, var(--bg-emerald) 45%, var(--bg-deep) 100%);
             background-attachment: fixed;
             color: var(--text-light);
             font-family: 'Outfit', sans-serif;
@@ -61,7 +65,6 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        /* Top Bar */
         .top-divider {
             height: 4px;
             background: var(--gold-gradient);
@@ -69,9 +72,9 @@
             box-shadow: 0 0 12px rgba(213, 187, 99, 0.4);
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
-            background: rgba(2, 26, 19, 0.85);
+            background: rgba(2, 26, 19, 0.88);
             backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--emerald-card-border);
             padding: 14px 24px;
@@ -119,7 +122,7 @@
             background: rgba(6, 49, 36, 0.9);
             border: 1px solid var(--gold-primary);
             border-radius: 30px;
-            padding: 4px 14px;
+            padding: 5px 14px;
             gap: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
@@ -140,9 +143,9 @@
             color: #fff;
         }
 
-        /* Hero Islamic Centerpiece */
+        /* Hero */
         .hero {
-            padding: 60px 20px 45px;
+            padding: 55px 20px 40px;
             text-align: center;
             position: relative;
         }
@@ -156,11 +159,10 @@
             text-shadow: 0 2px 14px rgba(213, 187, 99, 0.35);
         }
 
-        /* Islamic Medallion (Replicating the App's Center Octagon Arch) */
         .mihrab-medallion {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 20px;
+            width: 86px;
+            height: 86px;
+            margin: 0 auto 18px;
             background: radial-gradient(circle, #0c5740 0%, #03241b 100%);
             border: 2px solid var(--gold-primary);
             border-radius: 20px;
@@ -182,62 +184,58 @@
 
         .mihrab-medallion-inner {
             transform: rotate(-45deg);
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             line-height: 1;
         }
 
         .hero h1 {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         .hero p {
-            max-width: 720px;
-            margin: 0 auto 25px;
-            font-size: 1.15rem;
+            max-width: 760px;
+            margin: 0 auto 22px;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            font-weight: 400;
         }
 
         .hero-badges {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .hero-badge {
             background: rgba(5, 38, 28, 0.85);
             border: 1px solid var(--emerald-card-border);
-            padding: 6px 18px;
+            padding: 6px 16px;
             border-radius: 30px;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             color: var(--text-gold);
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            gap: 6px;
         }
 
         /* Container */
         .main-container {
-            max-width: 980px;
+            max-width: 1020px;
             margin: 0 auto 60px;
             padding: 0 20px;
             position: relative;
             z-index: 10;
         }
 
-        /* Navigation Tab Buttons */
         .tab-box {
             display: flex;
             justify-content: center;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             gap: 12px;
         }
 
@@ -251,8 +249,7 @@
             cursor: pointer;
             color: var(--text-gold);
             font-family: inherit;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            transition: all 0.3s;
         }
 
         .tab-btn:hover {
@@ -260,7 +257,6 @@
             transform: translateY(-2px);
         }
 
-        /* Active Tab Styled as App's Luxurious Gold Satin Card */
         .tab-btn.active {
             background: var(--gold-card-gradient);
             color: var(--text-dark);
@@ -268,7 +264,6 @@
             box-shadow: 0 6px 20px rgba(213, 187, 99, 0.35);
         }
 
-        /* Main Content Card */
         .content-card {
             background: var(--emerald-card);
             backdrop-filter: blur(12px);
@@ -277,7 +272,6 @@
             box-shadow: var(--shadow-lux);
             border: 1px solid var(--emerald-card-border);
             position: relative;
-            overflow: hidden;
         }
 
         .content-card::before {
@@ -298,20 +292,17 @@
             display: block;
         }
 
-        /* App-Styled Section Header with Diamond Accents (◇ — Title — ◇) */
         .section-header {
             text-align: center;
             border-bottom: 1px solid var(--emerald-card-border);
             padding-bottom: 20px;
-            margin-bottom: 28px;
-            position: relative;
+            margin-bottom: 30px;
         }
 
         .section-header h2 {
             font-size: 1.85rem;
             color: var(--gold-light);
             font-weight: 800;
-            letter-spacing: 0.5px;
         }
 
         .ornament-line {
@@ -327,7 +318,7 @@
         .ornament-line::before,
         .ornament-line::after {
             content: '';
-            width: 50px;
+            width: 45px;
             height: 1px;
             background: var(--gold-primary);
             opacity: 0.6;
@@ -345,104 +336,139 @@
             margin-top: 10px;
         }
 
-        /* Highlight Box */
-        .highlight-box {
-            background: rgba(2, 26, 19, 0.7);
-            border-left: 4px solid var(--gold-primary);
-            padding: 18px 24px;
-            border-radius: 0 14px 14px 0;
-            margin: 22px 0;
-            border-top: 1px solid rgba(213, 187, 99, 0.2);
-            border-bottom: 1px solid rgba(213, 187, 99, 0.2);
-            border-right: 1px solid rgba(213, 187, 99, 0.2);
-        }
-
-        body.rtl .highlight-box {
-            border-left: 1px solid rgba(213, 187, 99, 0.2);
-            border-right: 4px solid var(--gold-primary);
-            border-radius: 14px 0 0 14px;
-        }
-
-        /* GPS Card Inspired by the Prayer Widget */
-        .gps-card {
-            background: linear-gradient(145deg, #04241b 0%, #063527 100%);
-            border: 1.5px solid var(--gold-primary);
+        /* App-Style List Cards */
+        .app-item-card {
+            background: rgba(3, 26, 19, 0.8);
+            border: 1px solid var(--emerald-card-border);
             border-radius: 18px;
-            padding: 26px;
-            margin: 28px 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 0 15px rgba(213, 187, 99, 0.08);
-            position: relative;
+            padding: 22px 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            transition: all 0.3s;
         }
 
-        .gps-card h4 {
-            color: var(--gold-light);
-            font-size: 1.25rem;
-            margin-bottom: 14px;
+        .app-item-card:hover {
+            border-color: var(--gold-primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+
+        /* Circular Mint / Teal Icon Badge */
+        .mint-icon-badge {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 50%;
+            background: var(--mint-badge-bg);
+            border: 1.5px solid var(--mint-badge-border);
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            color: var(--mint-icon-color);
+            font-size: 1.4rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        .app-item-content {
+            flex: 1;
+        }
+
+        .app-item-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        .app-item-desc {
+            font-size: 0.95rem;
+            color: #d1e5db;
+            line-height: 1.7;
+        }
+
+        /* Emerald Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0 28px;
+            border-radius: 14px;
+            border: 1px solid var(--gold-primary);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .emerald-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background: #03251b;
+            font-size: 0.92rem;
+        }
+
+        body.rtl .emerald-table {
+            text-align: right;
+        }
+
+        .emerald-table th {
+            background: linear-gradient(135deg, #094736, #04291e);
+            color: var(--gold-light);
+            font-weight: 700;
+            padding: 14px 18px;
+            border-bottom: 2px solid var(--gold-primary);
+            white-space: nowrap;
+        }
+
+        .emerald-table td {
+            padding: 12px 18px;
+            color: #d7ede3;
+            border-bottom: 1px solid rgba(213, 187, 99, 0.15);
+        }
+
+        .emerald-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .emerald-table tr:hover td {
+            background: rgba(213, 187, 99, 0.06);
+        }
+
+        .badge-table {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
             font-weight: 700;
         }
 
-        .gps-highlight-badge {
-            background: var(--gold-card-gradient);
-            color: var(--text-dark);
-            padding: 2px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            display: inline-block;
-            margin-left: 8px;
+        .badge-local {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            color: #6ee7b7;
         }
 
-        body.rtl .gps-highlight-badge {
-            margin-left: 0;
-            margin-right: 8px;
+        .badge-online {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid #3b82f6;
+            color: #93c5fd;
         }
 
-        .policy-block {
-            margin-bottom: 28px;
+        .badge-nostore {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            color: #fca5a5;
         }
 
-        .policy-block h3 {
-            font-size: 1.3rem;
-            color: var(--gold-light);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        /* AdMob Opt-Out Box */
+        .optout-box {
+            background: rgba(213, 187, 99, 0.08);
+            border: 1px dashed var(--gold-primary);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-top: 12px;
+            color: #fae8a5;
+            font-size: 0.9rem;
         }
 
-        ul {
-            padding-left: 22px;
-            margin-bottom: 16px;
-        }
-
-        body.rtl ul {
-            padding-left: 0;
-            padding-right: 22px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            color: #d1e5db;
-        }
-
-        li strong {
-            color: var(--gold-light);
-        }
-
-        a {
-            color: var(--gold-light);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        a:hover {
-            color: #fff;
-        }
-
-        /* Features Grid Inspired by App's Prayer Tiles */
+        /* Features Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -451,39 +477,23 @@
         }
 
         .feature-tile {
-            background: rgba(3, 29, 21, 0.9);
+            background: rgba(3, 26, 19, 0.9);
             border: 1px solid var(--emerald-card-border);
             border-radius: 16px;
             padding: 22px;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
         }
 
         .feature-tile:hover {
             transform: translateY(-4px);
             border-color: var(--gold-primary);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 15px rgba(213, 187, 99, 0.15);
-        }
-
-        .feature-icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgba(213, 187, 99, 0.2), rgba(6, 49, 36, 0.8));
-            border: 1px solid var(--gold-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
         }
 
         .feature-tile h3 {
             font-size: 1.15rem;
             color: var(--gold-light);
-            margin-bottom: 8px;
+            margin: 12px 0 6px;
             font-weight: 700;
         }
 
@@ -493,7 +503,7 @@
             line-height: 1.6;
         }
 
-        /* Contact Box Styled with App Accent */
+        /* Contact Box */
         .contact-box {
             background: linear-gradient(145deg, #03241b 0%, #063b2c 100%);
             border: 1.5px solid var(--gold-primary);
@@ -513,7 +523,6 @@
         .contact-box a {
             color: var(--gold-primary);
             font-weight: 700;
-            font-size: 1.05rem;
         }
 
         /* Footer */
@@ -532,10 +541,9 @@
 
         @media (max-width: 650px) {
             .hero h1 { font-size: 2.1rem; }
-            .content-card { padding: 24px; border-radius: 18px; }
+            .content-card { padding: 22px; border-radius: 18px; }
             .nav-container { flex-direction: column; }
-            .mihrab-medallion { width: 75px; height: 75px; }
-            .mihrab-medallion-inner { font-size: 2rem; }
+            .app-item-card { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
@@ -569,12 +577,12 @@
             <span class="mihrab-medallion-inner">🕋</span>
         </div>
         <h1 id="hero-title">Misk Muslim (مسك المسلم)</h1>
-        <p id="hero-desc">Your comprehensive Islamic companion in every time and place — Combining prayer accuracy, elegant design, and complete user privacy.</p>
+        <p id="hero-desc">Your comprehensive Islamic companion in every time and place — Combining prayer accuracy, offline architecture, and complete user privacy.</p>
         
         <div class="hero-badges">
             <span class="hero-badge" id="badge-free">✨ 100% Free & No Accounts</span>
             <span class="hero-badge" id="badge-privacy">🔒 100% Private & On-Device</span>
-            <span class="hero-badge" id="badge-offline">🕋 Works Completely Offline</span>
+            <span class="hero-badge" id="badge-offline">🕋 Built-in Offline SQLite</span>
             <span class="hero-badge">👨‍💻 Dev: slmdroid</span>
         </div>
     </header>
@@ -587,7 +595,7 @@
             <button class="tab-btn" id="btn-tab-features" onclick="switchTab('features')">✨ App Features</button>
         </div>
 
-        <!-- 1. PRIVACY TAB -->
+        <!-- 1. PRIVACY POLICY TAB -->
         <section id="tab-privacy" class="content-card tab-content active">
             <div id="policy-content">
                 <!-- Dynamically Populated -->
@@ -605,10 +613,10 @@
     <!-- Footer -->
     <footer>
         <p id="footer-text">&copy; 2026 Misk Muslim (مسك المسلم). All rights reserved.</p>
-        <p style="margin-top: 6px; font-size: 0.85rem; color: var(--gold-primary);">Designed with perfection by <strong>slmdroid</strong></p>
+        <p style="margin-top: 6px; font-size: 0.85rem; color: var(--gold-primary);">Crafted with reverence by <strong>slmdroid</strong></p>
     </footer>
 
-    <!-- Scripts & Content for 4 Languages -->
+    <!-- Translations & Script -->
     <script>
         const translations = {
             en: {
@@ -616,76 +624,171 @@
                 isRtl: false,
                 navBrand: "Misk Muslim | مسك المسلم",
                 heroTitle: "Misk Muslim (مسك المسلم)",
-                heroDesc: "Your comprehensive Islamic companion in every time and place — Combining prayer accuracy, elegant design, and complete user privacy.",
+                heroDesc: "Your comprehensive Islamic companion in every time and place — Combining prayer accuracy, offline architecture, and complete user privacy.",
                 badgeFree: "✨ 100% Free & No Accounts",
                 badgePrivacy: "🔒 100% Private & On-Device",
-                badgeOffline: "🕋 Works Completely Offline",
+                badgeOffline: "🕋 Built-in Offline SQLite",
                 btnPrivacy: "📜 Privacy Policy",
                 btnFeatures: "✨ App Features",
                 footerText: "© 2026 Misk Muslim. All rights reserved.",
                 privacyHTML: `
                     <div class="section-header">
                         <h2>Privacy Policy for «Misk Muslim»</h2>
-                        <div class="ornament-line">◇ — Legal & Privacy Transparency — ◇</div>
+                        <div class="ornament-line">◇ — Offline-First Architecture & Full Transparency — ◇</div>
                         <span class="meta-tag">Effective Date: September 2026</span>
                         <span class="meta-tag">Developer: slmdroid</span>
                     </div>
 
-                    <div class="highlight-box">
-                        <strong style="color: var(--gold-light);">Privacy Commitment:</strong> «Misk Muslim» does not require account creation or login, nor does it collect, store, or transmit any personally identifiable information. Your data remains strictly in your hands.
+                    <!-- App UI Highlight 1: GPS -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📍</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Location Permission (GPS) — 100% Optional</div>
+                            <div class="app-item-desc">
+                                We request location access solely to calculate accurate local prayer times and determine Qibla direction. You can freely choose your city manually from our built-in offline database of 54,000+ cities without ever enabling GPS or connecting to the internet.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>📌 1. Zero Personal Data Collection</h3>
-                        <p>We do not collect names, email addresses, phone numbers, contact lists, or physical locations on remote servers. All your preferences (such as Holy Quran bookmarks, Athan voices, tasbih counts, and chosen themes) are stored <strong>locally on your device storage</strong>.</p>
+                    <!-- App UI Highlight 2: Offline SQLite -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🗄️</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Offline Core Content (Local SQLite Database)</div>
+                            <div class="app-item-desc">
+                                The core religious content operates <strong>completely offline</strong> via an integrated local SQLite database: Holy Quran textual reading, authentic Hadiths, daily Athkar, Islamic history events, Qibla calculation, 99 Names of Allah, and 54,000+ world cities. None of these require an internet connection.
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- GPS Detailed Card -->
-                    <div class="gps-card">
-                        <h4>📍 Location & GPS Usage Policy <span class="gps-highlight-badge">100% Optional</span></h4>
-                        
-                        <p style="margin-top: 10px;"><strong>1. What exactly is GPS used for?</strong></p>
-                        <ul>
-                            <li><strong>Accurate Prayer Times:</strong> Calculating local Fajr, Sunrise, Dhuhr, Asr, Maghrib, and Isha times with astronomical accuracy based on your geographical coordinates.</li>
-                            <li><strong>Qibla Direction (Compass):</strong> Calculating the exact azimuth angle between your current location and the Holy Kaaba in Makkah.</li>
-                        </ul>
-
-                        <p><strong>2. Is GPS mandatory for the app to function?</strong></p>
-                        <p><strong style="color: var(--gold-light);">No, it is strictly OPTIONAL:</strong></p>
-                        <ul>
-                            <li>If you decline location permission, the application <strong>continues to operate normally at 100% capacity</strong>.</li>
-                            <li>The app provides an integrated <strong>Manual City Selection</strong> mode featuring a built-in offline database of over <strong>54,000 cities worldwide</strong>. You can choose your city without enabling GPS and without needing internet.</li>
-                        </ul>
-
-                        <p><strong>3. Is user location ever tracked or saved?</strong></p>
-                        <p><strong style="color: var(--gold-light);">Never.</strong> The app does not track you in the background, does not save your coordinates, and never transmits location data to any remote servers. Coordinate math occurs solely on-device in real-time.</p>
+                    <!-- App UI Highlight 3: Online Secondary Services -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🌐</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Online Extended Features (APIs & Live Streams)</div>
+                            <div class="app-item-desc">
+                                While the core app is 100% offline, certain secondary multimedia features connect to reputable external providers/APIs when internet is available: Quran Tafsir books, audio recitations by world reciters, Stories of the Prophets, comprehensive audio Ruqyah, 24/7 Islamic live radios, and automatic city reverse geocoding via OpenStreetMap Nominatim.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>⚙️ 2. Other Device Permissions</h3>
-                        <ul>
-                            <li><strong>Exact Alarms & Notifications (POST_NOTIFICATIONS / SCHEDULE_EXACT_ALARM):</strong> Used strictly to sound the Athan and prayer reminders on exact seconds, even when the app is closed.</li>
-                            <li><strong>Foreground Media Service (FOREGROUND_SERVICE / MEDIA_PLAYBACK):</strong> Allows continuous listening to Quran recitations and Islamic radio in the background or with the screen locked.</li>
-                            <li><strong>Storage Access:</strong> Used to save Quran audio surahs locally if you choose to download them for offline playback.</li>
-                        </ul>
+                    <!-- App UI Highlight 4: Google AdMob -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📢</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Google AdMob & Family-Safe Standards</div>
+                            <div class="app-item-desc">
+                                The app displays advertisements via Google AdMob to sustain free access. All ads are strictly filtered to <code>MAX_AD_CONTENT_RATING_G</code> (guaranteeing zero gambling, alcohol, dating, or inappropriate content). Technical identifiers like Android Advertising ID (AAID) and device specs may be processed by Google in accordance with its privacy terms.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>🌐 3. Third-Party Services</h3>
-                        <ul>
-                            <li><strong>Google AdMob:</strong> May display non-intrusive ads to support continuous development. AdMob may collect anonymous device identifiers pursuant to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-                            <li><strong>Open-Source APIs (MP3Quran & AlQuran Cloud):</strong> Used to stream Quranic recitations and broadcasts.</li>
-                        </ul>
+                    <h3 style="color: var(--gold-light); margin: 32px 0 12px;">📊 1. Data Classification & Architecture Breakdown</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature / Data Type</th>
+                                    <th>Operational Purpose</th>
+                                    <th>Architecture & Connectivity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Textual Quran Reading</strong></td>
+                                    <td>Authentic Madinah Mushaf reading & aya search</td>
+                                    <td><span class="badge-table badge-local">100% Offline (Local SQLite)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hadith & Daily Athkar</strong></td>
+                                    <td>Sahih Bukhari, Muslim, 40 Nawawi, Hisn Al-Muslim</td>
+                                    <td><span class="badge-table badge-local">100% Offline (Local SQLite)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prayer Times & 54,000 Cities</strong></td>
+                                    <td>Astronomical calculations & countdown timer</td>
+                                    <td><span class="badge-table badge-local">100% Offline (Local SQLite)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Qibla Direction & Sensor</strong></td>
+                                    <td>Compass sensor alignment towards Holy Kaaba</td>
+                                    <td><span class="badge-table badge-nostore">Real-time / Never Stored</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Quran Audio Recitations</strong></td>
+                                    <td>Streaming & optional download from MP3Quran</td>
+                                    <td><span class="badge-table badge-online">Requires Internet (Audio API)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Quran Tafsirs (5 Books)</strong></td>
+                                    <td>In-depth verse explanation & commentary</td>
+                                    <td><span class="badge-table badge-online">Fetched via Online API</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Live Radio & Stories</strong></td>
+                                    <td>24/7 Islamic live streaming & Prophets stories</td>
+                                    <td><span class="badge-table badge-online">Requires Internet Connection</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Personal User Identity</strong></td>
+                                    <td>Names, emails, phone numbers, contacts, photos</td>
+                                    <td><span class="badge-table badge-nostore">Zero Collection / No Accounts</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>👶 4. Children's Privacy</h3>
-                        <p>«Misk Muslim» is family-friendly, fully safe for all ages including children, and collects zero data from minors.</p>
+                    <h3 style="color: var(--gold-light); margin: 28px 0 12px;">📢 2. Google AdMob Technical Data & User Control</h3>
+                    <p style="color: #d1e5db;">Google AdMob may collect standard non-personally identifiable diagnostic and advertising data:</p>
+                    
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Android Advertising ID (AAID):</strong> Used by Google to measure ad performance and prevent fraud.</li>
+                        <li><strong>Device Information:</strong> Device model, screen resolution, and operating system version.</li>
+                        <li><strong>General Engagement Data:</strong> Interaction metrics with served ads.</li>
+                    </ul>
+
+                    <div class="optout-box">
+                        <strong>💡 How to Reset or Opt-Out of Personalized Ads:</strong><br>
+                        You can reset or delete your Advertising ID anytime in your phone settings: <strong>Settings &gt; Privacy &gt; Ads (or Google &gt; Ads) &gt; Reset Advertising ID / Delete Advertising ID</strong>.
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 30px 0 12px;">🔒 3. Android Permissions Justifications</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>Permission</th>
+                                    <th>Technical Necessity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>ACCESS_FINE / COARSE_LOCATION</strong></td>
+                                    <td>100% Optional. Used solely to calculate astronomical prayer times and Qibla azimuth locally.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>POST_NOTIFICATIONS</strong></td>
+                                    <td>Delivers timely prayer Athans, Athkar reminders, and Islamic calendar events.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SCHEDULE_EXACT_ALARM</strong></td>
+                                    <td>Guarantees exact-second timing for prayer notifications even during device idle.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>FOREGROUND_SERVICE & MEDIA</strong></td>
+                                    <td>Keeps Quran recitations and live radios playing smoothly with screen locked.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VIBRATE</strong></td>
+                                    <td>Provides sensory haptic feedback for the electronic Tasbih counter.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="contact-box">
-                        <h3>📩 Contact & Dedicated Support</h3>
-                        <p>If you have any questions or feedback regarding this Privacy Policy:</p>
+                        <h3>📩 Direct Support & Inquiries</h3>
+                        <p>For any queries regarding your data protection or app features:</p>
                         <p style="margin-top: 8px;">• Developer: <strong>slmdroid</strong></p>
                         <p style="margin-top: 4px;">• Official Email: <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
                     </div>
@@ -694,49 +797,39 @@
                     <div class="section-header">
                         <h2>Comprehensive Islamic Features</h2>
                         <div class="ornament-line">◇ — All-in-One Spiritual Bag — ◇</div>
-                        <span class="meta-tag">Designed with Royal Precision</span>
+                        <span class="meta-tag">Engineered with Royal Precision</span>
                     </div>
 
                     <div class="features-grid">
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🕋</div>
+                            <div class="mint-icon-badge">🕋</div>
                             <h3>Accurate Prayer Times & Athan</h3>
-                            <p>Astronomical accuracy, 54,000+ offline cities or GPS, multiple Muazzin voices, and smart countdown timer.</p>
+                            <p>Astronomical accuracy, 54,000+ offline cities database or GPS, authentic Athan voices, and smart countdown timer.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📖</div>
-                            <h3>Complete Holy Quran</h3>
-                            <p>Authentic Uthmanic script matching Madinah Mushaf, fast search, aya bookmarks, and daily reading tracking.</p>
+                            <div class="mint-icon-badge">📖</div>
+                            <h3>Complete Holy Quran (Text)</h3>
+                            <p>100% Offline authentic Uthmanic script matching Madinah Mushaf, fast search, aya bookmarks, and daily reading tracking.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📚</div>
+                            <div class="mint-icon-badge">📚</div>
                             <h3>5 Authentic Tafsir Books</h3>
-                            <p>Tafsir Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Jalalayn, and Al-Tabari with single-click explanation.</p>
+                            <p>Tafsir Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Jalalayn, and Al-Tabari with single-click online explanation.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🧭</div>
+                            <div class="mint-icon-badge">🧭</div>
                             <h3>Smart Qibla Compass</h3>
                             <p>Interactive smooth compass guiding directly towards the Holy Kaaba with sensor leveling check.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📿</div>
+                            <div class="mint-icon-badge">📿</div>
                             <h3>Hisn Al-Muslim & Smart Sebha</h3>
-                            <p>Morning & evening Athkar, categorized supplications, and electronic Sebha with haptic feedback.</p>
+                            <p>Offline morning & evening Athkar, categorized supplications, and electronic Sebha with haptic feedback.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🎙️</div>
+                            <div class="mint-icon-badge">🎙️</div>
                             <h3>Quran Recitations & Live Radios</h3>
-                            <p>Listen to world-renowned reciters, offline download capabilities, and background playback support.</p>
-                        </div>
-                        <div class="feature-tile">
-                            <div class="feature-icon-box">📜</div>
-                            <h3>Hadith Encyclopedia</h3>
-                            <p>Sahih Al-Bukhari, Sahih Muslim, and 40 Hadith Nawawi with complete explanations and sharing.</p>
-                        </div>
-                        <div class="feature-tile">
-                            <div class="feature-icon-box">🛡️</div>
-                            <h3>Authentic Ruqyah Shariah</h3>
-                            <p>Read and listen to comprehensive Ruqyah verses and duas from Quran and Sunnah for healing and peace.</p>
+                            <p>Listen to world-renowned reciters via online streaming, optional download, and background playback support.</p>
                         </div>
                     </div>
                 `
@@ -746,127 +839,212 @@
                 isRtl: true,
                 navBrand: "«مسك المسلم» (Misk Muslim)",
                 heroTitle: "«مسك المسلم» (Misk Muslim)",
-                heroDesc: "رفيقك الإيماني الشامل في كل زمان ومكان — يجمع بين دقة المواعيد وسهولة الاستخدام وجمالية التصميم الإسلامي العصري مع أمان وخصوصية تامة.",
+                heroDesc: "رفيقك الإيماني الشامل في كل زمان ومكان — يجمع بين دقة المواعيد، معمارية العمل بدون إنترنت، والخصوصية التامة.",
                 badgeFree: "✨ مجاني وبدون تسجيل حساب",
                 badgePrivacy: "🔒 خصوصية تامة وحفظ محلي",
-                badgeOffline: "🕋 يعمل بالكامل بدون إنترنت",
+                badgeOffline: "🕋 قاعدة بيانات SQLite مدمجة",
                 btnPrivacy: "📜 سياسة الخصوصية الرسمية",
                 btnFeatures: "✨ خدمات ومميزات التطبيق",
                 footerText: "جميع الحقوق محفوظة © 2026 تطبيق «مسك المسلم».",
                 privacyHTML: `
                     <div class="section-header">
                         <h2>سياسة الخصوصية لتطبيق «مسك المسلم»</h2>
-                        <div class="ornament-line">◇ — الشفافية والأمانة في حماية البيانات — ◇</div>
+                        <div class="ornament-line">◇ — أولوية الخصوصية أولاً والعمل بدون إنترنت — ◇</div>
                         <span class="meta-tag">تاريخ السريان وآخر تحديث: سبتمبر 2026</span>
                         <span class="meta-tag">المطور: slmdroid</span>
                     </div>
 
-                    <div class="highlight-box">
-                        <strong style="color: var(--gold-light);">عهد الخصوصية والأمان:</strong> تطبيق «مسك المسلم» لا يتطلب أي تسجيل دخول ولا يطلب أو يجمع أياً من معلوماتكم أو أرقامكم الشخصية على الإطلاق. تم بناء التطبيق بهدف الأجر وخدمة المسلمين بأعلى معايير الأمان والأمانة.
+                    <!-- بطاقة 1: الموقع -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📍</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">الموقع الجغرافي (GPS) — اختياري تماماً 100%</div>
+                            <div class="app-item-desc">
+                                يُطلب إذن الموقع فقط لحساب أوقات الصلاة بدقة وتحديد اتجاه القبلة لحظياً. يمنحك التطبيق الحرية الكاملة لاختيار مدينتك يدوياً من قاعدة بيانات مدمجة تضم أكثر من <strong>54,000 مدينة عالمية</strong> دون تفعيل الـ GPS وبدون إنترنت.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>📌 1. عدم جمع أي بيانات شخصية</h3>
-                        <p>لا يطلب التطبيق اسمك، ولا بريدك الإلكتروني، ولا رقم هاتفك، ولا أي معلومات اتصال. كافة تفضيلاتكم داخل التطبيق (مثل الإشارات المرجعية للمصحف، أصوات المؤذنين، إحصائيات السبحة والأذكار) تُحفظ <strong>محلياً فقط على ذاكرة هاتفك</strong>.</p>
+                    <!-- بطاقة 2: المحتوى المحلي الأوفلاين -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🗄️</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">المحتوى الأساسي المحلي (قاعدة بيانات SQLite تعمل بدون إنترنت)</div>
+                            <div class="app-item-desc">
+                                صُمم التطبيق ليعمل <strong>بدون إنترنت</strong> في كافة عباداتك اليومية الأساسية من خلال قاعدة بيانات مدمجة: المصحف الشريف النصي للقراءة، كتب الأحاديث الشريفة، أذكار حصن المسلم، أحداث التاريخ الإسلامي والتقويم، حساب مواقيت الصلاة والأذان، اتجاه القبلة، أسماء الله الحسنى، وقاعدة 54,000 مدينة عالمية.
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- تفصيل الـ GPS بالعربية -->
-                    <div class="gps-card">
-                        <h4>📍 سياسة الموقع الجغرافي (GPS) <span class="gps-highlight-badge">خيار اختياري 100%</span></h4>
-                        
-                        <p style="margin-top: 10px;"><strong>1. في ماذا يُستخدم الـ GPS بالتحديد؟</strong></p>
-                        <ul>
-                            <li><strong>حساب مواقيت الصلاة بدقة:</strong> لمعرفة إحداثيات موقعك (خط الطول ودائرة العرض)، ليقوم التطبيق بحساب مواعيد الأذان (الفجر، الظهر، العصر، المغرب، العشاء) بدقة بالغة بحسب مدينتك.</li>
-                            <li><strong>تحديد اتجاه القبلة (البوصلة):</strong> لمعرفة الزاوية الصحيحة والدقيقة بين موقعك الحالي وبين الكعبة المشرفة في مكة المكرمة.</li>
-                        </ul>
-
-                        <p><strong>2. هل الـ GPS إجباري لكي يعمل التطبيق؟</strong></p>
-                        <p><strong style="color: var(--gold-light);">لا، ليس إجبارياً على الإطلاق:</strong></p>
-                        <ul>
-                            <li>إذا رفض المستخدم إعطاء إذن الـ GPS، فإن التطبيق <strong>يستمر في العمل بشكل طبيعي 100%</strong>.</li>
-                            <li>يوفّر التطبيق ميزة <strong>الاختيار اليدوي للمدينة</strong>؛ حيث يحتوي على قاعدة بيانات مدمجة تضم أكثر من <strong>54,000 مدينة حول العالم</strong>، يستطيع المستخدم ببساطة اختيار مدينته منها بدون تشغيل الـ GPS وبدون الحاجة حتى لإنترنت.</li>
-                        </ul>
-
-                        <p><strong>3. هل يتم حفظ أو تتبع موقع المستخدم؟</strong></p>
-                        <p><strong style="color: var(--gold-light);">إطلاقاً؛</strong> التطبيق لا يتبعك في الخلفية، ولا يقوم بحفظ موقعك، ولا يرسله إلى أي خوادم خارجية. القراءة تتم <strong>محلياً داخل الهاتف</strong> فقط لحساب الأوقات وزاوية القبلة لحظياً.</p>
+                    <!-- بطاقة 3: الخدمات المتصلة بالإنترنت -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🌐</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">الميزات الثانوية الإضافية (تتصل بالإنترنت عبر APIs)</div>
+                            <div class="app-item-desc">
+                                بينما المحتوى الأساسي يعمل محلياً بالكامل، فإن بعض الميزات الإضافية تتطلب اتصالاً بالإنترنت لجلب محتواها من مصادرها ومكتباتها المفتوحة: مكتبة التفاسير الإسلامية (الـ 5 تفاسير)، التلاوات الصوتية للمقرئين (بث وتحميل)، قصص الأنبياء، الرقية الشرعية الصوتية، الإذاعات الإسلامية المباشرة 24 ساعة، والاستعلام التلقائي عن اسم المدينة عبر خرائط OpenStreetMap.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>⚙️ 2. الأذونات والصلاحيات الأخرى وأسبابها</h3>
-                        <ul>
-                            <li><strong>الإشعارات والمنبه الدقيق (POST_NOTIFICATIONS / SCHEDULE_EXACT_ALARM):</strong> لإطلاق صوت الأذان والتنبيهات بالثانية في موعد الصلاة حتى لو كان التطبيق مغلقاً.</li>
-                            <li><strong>تشغيل الصوت في الخلفية (FOREGROUND_SERVICE / MEDIA_PLAYBACK):</strong> لمواصلة الاستماع للقرآن وإذاعات الراديو عند قفل الشاشة أو فتح تطبيقات أخرى.</li>
-                            <li><strong>التخزين المحلي (Storage):</strong> لحفظ السور والتلاوات التي تختار تحميلها للاستماع بدون إنترنت (Offline).</li>
-                        </ul>
+                    <!-- بطاقة 4: إعلانات AdMob -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📢</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">إعلانات Google AdMob وضوابطها الدينية</div>
+                            <div class="app-item-desc">
+                                يعرض التطبيق إعلانات لدعم استمرارية تطويره المجاني. جميع الإعلانات مصفاة برمجياً بأعلى معايير الأمان <code>MAX_AD_CONTENT_RATING_G</code> (مما يمنع ظهور أي إعلانات للقمار أو الكحول أو المواعدة أو أي محتوى غير لائق). قد تجمع Google معرف الإعلانات (AAID) ومعلومات الجهاز التقنية لأغراض منع الاحتيال والتحليل.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>🌐 3. خدمات ومكتبات الطرف الثالث</h3>
-                        <ul>
-                            <li><strong>شبكة إعلانات جوجل (Google AdMob):</strong> قد يعرض التطبيق إعلانات لدعم استمرارية التطوير المجاني، وفقاً لـ <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</li>
-                            <li><strong>المكتبات الصوتية المفتوحة (MP3Quran و AlQuran Cloud):</strong> لتزويد التطبيق بملفات التلاوات القرآنية وإذاعات الراديو.</li>
-                        </ul>
+                    <h3 style="color: var(--gold-light); margin: 32px 0 12px;">📊 1. تصنيف المحتوى وأسلوب التخزين والاتصال</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>الميزة / نوع البيانات</th>
+                                    <th>الغرض والاستخدام</th>
+                                    <th>طبيعة المعمارية والاتصال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>المصحف النصي للقراءة</strong></td>
+                                    <td>قراءة القرآن الكريم بالرسم العثماني والبحث</td>
+                                    <td><span class="badge-table badge-local">محلي 100% (SQLite بدون إنترنت)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الأحاديث وأذكار حصن المسلم</strong></td>
+                                    <td>صحيح البخاري، مسلم، الأربعون النووية، الأذكار</td>
+                                    <td><span class="badge-table badge-local">محلي 100% (SQLite بدون إنترنت)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>مواقيت الصلاة وقاعدة 54,000 مدينة</strong></td>
+                                    <td>حساب أوقات الصلوات والعداد التنازلي</td>
+                                    <td><span class="badge-table badge-local">محلي 100% (SQLite بدون إنترنت)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>بوصلة القبلة وحساس الهاتف</strong></td>
+                                    <td>توجيه حي نحو الكعبة المشرفة وقت فتح الشاشة</td>
+                                    <td><span class="badge-table badge-nostore">معالجة لحظية / لا تُحفظ</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تلاوات المقرئين الصوتية</strong></td>
+                                    <td>الاستماع لكبار القراء والتحميل</td>
+                                    <td><span class="badge-table badge-online">تحتاج اتصال بالإنترنت (APIs)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>مكتبة التفاسير الخمسة</strong></td>
+                                    <td>تفسير ابن كثير، السعدي، الميسر، الجلالين، الطبري</td>
+                                    <td><span class="badge-table badge-online">تُجلب عبر الإنترنت (APIs)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>قصص الأنبياء وإذاعات الراديو</strong></td>
+                                    <td>بث إذاعي مباشر وقصص تفاعلية</td>
+                                    <td><span class="badge-table badge-online">تحتاج اتصال بالإنترنت</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>البيانات الشخصية والحسابات</strong></td>
+                                    <td>الاسم، البريد، الهاتف، جهات الاتصال، الصور</td>
+                                    <td><span class="badge-table badge-nostore">لا نطلبها ولا نجمعها إطلاقاً</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>👶 4. خصوصية الأطفال</h3>
-                        <p>تطبيق «مسك المسلم» آمن لجميع أفراد الأسرة، وخالٍ تماماً من أي محتوى غير لائق، ولا يجمع أي معلومات من الأطفال دون سن 13 عاماً.</p>
+                    <h3 style="color: var(--gold-light); margin: 28px 0 12px;">📢 2. بيانات AdMob وحرية التحكم للمستخدم</h3>
+                    <p style="color: #d1e5db;">قد تجمع منصة Google AdMob البيانات التقنية المعتادة:</p>
+                    
+                    <ul style="margin-top: 10px;">
+                        <li><strong>معرّف إعلانات أندرويد (AAID):</strong> يُستخدم لقياس كفاءة الإعلان ومنع النقرات الاحتيالية.</li>
+                        <li><strong>معلومات الجهاز:</strong> طراز الهاتف وإصدار نظام أندرويد.</li>
+                        <li><strong>بيانات التفاعل:</strong> مدى التفاعل مع الإعلانات المعروضة.</li>
+                    </ul>
+
+                    <div class="optout-box">
+                        <strong>💡 كيفية التحكم في الإعلانات وإلغاء التخصيص:</strong><br>
+                        يمكنك إعادة تعيين معرّف الإعلانات أو إلغاء الإعلانات المخصصة في أي وقت عبر هاتفك: <strong>إعدادات الجهاز &gt; الخصوصية &gt; الإعلانات (أو Google &gt; الإعلانات) &gt; إعادة تعيين معرّف الإعلانات / حذف معرّف الإعلانات</strong>.
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 30px 0 12px;">🔒 3. أذونات أندرويد المطلوبة وأسبابها</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>الصلاحية / الإذن</th>
+                                    <th>لماذا هو مطلوب تقنياً؟</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الموقع (GPS)</strong></td>
+                                    <td>اختياري 100%. لحساب أوقات الصلاة واتجاه القبلة فلكياً داخل جهازك فقط.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الإشعارات (POST_NOTIFICATIONS)</strong></td>
+                                    <td>تنبيهك بمواعيد الصلوات الخمس والأذكار وأحداث التقويم الهجري.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المنبه الدقيق (SCHEDULE_EXACT_ALARM)</strong></td>
+                                    <td>لإطلاق صوت الأذان في الثانية المحددة بدقة حتى عند قفل الشاشة.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>خدمة الواجهة (FOREGROUND_SERVICE)</strong></td>
+                                    <td>لمواصلة تشغيل تلاوات القرآن الكريم والإذاعات الإسلامية عند قفل الشاشة.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الاهتزاز (VIBRATE)</strong></td>
+                                    <td>تغذية راجعة لمسية (Haptic) مريحة مع كل تسبيحة على السبحة الإلكترونية.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="contact-box">
-                        <h3>📩 التواصل والدعم الفني</h3>
-                        <p>إذا كان لديكم أي استفسار أو اقتراح بخصوص سياسة الخصوصية أو وظائف التطبيق، يسعدنا تواصلكم الدائم معنا:</p>
+                        <h3>📩 التواصل والدعم الفني المباشر</h3>
+                        <p>يسعدنا الرد على أي استفسارات تخص خصوصيتك أو وظائف التطبيق:</p>
                         <p style="margin-top: 8px;">• المطور: <strong>slmdroid</strong></p>
-                        <p style="margin-top: 4px;">• البريد الإلكتروني الرسمي المخصص للدعم: <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
+                        <p style="margin-top: 4px;">• البريد الرسمي المعتمد: <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
                     </div>
                 `,
                 featuresHTML: `
                     <div class="section-header">
                         <h2>✨ حقيبة المسلم اليومية المتكاملة</h2>
-                        <div class="ornament-line">◇ — مواقيت، قرآن، تفاسير، أذكار، وتلاوات — ◇</div>
-                        <span class="meta-tag">كل ما يحتاجه المسلم في تطبيق إسلامي واحد</span>
+                        <div class="ornament-line">◇ — كل ما يحتاجه المسلم في تطبيق واحد — ◇</div>
+                        <span class="meta-tag">مصمم بأعلى معايير الإتقان والفخامة</span>
                     </div>
 
                     <div class="features-grid">
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🕋</div>
+                            <div class="mint-icon-badge">🕋</div>
                             <h3>مواقيت الصلاة والأذان بدقة فائقة</h3>
-                            <p>حسابات فلكية دقيقة، تحديد الموقع بالـ GPS أو يدوياً عبر 54,000 مدينة، مع أصوات كبار المؤذنين وعداد تنازلي.</p>
+                            <p>حسابات فلكية دقيقة، قاعدة بيانات مدمجة تضم أكثر من 54,000 مدينة عالمية أو عبر الـ GPS، مع أصوات كبار المؤذنين وعداد تنازلي.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📖</div>
-                            <h3>القرآن الكريم كاملاً</h3>
-                            <p>مطابق لمصحف المدينة المنورة بخط عثماني أصيل، بحث سريع، فواصل مرجعية ومتابعة الورد اليومي.</p>
+                            <div class="mint-icon-badge">📖</div>
+                            <h3>القرآن الكريم كاملاً (نصياً)</h3>
+                            <p>يعمل بدون إنترنت بالرسم العثماني المطابق لمصحف المدينة المنورة، بحث سريع في السور والآيات، وفواصل مرجعية.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📚</div>
+                            <div class="mint-icon-badge">📚</div>
                             <h3>مكتبة التفاسير الخمسة</h3>
-                            <p>تفسير ابن كثير، السعدي، الميسر، الجلالين، والطبري بنقرة واحدة لكل آية ومشاركتها فوراً.</p>
+                            <p>تفسير ابن كثير، السعدي، الميسر، الجلالين، والطبري بنقرة واحدة عبر الاتصال بالإنترنت.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🧭</div>
+                            <div class="mint-icon-badge">🧭</div>
                             <h3>بوصلة دقيقة لاتجاه القبلة</h3>
-                            <p>بوصلة رقمية تفاعلية تحدد الكعبة المشرفة في أي مكان مع مؤشر ذكي لاستواء الهاتف وضمان الدقة.</p>
+                            <p>بوصلة تفاعلية سريعة تُرشدك نحو الكعبة المشرفة في أي مكان مع مؤشر ذكي لضمان استواء الهاتف.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📿</div>
+                            <div class="mint-icon-badge">📿</div>
                             <h3>حصن المسلم والسبحة الإلكترونية</h3>
-                            <p>أذكار الصباح والمساء، أذكار النوم والصلاة، مع سبحة رقمية ذكية واهتزاز تفاعلي لحفظ الأوراد.</p>
+                            <p>أذكار الصباح والمساء وأدعية اليوم والليلة كاملة بدون إنترنت مع سبحة رقمية ذكية واهتزاز تفاعلي.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🎙️</div>
+                            <div class="mint-icon-badge">🎙️</div>
                             <h3>تلاوات وإذاعات مباشرة 24/7</h3>
-                            <p>أعذب التلاوات لكبار قراء العالم الإسلامي مع إمكانية التحميل والاستماع في الخلفية دون انقطاع.</p>
-                        </div>
-                        <div class="feature-tile">
-                            <div class="feature-icon-box">📜</div>
-                            <h3>موسوعة الحديث الشريف</h3>
-                            <p>صحيح البخاري، صحيح مسلم، والأربعون النووية كاملة مع الشروح المفصلة وخاصية البحث.</p>
-                        </div>
-                        <div class="feature-tile">
-                            <div class="feature-icon-box">🛡️</div>
-                            <h3>الرقية الشرعية الشاملة</h3>
-                            <p>نصوص الرقية الثابتة من الكتاب والسنة مع تسجيلات صوتية خاشعة ومؤثرة للسكينة والاستشفاء.</p>
+                            <p>أعذب التلاوات لكبار قراء العالم الإسلامي مع إمكانية التحميل والاستماع في الخلفية عبر الإنترنت.</p>
                         </div>
                     </div>
                 `
@@ -876,56 +1054,133 @@
                 isRtl: false,
                 navBrand: "Misk Muslim | مسك المسلم",
                 heroTitle: "Misk Muslim (مسك المسلم)",
-                heroDesc: "Votre compagnon islamique complet — Précision des prières, design élégant et respect absolu de la vie privée.",
+                heroDesc: "Votre compagnon islamique complet — Architecture hors-ligne, précision des prières et respect absolu de la vie privée.",
                 badgeFree: "✨ 100% Gratuit & Sans Compte",
-                badgePrivacy: "🔒 Privé & Stockage Local",
-                badgeOffline: "🕋 Fonctionne Hors-Ligne",
+                badgePrivacy: "🔒 100% Privé & Données Locales",
+                badgeOffline: "🕋 Base SQLite Hors-Ligne",
                 btnPrivacy: "📜 Politique de Confidentialité",
                 btnFeatures: "✨ Fonctionnalités",
                 footerText: "© 2026 Misk Muslim. Tous droits réservés.",
                 privacyHTML: `
                     <div class="section-header">
                         <h2>Politique de Confidentialité — «Misk Muslim»</h2>
-                        <div class="ornament-line">◇ — Transparence et Sécurité des Données — ◇</div>
+                        <div class="ornament-line">◇ — Architecture Hors-Ligne et Transparence Totale — ◇</div>
                         <span class="meta-tag">Date d'effet : Septembre 2026</span>
                         <span class="meta-tag">Développeur : slmdroid</span>
                     </div>
 
-                    <div class="highlight-box">
-                        <strong style="color: var(--gold-light);">Engagement :</strong> L'application «Misk Muslim» ne nécessite aucune création de compte et ne collecte aucune donnée personnelle identifiable.
+                    <!-- Carte 1 : GPS -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📍</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Autorisation de Localisation (GPS) — 100% Optionnelle</div>
+                            <div class="app-item-desc">
+                                L'accès au GPS est utilisé exclusivement pour calculer précisément les heures de prière et déterminer l'angle de la Qibla. Vous pouvez sélectionner librement votre ville parmi plus de <strong>54 000 villes intégrées hors-ligne</strong> sans activer le GPS ni utiliser internet.
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- GPS DETAIL FR -->
-                    <div class="gps-card">
-                        <h4>📍 Utilisation du GPS et Localisation <span class="gps-highlight-badge">100% Optionnel</span></h4>
-                        <p style="margin-top: 10px;"><strong>1. À quoi sert le GPS ?</strong></p>
-                        <ul>
-                            <li><strong>Horaires de prière précis :</strong> Détermination des coordonnées pour calculer les heures de l'Adhan.</li>
-                            <li><strong>Direction de la Qibla :</strong> Détermination de l'angle exact vers la Sainte Kaaba à La Mecque.</li>
-                        </ul>
-
-                        <p><strong>2. Le GPS est-il obligatoire ?</strong></p>
-                        <p><strong style="color: var(--gold-light);">Non, il est 100% OPTIONNEL :</strong></p>
-                        <ul>
-                            <li>Si vous refusez l'accès, l'application <strong>continue de fonctionner à 100%</strong>.</li>
-                            <li>Comprend une base de données hors-ligne de plus de <strong>54 000 villes</strong> sélectionnables manuellement sans GPS ni internet.</li>
-                        </ul>
-
-                        <p><strong>3. Vos coordonnées sont-elles enregistrées ?</strong></p>
-                        <p><strong style="color: var(--gold-light);">Jamais.</strong> Tout se calcule localement sur votre téléphone en temps réel.</p>
+                    <!-- Carte 2 : SQLite Hors-Ligne -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🗄️</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Contenu Essentiel Local (Base de données SQLite Hors-Ligne)</div>
+                            <div class="app-item-desc">
+                                L'application fonctionne <strong>entièrement hors-ligne</strong> pour vos pratiques religieuses quotidiennes : texte complet du Saint Coran, Hadiths authentiques, invocations de Hisn Al-Muslim, calendrier hégirien, calculs de prière, 99 Noms d'Allah et base de 54 000 villes.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>⚙️ Autorisations & Tiers</h3>
-                        <ul>
-                            <li><strong>Notifications & Alarmes exactes :</strong> Pour déclencher l'Adhan à la seconde près.</li>
-                            <li><strong>Service en arrière-plan :</strong> Permet d'écouter le Coran écran verrouillé.</li>
-                            <li><strong>Google AdMob :</strong> Annonces non intrusives (<a href="https://policies.google.com/privacy" target="_blank">Politique Google</a>).</li>
-                        </ul>
+                    <!-- Carte 3 : Services en Ligne -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🌐</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Services Complémentaires en Ligne (APIs & Flux Directs)</div>
+                            <div class="app-item-desc">
+                                Certaines fonctionnalités multimédias secondaires nécessitent une connexion internet : les 5 livres de Tafsir, les récitations audio de grands récitateurs (streaming/téléchargement), les récits des Prophètes, la Ruqyah audio, les radios islamiques en direct 24h/24 et la géolocalisation inversée via OpenStreetMap Nominatim.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 4 : AdMob -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📢</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Publicités Google AdMob & Normes Familiales</div>
+                            <div class="app-item-desc">
+                                L'application affiche des publicités Google AdMob pour garantir sa gratuité. Toutes les annonces sont strictement filtrées selon la norme <code>MAX_AD_CONTENT_RATING_G</code> (garantissant l'exclusion totale de jeux d'argent, alcool, rencontres ou contenus inappropriés).
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 30px 0 12px;">📊 1. Tableau de traitement des fonctionnalités</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>Fonctionnalité / Donnée</th>
+                                    <th>Finalité</th>
+                                    <th>Connectivité & Stockage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Lecture du Coran (Texte)</strong></td>
+                                    <td>Lecture en calligraphie othomane et recherche</td>
+                                    <td><span class="badge-table badge-local">100% Hors-ligne (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hadiths & Hisn Al-Muslim</strong></td>
+                                    <td>Bukhari, Muslim, 40 Nawawi, Invocations</td>
+                                    <td><span class="badge-table badge-local">100% Hors-ligne (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Horaires de Prière & 54 000 Villes</strong></td>
+                                    <td>Calculs astronomiques et compte à rebours</td>
+                                    <td><span class="badge-table badge-local">100% Hors-ligne (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Boussole de la Qibla</strong></td>
+                                    <td>Orientation vers la Kaaba en temps réel</td>
+                                    <td><span class="badge-table badge-nostore">Temps réel / Jamais stocké</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Récitations Audio du Coran</strong></td>
+                                    <td>Écoute et téléchargement de réciteurs</td>
+                                    <td><span class="badge-table badge-online">Requiert Internet (API Audio)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tafsirs du Coran (5 livres)</strong></td>
+                                    <td>Explications détaillées des versets</td>
+                                    <td><span class="badge-table badge-online">Requiert Internet (API)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Radios en Direct & Récits</strong></td>
+                                    <td>Diffusion continue et histoires religieuses</td>
+                                    <td><span class="badge-table badge-online">Requiert Internet</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Données Personnelles de l'Utilisateur</strong></td>
+                                    <td>Nom, e-mail, téléphone, contacts, photos</td>
+                                    <td><span class="badge-table badge-nostore">Zéro collecte / Aucun compte</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 28px 0 12px;">📢 2. Données Techniques AdMob & Choix de l'Utilisateur</h3>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Identifiant publicitaire Android (AAID) :</strong> Utilisé par Google pour mesurer l'efficacité et lutter contre la fraude.</li>
+                        <li><strong>Données de l'appareil :</strong> Modèle du téléphone et version du système Android.</li>
+                    </ul>
+
+                    <div class="optout-box">
+                        <strong>💡 Réinitialiser ou désactiver les annonces personnalisées :</strong><br>
+                        Sur votre téléphone : <strong>Paramètres &gt; Confidentialité &gt; Annonces (ou Google &gt; Annonces) &gt; Réinitialiser l'identifiant publicitaire</strong>.
                     </div>
 
                     <div class="contact-box">
-                        <h3>📩 Contact & Assistance</h3>
+                        <h3>📩 Contact & Assistance Dédiée</h3>
                         <p>Développeur : <strong>slmdroid</strong></p>
                         <p style="margin-top: 4px;">E-mail officiel : <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
                     </div>
@@ -937,19 +1192,24 @@
                     </div>
                     <div class="features-grid">
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🕋</div>
+                            <div class="mint-icon-badge">🕋</div>
                             <h3>Horaires de prière & Adhan</h3>
-                            <p>Calculs astronomiques très précis, choix parmi 54 000 villes ou GPS, multiples voix de muezzins.</p>
+                            <p>Précision astronomique, base locale de 54 000 villes hors-ligne ou GPS, et voix authentiques de muezzins.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📖</div>
-                            <h3>Saint Coran complet</h3>
-                            <p>Calligraphie othomane de Médine, recherche instantanée, marque-pages et suivi de lecture.</p>
+                            <div class="mint-icon-badge">📖</div>
+                            <h3>Saint Coran complet (Texte)</h3>
+                            <p>100% Hors-ligne en calligraphie othomane de Médine, recherche instantanée et marque-pages.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🧭</div>
+                            <div class="mint-icon-badge">📚</div>
+                            <h3>5 Livres de Tafsir</h3>
+                            <p>Tafsir Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Jalalayn et Al-Tabari consultables en ligne.</p>
+                        </div>
+                        <div class="feature-tile">
+                            <div class="mint-icon-badge">🧭</div>
                             <h3>Boussole de la Qibla</h3>
-                            <p>Boussole interactive guidant fidèlement vers la Kaaba partout dans le monde.</p>
+                            <p>Boussole fluide indiquant fidèlement la direction de la Sainte Kaaba partout dans le monde.</p>
                         </div>
                     </div>
                 `
@@ -959,58 +1219,135 @@
                 isRtl: false,
                 navBrand: "Misk Muslim | مسك المسلم",
                 heroTitle: "Misk Muslim (مسك المسلم)",
-                heroDesc: "Tu compañero islámico integral — Precisión en los rezos, diseño elegante y total privacidad.",
+                heroDesc: "Tu compañero islámico integral — Arquitectura sin conexión, precisión en los rezos y total privacidad.",
                 badgeFree: "✨ 100% Gratis y Sin Cuentas",
-                badgePrivacy: "🔒 Privado y Almacenamiento Local",
-                badgeOffline: "🕋 Funciona Sin Conexión",
+                badgePrivacy: "🔒 100% Privado y Datos Locales",
+                badgeOffline: "🕋 Base SQLite Sin Conexión",
                 btnPrivacy: "📜 Política de Privacidad",
                 btnFeatures: "✨ Características",
                 footerText: "© 2026 Misk Muslim. Todos los derechos reservados.",
                 privacyHTML: `
                     <div class="section-header">
                         <h2>Política de Privacidad de «Misk Muslim»</h2>
-                        <div class="ornament-line">◇ — Transparencia y Seguridad — ◇</div>
+                        <div class="ornament-line">◇ — Arquitectura Local y Transparencia Total — ◇</div>
                         <span class="meta-tag">Fecha de vigencia: Septiembre 2026</span>
                         <span class="meta-tag">Desarrollador: slmdroid</span>
                     </div>
 
-                    <div class="highlight-box">
-                        <strong style="color: var(--gold-light);">Compromiso :</strong> «Misk Muslim» no requiere registro de cuenta ni recopila ningún dato de identificación personal.
+                    <!-- Tarjeta 1: GPS -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📍</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Permiso de Ubicación (GPS) — 100% Opcional</div>
+                            <div class="app-item-desc">
+                                Solicitamos acceso a la ubicación únicamente para calcular los horarios astronómicos de oración y la dirección de la Qibla. Puedes elegir libremente tu ciudad de forma manual entre más de <strong>54.000 ciudades locales integradas</strong> sin necesidad de activar el GPS ni requerir internet.
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- GPS DETAIL ES -->
-                    <div class="gps-card">
-                        <h4>📍 Uso de Ubicación y GPS <span class="gps-highlight-badge">100% Opcional</span></h4>
-                        <p style="margin-top: 10px;"><strong>1. ¿Para qué se utiliza el GPS?</strong></p>
-                        <ul>
-                            <li><strong>Horas de oración:</strong> Para calcular los horarios del Adhan con precisión astronómica.</li>
-                            <li><strong>Dirección de la Qibla:</strong> Para determinar el ángulo hacia la Sagrada Kaaba en La Meca.</li>
-                        </ul>
-
-                        <p><strong>2. ¿Es obligatorio el GPS?</strong></p>
-                        <p><strong style="color: var(--gold-light);">No, es 100% OPCIONAL :</strong></p>
-                        <ul>
-                            <li>Si rechazas el permiso, la app <strong>continúa funcionando con normalidad</strong>.</li>
-                            <li>Base de datos local de más de <strong>54.000 ciudades</strong> utilizables sin GPS ni internet.</li>
-                        </ul>
-
-                        <p><strong>3. ¿Se rastrea tu ubicación?</strong></p>
-                        <p><strong style="color: var(--gold-light);">En absoluto.</strong> Todo se procesa localmente en tu teléfono.</p>
+                    <!-- Tarjeta 2: SQLite Local -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🗄️</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Contenido Principal Offline (Base de Datos SQLite Local)</div>
+                            <div class="app-item-desc">
+                                Las prácticas religiosas fundamentales operan <strong>100% sin conexión a internet</strong> mediante una base de datos local SQLite: lectura del Sagrado Corán textual, libros de Hadiths auténticos, súplicas de Hisn Al-Muslim, historia islámica, cálculo de rezos, 99 Nombres de Alá y 54.000 ciudades.
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="policy-block">
-                        <h3>⚙️ Permisos adicionales y Terceros</h3>
-                        <ul>
-                            <li><strong>Notificaciones y Alarmas:</strong> Para emitir el Adhan en el segundo exacto.</li>
-                            <li><strong>Servicio en segundo plano:</strong> Para continuar escuchando recitaciones con la pantalla apagada.</li>
-                            <li><strong>Google AdMob:</strong> Anuncios respetuosos (<a href="https://policies.google.com/privacy" target="_blank">Privacidad Google</a>).</li>
-                        </ul>
+                    <!-- Tarjeta 3: Servicios en Línea -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">🌐</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Funciones Secundarias en Línea (APIs y Emisiones)</div>
+                            <div class="app-item-desc">
+                                Mientras que el núcleo es offline, algunas funciones multimedia secundarias se conectan a internet cuando está disponible: los 5 libros de Tafsir, recitaciones de grandes recitadores (streaming/descarga), historias de los Profetas, Ruqyah de audio, radios islámicas 24/7 y detección de ciudad por mapa en OpenStreetMap Nominatim.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: AdMob -->
+                    <div class="app-item-card">
+                        <div class="mint-icon-badge">📢</div>
+                        <div class="app-item-content">
+                            <div class="app-item-title">Publicidad Google AdMob y Entorno Familiar</div>
+                            <div class="app-item-desc">
+                                La aplicación muestra anuncios mediante Google AdMob para seguir siendo 100% gratuita. Todos los anuncios se filtran con la clasificación estricta <code>MAX_AD_CONTENT_RATING_G</code> (garantizando cero apuestas, alcohol, citas o contenido inapropiado).
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 30px 0 12px;">📊 1. Clasificación de Datos y Arquitectura</h3>
+                    <div class="table-responsive">
+                        <table class="emerald-table">
+                            <thead>
+                                <tr>
+                                    <th>Función / Tipo de dato</th>
+                                    <th>Finalidad</th>
+                                    <th>Conectividad y Almacenamiento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Lectura del Corán (Texto)</strong></td>
+                                    <td>Lectura en caligrafía otomana de Medina</td>
+                                    <td><span class="badge-table badge-local">100% Offline (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hadiths y Súplicas Diarias</strong></td>
+                                    <td>Bukhari, Muslim, 40 Nawawi, Hisn Al-Muslim</td>
+                                    <td><span class="badge-table badge-local">100% Offline (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Horarios de Rezo y 54.000 Ciudades</strong></td>
+                                    <td>Cálculo astronómico y cuenta regresiva</td>
+                                    <td><span class="badge-table badge-local">100% Offline (SQLite local)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Brújula de la Qibla y Sensor</strong></td>
+                                    <td>Alineación interactiva hacia La Meca</td>
+                                    <td><span class="badge-table badge-nostore">Tiempo real / Nunca se almacena</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Recitaciones de Audio</strong></td>
+                                    <td>Escucha de recitadores y descarga opcional</td>
+                                    <td><span class="badge-table badge-online">Requiere Internet (API Audio)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Libros de Tafsir (5 libros)</strong></td>
+                                    <td>Explicación detallada de los versículos</td>
+                                    <td><span class="badge-table badge-online">Requiere Internet (API)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Radios e Historias Religiosas</strong></td>
+                                    <td>Emisión en vivo e historias de los Profetas</td>
+                                    <td><span class="badge-table badge-online">Requiere Conexión a Internet</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Datos Personales del Usuario</strong></td>
+                                    <td>Nombre, correo, teléfono, fotos, contactos</td>
+                                    <td><span class="badge-table badge-nostore">Cero recopilación / Sin cuentas</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 28px 0 12px;">📢 2. Datos de AdMob y Control del Usuario</h3>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>ID de Publicidad Android (AAID):</strong> Utilizado por Google para medir la eficacia y prevenir fraudes.</li>
+                        <li><strong>Datos del dispositivo:</strong> Modelo de teléfono y versión de Android.</li>
+                    </ul>
+
+                    <div class="optout-box">
+                        <strong>💡 Restablecer o desactivar anuncios personalizados:</strong><br>
+                        En los ajustes de tu teléfono: <strong>Ajustes &gt; Privacidad &gt; Anuncios (o Google &gt; Anuncios) &gt; Restablecer ID de publicidad</strong>.
                     </div>
 
                     <div class="contact-box">
-                        <h3>📩 Contacto y Soporte</h3>
+                        <h3>📩 Contacto y Soporte Oficial</h3>
                         <p>Desarrollador: <strong>slmdroid</strong></p>
-                        <p style="margin-top: 4px;">Correo oficial: <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
+                        <p style="margin-top: 4px;">Correo electrónico: <a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></p>
                     </div>
                 `,
                 featuresHTML: `
@@ -1020,19 +1357,24 @@
                     </div>
                     <div class="features-grid">
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🕋</div>
+                            <div class="mint-icon-badge">🕋</div>
                             <h3>Horarios de Oración y Adhan</h3>
-                            <p>Cálculos astronómicos exactos, más de 54.000 ciudades offline o GPS, y variadas voces de almuédanos.</p>
+                            <p>Cálculos astronómicos exactos, base local de 54.000 ciudades offline o GPS, y variadas voces de almuédanos.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">📖</div>
-                            <h3>Sagrado Corán Completo</h3>
-                            <p>Caligrafía otomana de Medina, búsqueda rápida y seguimiento diario de lectura.</p>
+                            <div class="mint-icon-badge">📖</div>
+                            <h3>Sagrado Corán Completo (Texto)</h3>
+                            <p>100% Offline en caligrafía otomana de Medina, búsqueda rápida y seguimiento de lectura diario.</p>
                         </div>
                         <div class="feature-tile">
-                            <div class="feature-icon-box">🧭</div>
-                            <h3>Brújula precisa de la Qibla</h3>
-                            <p>Brújula interactiva que apunta a la Kaaba desde cualquier parte del mundo.</p>
+                            <div class="mint-icon-badge">📚</div>
+                            <h3>5 Libros de Tafsir</h3>
+                            <p>Tafsir Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Jalalayn y Al-Tabari con consulta en línea.</p>
+                        </div>
+                        <div class="feature-tile">
+                            <div class="mint-icon-badge">🧭</div>
+                            <h3>Brújula de la Qibla</h3>
+                            <p>Brújula interactiva que apunta fielmente a la Kaaba desde cualquier lugar del mundo.</p>
                         </div>
                     </div>
                 `
@@ -1083,7 +1425,7 @@
             }
         }
 
-        // Default language is English as requested
+        // Initialize default view
         changeLanguage('en');
     </script>
 </body>
