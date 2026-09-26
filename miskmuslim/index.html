@@ -2,921 +2,779 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>بيان المسلم - سياسة الخصوصية الرسمية | Bayan Muslim Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيان المسلم - سياسة الخصوصية وشروط الاستخدام | Privacy Policy</title>
+  <meta name="description" content="سياسة الخصوصية الرسمية لتطبيق بيان المسلم - Bayan Muslim لنظام أندرويد.">
   
-  <!-- خطوط جوجل الرسمية للتطبيق -->
+  <!-- خطوط جوجل الرسمية (Cairo للعربية & Outfit للإنجليزية) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- أيقونات FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --bg-dark: #022C22;
-      --container-bg: #063A27;
-      --emerald-accent: #10B981;
+      --primary: #064E3B;
+      --primary-dark: #022C22;
+      --emerald: #10B981;
       --emerald-light: #34D399;
-      --gold: #e9c349;
-      --gold-dark: #b88739;
-      --gold-gradient: linear-gradient(135deg, #E4CC86 0%, #D0B066 52%, #B88739 100%);
-      --text-main: #FFFFFF;
-      --text-muted: rgba(255, 255, 255, 0.75);
-      --font-cairo: 'Cairo', sans-serif;
-      --font-amiri: 'Amiri', serif;
+      --gold: #D97706;
+      --gold-light: #FBBF24;
+      --gold-border: #F59E0B;
+      --bg: #031D17;
+      --card-bg: rgba(6, 78, 59, 0.45);
+      --card-border: rgba(16, 185, 129, 0.25);
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --white: #FFFFFF;
+      --font-ar: 'Cairo', sans-serif;
+      --font-en: 'Outfit', sans-serif;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-tap-highlight-color: transparent;
+      transition: all 0.25s ease;
     }
 
     body {
-      background-color: #01140F;
+      background-color: var(--bg);
       background-image: 
-        radial-gradient(circle at 50% 0%, #064E3B 0%, transparent 60%),
-        radial-gradient(circle at 50% 100%, #022019 0%, transparent 70%);
-      color: var(--text-main);
-      font-family: var(--font-cairo);
+        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.1) 0%, transparent 40%);
+      color: var(--text);
+      font-family: var(--font-ar);
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 20px 10px;
+      padding: 24px 16px 60px 16px;
     }
 
-    /* إطار الهاتف المحمول ثلاثي الأبعاد */
-    .phone-mockup {
+    body.lang-en {
+      direction: ltr;
+      font-family: var(--font-en);
+    }
+
+    /* حاوية العرض على شكل تطبيق محمول فاخر */
+    .app-viewport {
       width: 100%;
-      max-width: 440px;
-      min-height: 900px;
-      background: var(--bg-dark);
-      border-radius: 46px;
-      border: 8px solid #1A2E26;
-      box-shadow: 
-        0 0 0 2px rgba(233, 195, 73, 0.3),
-        0 25px 60px rgba(0, 0, 0, 0.8),
-        inset 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 820px;
       display: flex;
       flex-direction: column;
-      position: relative;
-      overflow: hidden;
+      gap: 20px;
     }
 
-    /* شريط الحالة العلوي (Status Bar) */
-    .status-bar {
-      height: 42px;
-      padding: 10px 22px 0 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      font-weight: 700;
-      color: #E2E8F0;
-      z-index: 50;
-    }
-
-    .status-icons {
-      display: flex;
-      gap: 7px;
-      align-items: center;
-    }
-
-    /* زر تغيير اللغة الصغير الفاخر في الهيدر */
-    .lang-pill-btn {
-      background: rgba(233, 195, 73, 0.18);
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-family: inherit;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 12px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    /* المحتوى القابل للتمرير مثل التطبيق */
-    .app-scroll-body {
-      flex: 1;
-      overflow-y: auto;
-      padding: 10px 16px 100px 16px;
+    /* هيدر التطبيق العلوي */
+    .app-header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: 28px;
+      padding: 28px 24px;
       display: flex;
       flex-direction: column;
       gap: 16px;
-      scrollbar-width: none;
-    }
-    .app-scroll-body::-webkit-scrollbar { display: none; }
-
-    /* 🕌 1. هيدر المحراب الإسلامي الشريف 🕌 */
-    .mihrab-header {
-      width: 100%;
-      background: linear-gradient(180deg, rgba(6, 78, 59, 0.9) 0%, rgba(2, 44, 34, 0.95) 100%);
-      border: 1.5px solid var(--gold);
-      border-radius: 28px;
-      padding: 22px 16px 18px 16px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
       position: relative;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
       overflow: hidden;
     }
 
-    /* نقش القوس الإسلامي العلوي في المحراب */
-    .mihrab-arch-svg {
+    .app-header::after {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      opacity: 0.18;
+      top: -40px;
+      left: -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
     }
 
-    .mihrab-basmala {
-      font-family: var(--font-amiri);
-      font-size: 17px;
-      color: var(--gold);
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-    }
-
-    .mihrab-app-title {
-      font-size: 24px;
-      font-weight: 900;
-      color: #FFFFFF;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .mihrab-app-title i {
-      color: var(--gold);
-      font-size: 20px;
-    }
-
-    .mihrab-subtitle {
-      font-size: 12px;
-      color: var(--emerald-light);
-      font-weight: 700;
-      margin-top: 4px;
-    }
-
-    /* 🌟 2. البطاقة المركزية الفخمة (بطاقة الصلاة المركزية / بيانات المطور و AdMob) 🌟 */
-    .central-prayer-card {
-      width: 100%;
-      background: radial-gradient(circle at 50% 30%, #0A4D35 0%, #032B1E 100%);
-      border: 1.8px solid var(--gold);
-      border-radius: 26px;
-      padding: 20px 16px;
-      position: relative;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
-    }
-
-    /* أركان الزخرفة الأندلسية الأربعة */
-    .corner-ornament {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      fill: none;
-      stroke: var(--gold);
-      stroke-width: 1.2;
-      opacity: 0.85;
-    }
-    .c-top-left { top: 6px; left: 6px; }
-    .c-top-right { top: 6px; right: 6px; transform: scaleX(-1); }
-    .c-bot-left { bottom: 6px; left: 6px; transform: scaleY(-1); }
-    .c-bot-right { bottom: 6px; right: 6px; transform: scale(-1); }
-
-    .central-badge-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .dev-details-list {
-      background: rgba(0, 0, 0, 0.32);
-      border: 1px solid rgba(233, 195, 73, 0.3);
-      border-radius: 18px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .dev-item-row {
+    .header-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 12px;
-    }
-
-    .dev-item-label {
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dev-item-label i { color: var(--gold); }
-
-    .dev-item-value {
-      color: #FFFFFF;
-      font-weight: 700;
-      direction: ltr;
-    }
-
-    .dev-item-value a {
-      color: var(--emerald-light);
-      text-decoration: none;
-    }
-
-    /* زر المتجر الذهبي المعتمد */
-    .gold-store-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--gold-gradient);
-      color: #1A1202;
-      text-decoration: none;
-      font-size: 12.5px;
-      font-weight: 900;
-      padding: 12px 14px;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(184, 135, 57, 0.45);
-      border: 1px solid #FFF1C5;
-      text-align: center;
-    }
-
-    .gold-store-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(184, 135, 57, 0.6);
-    }
-
-    /* صندوق روبوت AdMob للتحقق السريع */
-    .admob-crawler-box {
-      margin-top: 12px;
-      background: rgba(0, 0, 0, 0.45);
-      border: 1px dashed rgba(233, 195, 73, 0.4);
-      border-radius: 14px;
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .admob-crawler-code {
-      font-family: monospace;
-      font-size: 10px;
-      color: #38BDF8;
-      overflow-x: auto;
-      white-space: nowrap;
-      direction: ltr;
-    }
-
-    .admob-crawler-copy {
-      background: rgba(233, 195, 73, 0.2);
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: inherit;
-      white-space: nowrap;
-    }
-
-    /* 🌟 3. شبكة بطاقات الصلوات (Prayer Cards Grid للسياسات) 🌟 */
-    .section-headline {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .prayer-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .prayer-policy-tile {
-      background: var(--container-bg);
-      border: 1.2px solid rgba(233, 195, 73, 0.45);
-      border-radius: 18px;
-      padding: 14px 12px;
+    .brand-group {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-      position: relative;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #10B981 0%, #047857 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      font-size: 26px;
+      color: #FFF;
+    }
+
+    .brand-text h1 {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 13px;
+      color: var(--emerald-light);
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--card-border);
+      border-radius: 30px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
       cursor: pointer;
+      font-family: inherit;
+    }
+
+    .lang-btn.active {
+      background: var(--emerald);
+      color: #022C22;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .badge-item i {
+      color: var(--gold-light);
+    }
+
+    /* 🌟 بطاقة المطور المحاكية لبطاقات الصلاة في التطبيق 🌟 */
+    .prayer-style-card {
+      background: linear-gradient(145deg, rgba(8, 70, 47, 0.85) 0%, rgba(4, 44, 30, 0.95) 100%);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      position: relative;
       overflow: hidden;
     }
 
-    .prayer-policy-tile:hover {
-      border-color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    /* نقش أندلسي دائري خلف البطاقة */
-    .tile-arabic-star {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      width: 44px;
-      height: 44px;
-      opacity: 0.12;
-      pointer-events: none;
-    }
-
-    .tile-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .tile-icon-frame {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: rgba(233, 195, 73, 0.15);
-      border: 1px solid rgba(233, 195, 73, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 14px;
-    }
-
-    .tile-title {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: #FFFFFF;
-      line-height: 1.3;
-    }
-
-    .tile-desc {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .tile-status-badge {
-      align-self: flex-start;
-      background: rgba(16, 185, 129, 0.2);
-      border: 0.8px solid var(--emerald-accent);
-      color: #A7F3D0;
-      font-size: 9.5px;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 8px;
-      margin-top: 2px;
-    }
-
-    /* بطاقة الشروط الكاملة الممتدة على العرض */
-    .full-width-tile {
-      grid-column: span 2;
-    }
-
-    /* 🕌 4. شريط التنقل السفلي المقوس (Bottom Navigation Bar) 🕌 */
-    .curved-bottom-bar-wrapper {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 74px;
-      z-index: 40;
-      pointer-events: auto;
-    }
-
-    .curved-tab-svg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 74px;
-      filter: drop-shadow(0 -4px 14px rgba(0, 0, 0, 0.6));
-    }
-
-    .tab-items-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 74px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0 12px;
-    }
-
-    .tab-btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 10.5px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .tab-btn i { font-size: 18px; }
-
-    .tab-btn.active {
-      color: var(--gold);
-    }
-
-    /* الزر الأوسط المرتفع في المحراب السفلي */
-    .center-elevated-tab {
-      width: 52px;
-      height: 52px;
-      border-radius: 26px;
-      background: var(--gold-gradient);
-      border: 3px solid #01140F;
-      box-shadow: 0 6px 18px rgba(233, 195, 73, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1A1202;
-      font-size: 22px;
-      margin-top: -28px;
-      cursor: pointer;
-    }
-
-    /* نافذة منبثقة تفصيلية عند الضغط على بطاقة صلاة */
-    .policy-modal-overlay {
+    .prayer-style-card::before {
+      content: "";
       position: absolute;
       top: 0;
+      right: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
-      z-index: 60;
-      display: none;
-      align-items: flex-end;
-      padding: 12px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
     }
 
-    .policy-modal-sheet {
-      width: 100%;
-      background: var(--bg-dark);
-      border: 1.5px solid var(--gold);
-      border-radius: 28px;
-      padding: 22px;
-      max-height: 80%;
-      overflow-y: auto;
-      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
-      position: relative;
+    .developer-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(245, 158, 11, 0.35);
     }
 
-    .modal-close-btn {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #FFF;
-      width: 32px;
-      height: 32px;
-      border-radius: 16px;
-      cursor: pointer;
+    .dev-icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background: rgba(217, 119, 6, 0.18);
+      border: 1.2px solid var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--gold-light);
+      font-size: 18px;
     }
 
-    .modal-title {
-      font-size: 16px;
+    .dev-title-text h3 {
+      font-size: 18px;
       font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 12px;
+      color: #FEF3C7;
+    }
+
+    .dev-title-text span {
+      font-size: 12px;
+      color: #D1FAE5;
+    }
+
+    .dev-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .dev-row-item {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 12px 16px;
       display: flex;
       align-items: center;
+      gap: 12px;
+    }
+
+    .dev-row-item i {
+      font-size: 18px;
+      color: var(--emerald-light);
+    }
+
+    .dev-row-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dev-row-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .dev-row-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .dev-row-val a {
+      color: var(--emerald-light);
+      text-decoration: none;
+    }
+
+    .dev-row-val a:hover {
+      text-decoration: underline;
+    }
+
+    /* زر المتجر الذهبي الفخم */
+    .store-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+      color: #FFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 14px 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35);
+      border: 1px solid #FDE68A;
+    }
+
+    .store-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(217, 119, 6, 0.45);
+    }
+
+    /* بطاقة التحقق من ملكية AdMob (app-ads.txt) */
+    .admob-verification-card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px dashed rgba(59, 130, 246, 0.4);
+      border-radius: 20px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .admob-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 8px;
     }
 
-    .modal-text {
+    .admob-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #60A5FA;
       font-size: 13px;
-      color: #E2E8F0;
+      font-weight: 800;
+    }
+
+    .admob-code-box {
+      background: #020617;
+      border: 1px solid #1E293B;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #38BDF8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: auto;
+    }
+
+    .copy-btn {
+      background: rgba(59, 130, 246, 0.2);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #93C5FD;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .copy-btn:hover {
+      background: #2563EB;
+      color: #FFF;
+    }
+
+    /* بنود سياسة الخصوصية */
+    .policy-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .policy-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .policy-card:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-icon-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--emerald-light);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .card-body {
+      font-size: 14px;
+      color: #CBD5E1;
       line-height: 1.8;
     }
 
-    /* دعم الوضع الإنجليزي بالكامل */
-    body.en-mode {
-      direction: ltr;
-      font-family: 'Outfit', sans-serif;
+    .card-body ul {
+      margin: 10px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    body.en-mode .mihrab-basmala { display: none; }
-    body.en-mode .modal-close-btn { left: auto; right: 14px; }
+
+    .highlight-pill {
+      background: rgba(16, 185, 129, 0.18);
+      color: #6EE7B7;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* الفوتر */
+    .app-footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--emerald-light);
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 12px 10px 40px 10px; }
+      .app-header { padding: 20px 16px; border-radius: 22px; }
+      .brand-icon { width: 48px; height: 48px; font-size: 22px; }
+      .brand-text h1 { font-size: 20px; }
+      .prayer-style-card { padding: 18px 14px; }
+      .policy-card { padding: 18px 16px; }
+      .store-cta-btn { font-size: 13px; padding: 12px 16px; text-align: center; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- 📱 إطار التطبيق المحاكي للشاشة الرئيسية 📱 -->
-  <div class="phone-mockup">
+  <div class="app-viewport">
 
-    <!-- شريط الحالة (Status Bar) -->
-    <div class="status-bar">
-      <span id="currentTime">12:00</span>
-      <div class="status-icons">
-        <button class="lang-pill-btn" onclick="toggleLanguage()">
-          <i class="fa-solid fa-globe"></i>
-          <span id="langBtnText">English</span>
-        </button>
-        <i class="fa-solid fa-wifi" style="font-size: 11px;"></i>
-        <i class="fa-solid fa-battery-full" style="font-size: 14px;"></i>
+    <!-- 🌟 هيدر التطبيق العلوي 🌟 -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="brand-group">
+          <div class="brand-icon">
+            <i class="fa-solid fa-kaaba"></i>
+          </div>
+          <div class="brand-text">
+            <h1 data-key="appName">بيان المسلم (Bayan Muslim)</h1>
+            <p data-key="appSub">رفيقك الإيماني اليومي الشامل | Daily Islamic Companion</p>
+          </div>
+        </div>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="switchLanguage('ar')">العربية</button>
+          <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+        </div>
       </div>
-    </div>
 
-    <!-- جسم التطبيق القابل للتمرير -->
-    <div class="app-scroll-body">
+      <div class="header-badges">
+        <span class="badge-item"><i class="fa-solid fa-shield-halved"></i> <span data-key="badgeSafe">آمن 100% وخالٍ من التتبع</span></span>
+        <span class="badge-item"><i class="fa-solid fa-box"></i> <span>com.slmdroid.bayanmuslim</span></span>
+        <span class="badge-item"><i class="fa-solid fa-calendar-check"></i> <span data-key="badgeDate">آخر تحديث: 2026</span></span>
+      </div>
+    </header>
 
-      <!-- 🕌 1. المحراب الإسلامي الشريف في الأعلى 🕌 -->
-      <section class="mihrab-header">
-        <svg class="mihrab-arch-svg" viewBox="0 0 100 60" preserveAspectRatio="none">
-          <path d="M 0,60 L 0,20 Q 50,-10 100,20 L 100,60 Z" fill="none" stroke="#e9c349" stroke-width="1.5" />
-          <path d="M 10,60 L 10,25 Q 50,2 90,25 L 90,60 Z" fill="none" stroke="#e9c349" stroke-width="0.8" stroke-dasharray="2,2" />
-        </svg>
-        <div class="mihrab-basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-        <h1 class="mihrab-app-title">
-          <i class="fa-solid fa-kaaba"></i>
-          <span data-key="appName">بيان المسلم</span>
-        </h1>
-        <div class="mihrab-subtitle" data-key="policyLabel">وثيقة سياسة الخصوصية وشروط الاستخدام الرسمية</div>
-      </section>
-
-      <!-- 🌟 2. البطاقة المركزية (تصميم بطاقة الصلاة المركزية بالتطبيق) 🌟 -->
-      <section class="central-prayer-card">
-        <!-- الزخارف الأندلسية على أركان البطاقة -->
-        <svg class="corner-ornament c-top-left" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
-        <svg class="corner-ornament c-top-right" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
-        <svg class="corner-ornament c-bot-left" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
-        <svg class="corner-ornament c-bot-right" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
-
-        <div class="central-badge-title">
+    <!-- 🌟 بطاقة المطور الفاخرة المصممة على طراز بطاقات الصلاة 🌟 -->
+    <div class="prayer-style-card">
+      <div class="developer-header">
+        <div class="dev-icon-circle">
           <i class="fa-solid fa-certificate"></i>
-          <span data-key="devCardTitle">بطاقة المطور والاعتماد الرسمي</span>
         </div>
-
-        <div class="dev-details-list">
-          <div class="dev-item-row">
-            <span class="dev-item-label"><i class="fa-solid fa-user-shield"></i> <span data-key="devLabel">المطور المعتمد:</span></span>
-            <span class="dev-item-value">Salim El Mokadem</span>
-          </div>
-          <div class="dev-item-row">
-            <span class="dev-item-label"><i class="fa-solid fa-envelope"></i> <span data-key="mailLabel">البريد الإلكتروني:</span></span>
-            <span class="dev-item-value"><a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></span>
-          </div>
-          <div class="dev-item-row">
-            <span class="dev-item-label"><i class="fa-solid fa-box-archive"></i> <span data-key="pkgLabel">معرّف الحزمة:</span></span>
-            <span class="dev-item-value">com.slmdroid.bayanmuslim</span>
-          </div>
+        <div class="dev-title-text">
+          <h3 data-key="devCardTitle">بطاقة المطور والاعتماد الرسمي</h3>
+          <span data-key="devCardSub">المعلومات القانونية وجهة الاتصال الرسمية للتطبيق</span>
         </div>
-
-        <!-- رابط متجر Play بالنص المطلوب تماماً ليوجه للمتجر -->
-        <a href="https://play.google.com/store/apps/developer?id=Slmdroid" target="_blank" rel="noopener noreferrer" class="gold-store-button">
-          <i class="fa-brands fa-google-play"></i>
-          <span data-key="storeBtnText">تطبيقات Android بواسطة Slmdroid على Google Play</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i>
-        </a>
-
-        <!-- خانة تحقق AdMob الرسمية -->
-        <div class="admob-crawler-box">
-          <code class="admob-crawler-code" id="admobText">google.com, pub-4098081179037072, DIRECT, f08c47fec0942fa0</code>
-          <button class="admob-crawler-copy" onclick="copyAdmobRecord()">
-            <i class="fa-regular fa-copy"></i> <span id="copyBtnText">نسخ</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- 🌟 3. شبكة بطاقات الصلوات (تحمل بنود الخصوصية) 🌟 -->
-      <div class="section-headline">
-        <i class="fa-solid fa-shield-halved"></i>
-        <span data-key="policyGridTitle">بنود الصلاحيات وحماية البيانات</span>
       </div>
 
-      <div class="prayer-cards-grid">
-
-        <!-- بطاقة 1: الفجر / الموقع الجغرافي -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('location')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="tile-title" data-key="cardLocTitle">الموقع ومواقيت الصلاة</div>
+      <div class="dev-info-grid">
+        <div class="dev-row-item">
+          <i class="fa-solid fa-user-tie"></i>
+          <div class="dev-row-content">
+            <span class="dev-row-label" data-key="devNameLabel">اسم المطور المعتمد</span>
+            <span class="dev-row-val">Salim El Mokadem</span>
           </div>
-          <p class="tile-desc" data-key="cardLocDesc">حساب مواقيت الصلاة واتجاه القبلة محلياً فقط 100% دون تتبع.</p>
-          <span class="tile-status-badge" data-key="badgeNoTracking">معالجة محلية بالكامل</span>
         </div>
 
-        <!-- بطاقة 2: الشروق / بوصلة القبلة والمستشعرات -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('sensors')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-compass"></i></div>
-            <div class="tile-title" data-key="cardSensTitle">البوصلة والمستشعرات</div>
+        <div class="dev-row-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="dev-row-content">
+            <span class="dev-row-label" data-key="devMailLabel">البريد الإلكتروني الرسمي للتواصل</span>
+            <span class="dev-row-val"><a href="mailto:misk.muslim.contact@gmail.com">misk.muslim.contact@gmail.com</a></span>
           </div>
-          <p class="tile-desc" data-key="cardSensDesc">استشعار الاتجاه المغناطيسي واستواء الهاتف أفقياً بلحظيتها.</p>
-          <span class="tile-status-badge" data-key="badgeNoStorage">لا يتم تخزينها</span>
         </div>
-
-        <!-- بطاقة 3: الظهر / الأذان والتنبيهات الدقيقة -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('alarms')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-bell"></i></div>
-            <div class="tile-title" data-key="cardAlarmTitle">الأذان والمنبه الدقيق</div>
-          </div>
-          <p class="tile-desc" data-key="cardAlarmDesc">إذن USE_EXACT_ALARM لرفع الأذان وتذكيرات الأذكار في موعدها.</p>
-          <span class="tile-status-badge" data-key="badgeSafeAlarm">دقة تامة في الوقت</span>
-        </div>
-
-        <!-- بطاقة 4: العصر / التخزين والتلاوات أوفلاين -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('storage')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-file-audio"></i></div>
-            <div class="tile-title" data-key="cardStorageTitle">التخزين والتلاوات</div>
-          </div>
-          <p class="tile-desc" data-key="cardStorageDesc">حفظ السور القرآنية للمقرئين أوفلاين بمجلد التطبيق المعزول.</p>
-          <span class="tile-status-badge" data-key="badgeSandboxed">مجلد معزول وآمن</span>
-        </div>
-
-        <!-- بطاقة 5: المغرب / إعلانات جوجل AdMob -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('admob')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-rectangle-ad"></i></div>
-            <div class="tile-title" data-key="cardAdmobTitle">إعلانات AdMob</div>
-          </div>
-          <p class="tile-desc" data-key="cardAdmobDesc">إعلانات محتشمة متوافقة مع سياسة عائلات جوجل Play والشريعة.</p>
-          <span class="tile-status-badge" data-key="badgeAdSafe">متوافق مع العائلة</span>
-        </div>
-
-        <!-- بطاقة 6: العشاء / أمان الأطفال وحذف البيانات -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('privacy')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-user-lock"></i></div>
-            <div class="tile-title" data-key="cardCoppaTitle">أمان العائلة وحقوقك</div>
-          </div>
-          <p class="tile-desc" data-key="cardCoppaDesc">التزام تام بمعايير COPPA وحق المستخدم في حذف البيانات فوراً.</p>
-          <span class="tile-status-badge" data-key="badgeCoppa">حماية تامة 100%</span>
-        </div>
-
       </div>
 
+      <!-- رابط متجر Google Play مع نص الربط المطلوب -->
+      <a href="https://play.google.com/store/apps/developer?id=Slmdroid" target="_blank" rel="noopener noreferrer" class="store-cta-btn">
+        <i class="fa-brands fa-google-play"></i>
+        <span data-key="storeLinkText">تطبيقات Android بواسطة Slmdroid على Google Play</span>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+      </a>
     </div>
 
-    <!-- 🕌 4. شريط التنقل السفلي المقوس الفخم (Bottom Navigation Bar) 🕌 -->
-    <div class="curved-bottom-bar-wrapper">
-      <svg class="curved-tab-svg" viewBox="0 0 440 74" preserveAspectRatio="none">
-        <path d="M 0,20 Q 0,0 20,0 L 165,0 C 185,0 190,34 220,34 C 250,34 255,0 275,0 L 420,0 Q 440,0 440,20 L 440,74 L 0,74 Z" fill="#03241B" stroke="#e9c349" stroke-width="1.2" />
-      </svg>
-      <div class="tab-items-container">
-        <div class="tab-btn active">
-          <i class="fa-solid fa-mosque"></i>
-          <span data-key="tabHome">الرئيسية</span>
-        </div>
-        <div class="tab-btn" onclick="openPolicyModal('storage')">
-          <i class="fa-solid fa-book-quran"></i>
-          <span data-key="tabQuran">القرآن</span>
-        </div>
-        
-        <!-- الزر المرتفع في المحراب الأوسط -->
-        <div class="center-elevated-tab" onclick="openPolicyModal('location')" title="اتجاه القبلة">
-          <i class="fa-solid fa-kaaba"></i>
-        </div>
-
-        <div class="tab-btn" onclick="openPolicyModal('alarms')">
-          <i class="fa-solid fa-hands-praying"></i>
-          <span data-key="tabAthkar">الأذكار</span>
-        </div>
-        <div class="tab-btn" onclick="openPolicyModal('dev')">
-          <i class="fa-solid fa-shield-halved"></i>
-          <span data-key="tabPolicy">الخصوصية</span>
-        </div>
+    <!-- 🌟 بطاقة التحقق من ملكية إعلانات AdMob (app-ads.txt) 🌟 -->
+    <div class="admob-verification-card">
+      <div class="admob-header">
+        <span class="admob-tag"><i class="fa-solid fa-bullhorn"></i> <span data-key="admobTitle">التحقق من ملكية الناشر (Google AdMob Publisher Verification)</span></span>
+        <button class="copy-btn" onclick="copyAdmobLine()"><i class="fa-regular fa-copy"></i> <span data-key="copyBtn">نسخ</span></button>
+      </div>
+      <div class="admob-code-box">
+        <code id="admobRecord">google.com, pub-4098081179037072, DIRECT, f08c47fec0942fa0</code>
       </div>
     </div>
 
-    <!-- النافذة المنبثقة التفصيلية (Sheet Modal) -->
-    <div class="policy-modal-overlay" id="policyModal" onclick="closePolicyModal(event)">
-      <div class="policy-modal-sheet" onclick="event.stopPropagation()">
-        <button class="modal-close-btn" onclick="closePolicyModalDirect()"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-title" id="modalTitle"></div>
-        <div class="modal-text" id="modalBody"></div>
+    <!-- 🌟 بنود سياسة الخصوصية الشاملة والمتعمقة 🌟 -->
+    <main class="policy-sections" id="policyContent">
+
+      <!-- 1. مقدمة السياسة -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h2 class="card-title" data-key="sec1Title">1. مقدمة والتزامنا بالخصوصية</h2>
+        </div>
+        <div class="card-body" data-key="sec1Body">
+          تعتبر خصوصيتك أمانة مقدسة لدينا في تطبيق <strong>"بيان المسلم" (Bayan Muslim)</strong>، المطوّر بواسطة <strong>Salim El Mokadem</strong>. صُمم التطبيق ليكون رفيقاً إيمانياً نقياً يقربك إلى الله، ولذلك فإن مبدأنا الجوهري هو <strong>"حماية البيانات بالكامل وعدم تتبع المستخدمين نهائياً"</strong>. نحن لا نبيع ولا نتاجر ولا نجمع أي بيانات تعريف شخصية (PII)، وكل الحسابات الدينية تجري بشكل محلي 100% داخل عتاد هاتفك.
+        </div>
+      </article>
+
+      <!-- 2. الموقع الجغرافي والقبلة -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+          <h2 class="card-title" data-key="sec2Title">2. صلاحية الموقع الجغرافي (GPS & Location)</h2>
+        </div>
+        <div class="card-body" data-key="sec2Body">
+          يطلب التطبيق إذن الوصول إلى الموقع الجغرافي (الموقع الدقيق والموقع التقريبي) حصراً للأغراض التالية:
+          <ul>
+            <li><strong>حساب مواقيت الصلاة بدقة:</strong> وفق خطوط الطول والعرض لمدينتك المحددة بناءً على طرق الحساب الفقهية المعتمدة محلياً.</li>
+            <li><strong>تحديد اتجاه القبلة الشريفة:</strong> لحساب زاوية الانحراف نحو الكعبة المشرفة بمكة المكرمة بدقة هندسية.</li>
+          </ul>
+          <span class="highlight-pill">ملاحظة أمان هامة:</span> إحداثيات موقعك <strong>تُعالج محلياً فقط داخل جهازك</strong> بواسطة خوارزميات فلكية رياضية، ولا يتم إرسالها أو تخزينها على أي خادم خارجي (Server) تابع لنا على الإطلاق.
+        </div>
+      </article>
+
+      <!-- 3. المستشعرات والبوصلة -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-compass"></i></div>
+          <h2 class="card-title" data-key="sec3Title">3. مستشعرات البوصلة والتسارع (Sensors)</h2>
+        </div>
+        <div class="card-body" data-key="sec3Body">
+          يستخدم التطبيق مستشعر المجال المغناطيسي (Magnetometer) ومستشعر التسارع (Accelerometer) حصراً داخل شاشة <strong>"بوصلة القبلة"</strong> لمعرفة اتجاه الشمال المغناطيسي وضمان استواء الهاتف أفقياً بدقة عبر نقطة الاتزان الزمردية. لا يتم تسجيل أو الاحتفاظ بأي قراءات للمستشعرات خارج جلسة استخدام البوصلة الفورية.
+        </div>
+      </article>
+
+      <!-- 4. التنبيهات الدقيقة والأذان -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-bell"></i></div>
+          <h2 class="card-title" data-key="sec4Title">4. الإشعارات والتنبيهات الدقيقة (Exact Alarms & Notifications)</h2>
+        </div>
+        <div class="card-body" data-key="sec4Body">
+          لضمان عدم فوات أي صلاة مفروضة، يستخدم التطبيق إذن التنبيهات الدقيقة <code>SCHEDULE_EXACT_ALARM</code> و <code>USE_EXACT_ALARM</code> لجدولة إشعارات الأذان وتذكيرات أذكار الصباح والمساء بدقة في أوقاتها المحددة حتى عند إغلاق التطبيق. يمكنك التحكم الكامل في تفعيل أو كتم صوت أي أذان أو إشعار عبر إعدادات التطبيق في أي وقت.
+        </div>
+      </article>
+
+      <!-- 5. التخزين الصوتي وقواعد البيانات -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-database"></i></div>
+          <h2 class="card-title" data-key="sec5Title">5. التخزين المحلي والملفات الصوتية (Local Storage & Audio)</h2>
+        </div>
+        <div class="card-body" data-key="sec5Body">
+          يحفظ التطبيق تفضيلات المستخدم (مثل اسم المدينة المختارة، الثيم المفضل، وسجل الورد والختمات) محلياً عبر <code>AsyncStorage</code> و <code>SQLite</code> على هاتفك. كما يتيح لك تحميل تلاوات القرآن الكريم لمقرئيك المفضلين لتشغيلها بدون إنترنت (Offline)، وتُخزن هذه الملفات في المجلد الخاص بالتطبيق دون الوصول إلى صورك أو ملفاتك الشخصية الأخرى.
+        </div>
+      </article>
+
+      <!-- 6. الإعلانات ومزودو الخدمات -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-rectangle-ad"></i></div>
+          <h2 class="card-title" data-key="sec6Title">6. الإعلانات وخدمات الطرف الثالث (Google AdMob)</h2>
+        </div>
+        <div class="card-body" data-key="sec6Body">
+          لدعم التطوير المستمر وتقديم التطبيق مجاناً لجميع المسلمين، نعرض إعلانات محتشمة ومتوافقة مع الشريعة الإسلامية عبر شبكة <strong>Google AdMob</strong>.
+          <ul>
+            <li>قد تجمع خدمات Google AdMob معرّف الإعلانات المجهول (Advertising ID) الخاص بجهازك لتقديم إعلانات ملائمة ومنع النقر الاحتيالي.</li>
+            <li>يلتزم التطبيق التزاماً تاماً بسياسات Google Play الإعلانية وسياسة عائلات جوجل (Families Policy).</li>
+            <li>يمكنك مراجعة سياسة خصوصية جوجل عبر: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--emerald-light); font-weight:700;">Google Privacy & Terms</a>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7. أمان الأطفال وسياسة العائلة -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-children"></i></div>
+          <h2 class="card-title" data-key="sec7Title">7. خصوصية الأطفال وسلامة العائلة (COPPA Compliance)</h2>
+        </div>
+        <div class="card-body" data-key="sec7Body">
+          تطبيق "بيان المسلم" تطبيق موجه لجميع أفراد الأسرة المسلمة من شتى الأعمار بما فيهم الأطفال. نحن لا نجمع عن علم أي بيانات شخصية من الأطفال دون سن 13 عاماً، وجميع محتويات التطبيق دينية، تعليمية، ونقية 100% ومتوافقة مع متطلبات حماية خصوصية الأطفال على الإنترنت (COPPA).
+        </div>
+      </article>
+
+      <!-- 8. حقوق المستخدم وحذف البيانات -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-user-shield"></i></div>
+          <h2 class="card-title" data-key="sec8Title">8. حقوق المستخدم وحذف البيانات (Your Rights)</h2>
+        </div>
+        <div class="card-body" data-key="sec8Body">
+          نظراً لأن جميع بياناتك مخزنة محلياً في جهازك، يمكنك حذف كافة تفضيلاتك والتلاوات المحملة فوراً عن طريق "مسح بيانات التطبيق" (Clear App Data) من إعدادات أندرويد أو بإلغاء تثبيت التطبيق. كما يحق لك التواصل معنا في أي وقت لطلب أي استفسار يتعلق بخصوصيتك.
+        </div>
+      </article>
+
+      <!-- 9. تواصل معنا -->
+      <article class="policy-card">
+        <div class="card-header-row">
+          <div class="card-icon-circle"><i class="fa-solid fa-headset"></i></div>
+          <h2 class="card-title" data-key="sec9Title">9. التواصل والاستفسارات القانونية</h2>
+        </div>
+        <div class="card-body" data-key="sec9Body">
+          إذا كانت لديك أي أسئلة أو مقترحات أو استفسارات حول سياسة الخصوصية هذه، يُرجى مراسلة المطور مباشرة:
+          <br><br>
+          <strong>المطور:</strong> Salim El Mokadem<br>
+          <strong>البريد الإلكتروني:</strong> <a href="mailto:misk.muslim.contact@gmail.com" style="color:var(--emerald-light); font-weight:700;">misk.muslim.contact@gmail.com</a><br>
+          <strong>متجر المطور:</strong> <a href="https://play.google.com/store/apps/developer?id=Slmdroid" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light); font-weight:700;">Slmdroid on Google Play</a>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- 🌟 فوتر الصفحة 🌟 -->
+    <footer class="app-footer">
+      <div class="footer-badge">
+        <i class="fa-solid fa-heart"></i>
+        <span data-key="footerMade">صُنع بحب وإخلاص لخدمة المسلمين في شتى بقاع الأرض</span>
       </div>
-    </div>
+      <div>
+        <span>&copy; 2026 Bayan Muslim - Developed by Salim El Mokadem (Slmdroid). All rights reserved.</span>
+      </div>
+    </footer>
 
   </div>
 
-  <!-- سكربت التحكم باللغة والنوافذ المنبثقة والوقت الحقيقي -->
+  <!-- سكربت التبديل اللغوي والنسخ الفوري -->
   <script>
-    // تحديث ساعة شريط الحالة العلوية
-    function updateClock() {
-      const now = new Date();
-      const h = String(now.getHours()).padStart(2, '0');
-      const m = String(now.getMinutes()).padStart(2, '0');
-      document.getElementById('currentTime').innerText = `${h}:${m}`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    // نصوص السياسة باللغتين العربية والإنجليزية
-    const detailsDB = {
+    const translations = {
       ar: {
-        location: {
-          title: "صلاحية الموقع الجغرافي (GPS & Location)",
-          text: "يستخدم تطبيق 'بيان المسلم' إذن الموقع (الدقيق والتقريبي) لحساب مواقيت الصلاة بدقة فلكية حسب إحداثيات مدينتك، وتحديد زاوية انحراف القبلة نحو مكة المكرمة. يتم تنفيذ كافة العمليات الحسابية محلياً 100% على عتاد هاتفك ولا يتم رفع الإحداثيات أو تتبعها أو مشاركتها مع أي خادم خارجي نهائياً."
-        },
-        sensors: {
-          title: "مستشعرات البوصلة والتسارع (Sensors)",
-          text: "يستخدم التطبيق مستشعر المجال المغناطيسي (Magnetometer) ومستشعر التسارع (Accelerometer) في شاشة بوصلة القبلة فقط لمعرفة اتجاه الشمال وتأكيد استواء الهاتف عبر نقطة الاتزان الزمردية المشعة. تُعالج بيانات المستشعرات في الوقت الحقيقي وتتلاشى فور مغادرة شاشة القبلة."
-        },
-        alarms: {
-          title: "التنبيهات الدقيقة والأذان (Exact Alarms)",
-          text: "لضمان رفع الأذان والتنبيه بدخول وقت الصلاة وأذكار الصباح والمساء بدقة متناهية، يطلب التطبيق إذن SCHEDULE_EXACT_ALARM و USE_EXACT_ALARM لجدولة نداء الصلاة حتى في وضع السكون وقفل الشاشة، مع إمكانية التخصيص الكامل وكتم أي صوت من الإعدادات."
-        },
-        storage: {
-          title: "التخزين الصوتي والملفات (Storage & Audio)",
-          text: "يحفظ التطبيق تفضيلاتك وسجل الختمات محلياً عبر تقنية SQLite و AsyncStorage. وعند قيامك بتحميل سور القرآن الكريم لمقرئيك المفضلين للاستماع بدون إنترنت، تُحفظ الملفات في الذاكرة المعزولة الخاصة بالتطبيق، ولا يمكن للتطبيق الوصول إلى صورك أو ملفاتك الشخصية."
-        },
-        admob: {
-          title: "إعلانات جوجل AdMob وسلامة المحتوى",
-          text: "نعرض إعلانات محتشمة ونقية عبر شبكة Google AdMob لدعم استمرار التطبيق مجاناً لكافة المسلمين. يلتزم التطبيق بسياسات العائلات في Google Play ولا يستهدف الإعلانات الحساسة أو غير اللائقة. يمكنك مراجعة سياسة Google عبر policies.google.com/privacy."
-        },
-        privacy: {
-          title: "أمان الأطفال وحقوق المستخدم (COPPA)",
-          text: "التطبيق آمن لجميع أفراد الأسرة من كافة الأعمار، وخالٍ تماماً من أي جمع لبيانات الأطفال دون سن 13 عاماً متوافقاً مع متطلبات COPPA. يمكنك في أي لحظة مسح كافة البيانات المحفوظة محلياً أو إلغاء تثبيت التطبيق بضغطة زر واحدة."
-        },
-        dev: {
-          title: "بيانات المطور والتواصل القانوني",
-          text: "المطور المسؤول: Salim El Mokadem<br>البريد الإلكتروني الرسمي: misk.muslim.contact@gmail.com<br>متجر التطبيقات: تطبيقات Android بواسطة Slmdroid على Google Play.<br>نحن ملتزمون بالرد الفوري على أي استفسار يخص خصوصيتك."
-        }
+        appName: "بيان المسلم (Bayan Muslim)",
+        appSub: "رفيقك الإيماني اليومي الشامل | Daily Islamic Companion",
+        badgeSafe: "آمن 100% وخالٍ من التتبع",
+        badgeDate: "آخر تحديث: 2026",
+        devCardTitle: "بطاقة المطور والاعتماد الرسمي",
+        devCardSub: "المعلومات القانونية وجهة الاتصال الرسمية للتطبيق",
+        devNameLabel: "اسم المطور المعتمد",
+        devMailLabel: "البريد الإلكتروني الرسمي للتواصل",
+        storeLinkText: "تطبيقات Android بواسطة Slmdroid على Google Play",
+        admobTitle: "التحقق من ملكية الناشر (Google AdMob Publisher Verification)",
+        copyBtn: "نسخ",
+        copiedBtn: "تم النسخ!",
+        sec1Title: "1. مقدمة والتزامنا بالخصوصية",
+        sec1Body: "تعتبر خصوصيتك أمانة مقدسة لدينا في تطبيق <strong>\"بيان المسلم\" (Bayan Muslim)</strong>، المطوّر بواسطة <strong>Salim El Mokadem</strong>. صُمم التطبيق ليكون رفيقاً إيمانياً نقياً يقربك إلى الله، ولذلك فإن مبدأنا الجوهري هو <strong>\"حماية البيانات بالكامل وعدم تتبع المستخدمين نهائياً\"</strong>. نحن لا نبيع ولا نتاجر ولا نجمع أي بيانات تعريف شخصية (PII)، وكل الحسابات الدينية تجري بشكل محلي 100% داخل عتاد هاتفك.",
+        sec2Title: "2. صلاحية الموقع الجغرافي (GPS & Location)",
+        sec2Body: "يطلب التطبيق إذن الوصول إلى الموقع الجغرافي (الموقع الدقيق والموقع التقريبي) حصراً للأغراض التالية: <ul><li><strong>حساب مواقيت الصلاة بدقة:</strong> وفق خطوط الطول والعرض لمدينتك المحددة بناءً على طرق الحساب الفقهية المعتمدة محلياً.</li><li><strong>تحديد اتجاه القبلة الشريفة:</strong> لحساب زاوية الانحراف نحو الكعبة المشرفة بمكة المكرمة بدقة هندسية.</li></ul> <span class=\"highlight-pill\">ملاحظة أمان هامة:</span> إحداثيات موقعك <strong>تُعالج محلياً فقط داخل جهازك</strong> بواسطة خوارزميات فلكية رياضية، ولا يتم إرسالها أو تخزينها على أي خادم خارجي (Server) تابع لنا على الإطلاق.",
+        sec3Title: "3. مستشعرات البوصلة والتسارع (Sensors)",
+        sec3Body: "يستخدم التطبيق مستشعر المجال المغناطيسي (Magnetometer) ومستشعر التسارع (Accelerometer) حصراً داخل شاشة <strong>\"بوصلة القبلة\"</strong> لمعرفة اتجاه الشمال المغناطيسي وضمان استواء الهاتف أفقياً بدقة عبر نقطة الاتزان الزمردية. لا يتم تسجيل أو الاحتفاظ بأي قراءات للمستشعرات خارج جلسة استخدام البوصلة الفورية.",
+        sec4Title: "4. الإشعارات والتنبيهات الدقيقة (Exact Alarms & Notifications)",
+        sec4Body: "لضمان عدم فوات أي صلاة مفروضة، يستخدم التطبيق إذن التنبيهات الدقيقة <code>SCHEDULE_EXACT_ALARM</code> و <code>USE_EXACT_ALARM</code> لجدولة إشعارات الأذان وتذكيرات أذكار الصباح والمساء بدقة في أوقاتها المحددة حتى عند إغلاق التطبيق. يمكنك التحكم الكامل في تفعيل أو كتم صوت أي أذان أو إشعار عبر إعدادات التطبيق في أي وقت.",
+        sec5Title: "5. التخزين المحلي والملفات الصوتية (Local Storage & Audio)",
+        sec5Body: "يحفظ التطبيق تفضيلات المستخدم (مثل اسم المدينة المختارة، الثيم المفضل، وسجل الورد والختمات) محلياً عبر <code>AsyncStorage</code> و <code>SQLite</code> على هاتفك. كما يتيح لك تحميل تلاوات القرآن الكريم لمقرئيك المفضلين لتشغيلها بدون إنترنت (Offline)، وتُخزن هذه الملفات في المجلد الخاص بالتطبيق دون الوصول إلى صورك أو ملفاتك الشخصية الأخرى.",
+        sec6Title: "6. الإعلانات وخدمات الطرف الثالث (Google AdMob)",
+        sec6Body: "لدعم التطوير المستمر وتقديم التطبيق مجاناً لجميع المسلمين، نعرض إعلانات محتشمة ومتوافقة مع الشريعة الإسلامية عبر شبكة <strong>Google AdMob</strong>. <ul><li>قد تجمع خدمات Google AdMob معرّف الإعلانات المجهول (Advertising ID) الخاص بجهازك لتقديم إعلانات ملائمة ومنع النقر الاحتيالي.</li><li>يلتزم التطبيق التزاماً تاماً بسياسات Google Play الإعلانية وسياسة عائلات جوجل (Families Policy).</li><li>يمكنك مراجعة سياسة خصوصية جوجل عبر: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--emerald-light); font-weight:700;\">Google Privacy & Terms</a>.</li></ul>",
+        sec7Title: "7. خصوصية الأطفال وسلامة العائلة (COPPA Compliance)",
+        sec7Body: "تطبيق \"بيان المسلم\" تطبيق موجه لجميع أفراد الأسرة المسلمة من شتى الأعمار بما فيهم الأطفال. نحن لا نجمع عن علم أي بيانات شخصية من الأطفال دون سن 13 عاماً، وجميع محتويات التطبيق دينية، تعليمية، ونقية 100% ومتوافقة مع متطلبات حماية خصوصية الأطفال على الإنترنت (COPPA).",
+        sec8Title: "8. حقوق المستخدم وحذف البيانات (Your Rights)",
+        sec8Body: "نظراً لأن جميع بياناتك مخزنة محلياً في جهازك، يمكنك حذف كافة تفضيلاتك والتلاوات المحملة فوراً عن طريق \"مسح بيانات التطبيق\" (Clear App Data) من إعدادات أندرويد أو بإلغاء تثبيت التطبيق. كما يحق لك التواصل معنا في أي وقت لطلب أي استفسار يتعلق بخصوصيتك.",
+        sec9Title: "9. التواصل والاستفسارات القانونية",
+        sec9Body: "إذا كانت لديك أي أسئلة أو مقترحات أو استفسارات حول سياسة الخصوصية هذه، يُرجى مراسلة المطور مباشرة:<br><br><strong>المطور:</strong> Salim El Mokadem<br><strong>البريد الإلكتروني:</strong> <a href=\"mailto:misk.muslim.contact@gmail.com\" style=\"color:var(--emerald-light); font-weight:700;\">misk.muslim.contact@gmail.com</a><br><strong>متجر المطور:</strong> <a href=\"https://play.google.com/store/apps/developer?id=Slmdroid\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--gold-light); font-weight:700;\">Slmdroid on Google Play</a>",
+        footerMade: "صُنع بحب وإخلاص لخدمة المسلمين في شتى بقاع الأرض"
       },
       en: {
-        location: {
-          title: "Location Permission (GPS & Coordinates)",
-          text: "Bayan Muslim accesses precise and approximate location strictly on-device to compute exact prayer times and Qibla direction towards Mecca. Calculations are performed 100% locally on your phone hardware. Location coordinates are never uploaded, logged, or shared with external servers."
-        },
-        sensors: {
-          title: "Compass & Accelerometer Sensors",
-          text: "The application accesses device Magnetometer and Accelerometer sensors solely within the Qibla Compass interface to identify magnetic North and flat leveling. Sensor streams are processed live in volatile memory and are never persisted."
-        },
-        alarms: {
-          title: "Exact Alarms & Adhan Scheduling",
-          text: "To ensure you never miss prayers, the app utilizes SCHEDULE_EXACT_ALARM and USE_EXACT_ALARM permissions to trigger Adhan calls and Athkar reminders punctually, even while the phone is asleep or locked."
-        },
-        storage: {
-          title: "Audio Storage & Offline Recitations",
-          text: "Preferences and Quran bookmarks are stored locally via SQLite and AsyncStorage. Downloaded Quran recitations for offline listening are saved exclusively in the app's sandboxed storage directory, completely isolated from your personal files and photos."
-        },
-        admob: {
-          title: "Google AdMob & Family Safety",
-          text: "We serve family-safe, non-intrusive advertisements via Google AdMob to keep the application 100% free for all Muslims worldwide. The app complies strictly with Google Play Families Policy and AdMob privacy standards."
-        },
-        privacy: {
-          title: "Children's Privacy & User Rights (COPPA)",
-          text: "Bayan Muslim is family-safe for all ages and strictly complies with COPPA (Children's Online Privacy Protection Act). You can purge all cached data instantly at any time via Android app settings or by uninstalling the application."
-        },
-        dev: {
-          title: "Official Developer Legal Credentials",
-          text: "Lead Developer: Salim El Mokadem<br>Contact Email: misk.muslim.contact@gmail.com<br>Store Portfolio: Android Apps by Slmdroid on Google Play.<br>We are committed to prompt responses regarding user privacy."
-        }
+        appName: "Bayan Muslim (بيان المسلم)",
+        appSub: "Your Comprehensive Daily Islamic Companion",
+        badgeSafe: "100% Secure & Zero Tracking",
+        badgeDate: "Last Updated: 2026",
+        devCardTitle: "Official Developer & Verification Badge",
+        devCardSub: "Official legal entity and contact credentials",
+        devNameLabel: "Certified Developer",
+        devMailLabel: "Official Contact Email",
+        storeLinkText: "Android Apps by Slmdroid on Google Play",
+        admobTitle: "Google AdMob Publisher Verification (app-ads.txt)",
+        copyBtn: "Copy",
+        copiedBtn: "Copied!",
+        sec1Title: "1. Introduction & Privacy Commitment",
+        sec1Body: "Your privacy is a sacred trust at <strong>Bayan Muslim</strong>, developed by <strong>Salim El Mokadem</strong>. Designed to be a pure spiritual companion, our core foundation is <strong>complete data protection and absolute zero tracking</strong>. We do not sell, rent, trade, or harvest any Personally Identifiable Information (PII). All religious calculations are executed 100% locally on your device.",
+        sec2Title: "2. Location Services (GPS & Coordinates)",
+        sec2Body: "The application requests precise and approximate location permissions exclusively for the following purposes: <ul><li><strong>Accurate Prayer Times:</strong> Calculated based on your device's geographical coordinates and approved regional astronomical conventions.</li><li><strong>Qibla Direction:</strong> Calculating the exact azimuth heading towards the Holy Kaaba in Mecca.</li></ul> <span class=\"highlight-pill\">Critical Security Guarantee:</span> Your geographical coordinates are <strong>processed strictly on-device</strong> through local mathematical algorithms. They are never transmitted, logged, or stored on any external server.",
+        sec3Title: "3. Compass & Accelerometer Sensors",
+        sec3Body: "The app accesses your device's Magnetometer and Accelerometer sensors exclusively within the <strong>Qibla Compass</strong> screen to locate magnetic North and ensure your device is held flat via the emerald leveler. Sensor data is processed in real time and is never recorded or retained outside the compass screen session.",
+        sec4Title: "4. Exact Alarms & Notifications",
+        sec4Body: "To ensure you never miss prayer times, the app utilizes <code>SCHEDULE_EXACT_ALARM</code> and <code>USE_EXACT_ALARM</code> permissions to trigger Adhan and Athkar reminders reliably even when the device is locked or in battery-saving mode. You have full granular control over enabling, muting, or customizing any reminder in the app settings.",
+        sec5Title: "5. Local Storage & Offline Audio Caching",
+        sec5Body: "The application saves your preferences (such as selected city, preferred visual theme, and Quran reading bookmarks) locally via <code>AsyncStorage</code> and <code>SQLite</code> databases. You can also download recitations of your favorite Quran reciters for offline listening. These files are strictly confined to the app's sandboxed storage and cannot access your personal photos or files.",
+        sec6Title: "6. Advertising & Third-Party SDKs (Google AdMob)",
+        sec6Body: "To support ongoing development and offer this application completely free of charge to all Muslims worldwide, we display respectful, family-friendly advertisements through <strong>Google AdMob</strong>. <ul><li>Google AdMob may collect your device's anonymous Advertising ID to serve relevant ads and prevent fraudulent clicks.</li><li>The app strictly adheres to Google Play Advertising Policies and the Google Play Families Policy.</li><li>You can review Google's privacy policy at: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--emerald-light); font-weight:700;\">Google Privacy & Terms</a>.</li></ul>",
+        sec7Title: "7. Children's Privacy (COPPA Compliance)",
+        sec7Body: "Bayan Muslim is designed for all family members of all ages, including children. We do not knowingly collect personal information from children under 13. All content is educational, religious, and 100% compliant with the Children's Online Privacy Protection Act (COPPA).",
+        sec8Title: "8. User Rights & Data Deletion",
+        sec8Body: "Because all your data is stored locally on your device, you have immediate and absolute control: clearing the app data through Android Settings or uninstalling the app permanently purges all stored preferences and cached audio. You are always welcome to contact us regarding any privacy inquiries.",
+        sec9Title: "9. Contact & Official Inquiries",
+        sec9Body: "If you have questions, feedback, or legal inquiries regarding this Privacy Policy, please contact the developer directly:<br><br><strong>Developer:</strong> Salim El Mokadem<br><strong>Email:</strong> <a href=\"mailto:misk.muslim.contact@gmail.com\" style=\"color:var(--emerald-light); font-weight:700;\">misk.muslim.contact@gmail.com</a><br><strong>Developer Store:</strong> <a href=\"https://play.google.com/store/apps/developer?id=Slmdroid\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--gold-light); font-weight:700;\">Slmdroid on Google Play</a>",
+        footerMade: "Crafted with dedication to serve Muslims worldwide"
       }
     };
 
-    let currentLang = 'ar';
+    function switchLanguage(lang) {
+      document.body.className = lang === 'en' ? 'lang-en' : '';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
 
-    function openPolicyModal(key) {
-      const data = detailsDB[currentLang][key];
-      if (!data) return;
-      document.getElementById('modalTitle').innerHTML = data.title;
-      document.getElementById('modalBody').innerHTML = data.text;
-      document.getElementById('policyModal').style.display = 'flex';
-    }
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText.toLowerCase().includes(lang === 'en' ? 'english' : 'العربية'));
+      });
 
-    function closePolicyModal(e) {
-      if (e.target.id === 'policyModal') {
-        document.getElementById('policyModal').style.display = 'none';
-      }
-    }
-
-    function closePolicyModalDirect() {
-      document.getElementById('policyModal').style.display = 'none';
-    }
-
-    function copyAdmobRecord() {
-      const text = document.getElementById('admobText').innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        const btn = document.getElementById('copyBtnText');
-        btn.innerText = currentLang === 'ar' ? 'تم النسخ!' : 'Copied!';
-        setTimeout(() => {
-          btn.innerText = currentLang === 'ar' ? 'نسخ' : 'Copy';
-        }, 2000);
+      const dict = translations[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
       });
     }
 
-    function toggleLanguage() {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      document.body.classList.toggle('en-mode', currentLang === 'en');
-      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-      document.getElementById('langBtnText').innerText = currentLang === 'ar' ? 'English' : 'العربية';
-
-      const strings = {
-        ar: {
-          appName: "بيان المسلم",
-          policyLabel: "وثيقة سياسة الخصوصية وشروط الاستخدام الرسمية",
-          devCardTitle: "بطاقة المطور والاعتماد الرسمي",
-          devLabel: "المطور المعتمد:",
-          mailLabel: "البريد الإلكتروني:",
-          pkgLabel: "معرّف الحزمة:",
-          storeBtnText: "تطبيقات Android بواسطة Slmdroid على Google Play",
-          policyGridTitle: "بنود الصلاحيات وحماية البيانات",
-          cardLocTitle: "الموقع ومواقيت الصلاة",
-          cardLocDesc: "حساب مواقيت الصلاة واتجاه القبلة محلياً فقط 100% دون تتبع.",
-          badgeNoTracking: "معالجة محلية بالكامل",
-          cardSensTitle: "البوصلة والمستشعرات",
-          cardSensDesc: "استشعار الاتجاه المغناطيسي واستواء الهاتف أفقياً بلحظيتها.",
-          badgeNoStorage: "لا يتم تخزينها",
-          cardAlarmTitle: "الأذان والمنبه الدقيق",
-          cardAlarmDesc: "إذن USE_EXACT_ALARM لرفع الأذان وتذكيرات الأذكار في موعدها.",
-          badgeSafeAlarm: "دقة تامة في الوقت",
-          cardStorageTitle: "التخزين والتلاوات",
-          cardStorageDesc: "حفظ السور القرآنية للمقرئين أوفلاين بمجلد التطبيق المعزول.",
-          badgeSandboxed: "مجلد معزول وآمن",
-          cardAdmobTitle: "إعلانات AdMob",
-          cardAdmobDesc: "إعلانات محتشمة متوافقة مع سياسة عائلات جوجل Play والشريعة.",
-          badgeAdSafe: "متوافق مع العائلة",
-          cardCoppaTitle: "أمان العائلة وحقوقك",
-          cardCoppaDesc: "التزام تام بمعايير COPPA وحق المستخدم في حذف البيانات فوراً.",
-          badgeCoppa: "حماية تامة 100%",
-          tabHome: "الرئيسية",
-          tabQuran: "القرآن",
-          tabAthkar: "الأذكار",
-          tabPolicy: "الخصوصية"
-        },
-        en: {
-          appName: "Bayan Muslim",
-          policyLabel: "Official Privacy Policy & Terms of Service",
-          devCardTitle: "Official Developer Legal Badge",
-          devLabel: "Verified Developer:",
-          mailLabel: "Contact Email:",
-          pkgLabel: "Package ID:",
-          storeBtnText: "Android Apps by Slmdroid on Google Play",
-          policyGridTitle: "Permissions & Data Protection",
-          cardLocTitle: "Location & Prayer Times",
-          cardLocDesc: "On-device local prayer times and Qibla heading with zero tracking.",
-          badgeNoTracking: "100% Local Processing",
-          cardSensTitle: "Compass & Sensors",
-          cardSensDesc: "Live magnetic field and flat phone leveling orientation.",
-          badgeNoStorage: "Zero Retention",
-          cardAlarmTitle: "Exact Alarms & Adhan",
-          cardAlarmDesc: "USE_EXACT_ALARM permission for punctual Adhan notifications.",
-          badgeSafeAlarm: "Punctual Precision",
-          cardStorageTitle: "Storage & Audio Cache",
-          cardStorageDesc: "Offline Quran audio recitations stored in sandboxed directory.",
-          badgeSandboxed: "Sandboxed & Safe",
-          cardAdmobTitle: "Google AdMob Ads",
-          cardAdmobDesc: "Respectful ads compliant with Google Play Families Policies.",
-          badgeAdSafe: "Family Compliant",
-          cardCoppaTitle: "Family Safety & Rights",
-          cardCoppaDesc: "Strict COPPA adherence and instant user data deletion rights.",
-          badgeCoppa: "100% Protected",
-          tabHome: "Home",
-          tabQuran: "Quran",
-          tabAthkar: "Athkar",
-          tabPolicy: "Privacy"
-        }
-      };
-
-      const trans = strings[currentLang];
-      for (const [key, val] of Object.entries(trans)) {
-        const el = document.querySelector(`[data-key="${key}"]`);
-        if (el) el.innerText = val;
-      }
+    function copyAdmobLine() {
+      const text = document.getElementById('admobRecord').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const copyBtn = document.querySelector('.copy-btn span');
+        const isEn = document.body.classList.contains('lang-en');
+        copyBtn.innerText = isEn ? 'Copied!' : 'تم النسخ!';
+        setTimeout(() => {
+          copyBtn.innerText = isEn ? 'Copy' : 'نسخ';
+        }, 2000);
+      });
     }
   </script>
 </body>
