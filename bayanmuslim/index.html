@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>بيان المسلم - سياسة الخصوصية الرسمية | Bayan Muslim Privacy Policy</title>
+  <title>بيان المسلم - سياسة الخصوصية الرسمية ودليل الخدمات | Bayan Muslim Privacy Policy</title>
   
-  <!-- بيانات زاحف جوجل وأدموب المخفية رسمياً -->
+  <!-- بيانات زاحف جوجل وأدموب الرسمية -->
   <meta name="google-site-verification" content="google.com, pub-4098081179037072, DIRECT, f08c47fec0942fa0">
   <meta name="app-ads" content="google.com, pub-4098081179037072, DIRECT, f08c47fec0942fa0">
 
@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* 🌟 مصفوفة ثيمات تطبيق بيان المسلم 🌟 */
+    /* 🌟 مصفوفة ثيمات تطبيق بيان المسلم الرسمية 🌟 */
     :root {
       --bg-dark: #022C22;
       --container-bg: #063A27;
@@ -82,7 +82,7 @@
     .phone-mockup {
       width: 100%;
       max-width: 440px;
-      min-height: 920px;
+      min-height: 940px;
       background: var(--bg-dark);
       border-radius: 46px;
       border: 8px solid #14221C;
@@ -93,7 +93,7 @@
       overflow: hidden;
     }
 
-    /* شريط الحالة العلوي */
+    /* شريط الحالة العلوي (الوقت والتاريخ باللون الأبيض) */
     .status-bar {
       min-height: 44px;
       padding: 12px 18px 4px 18px;
@@ -102,7 +102,7 @@
       align-items: center;
       font-size: 11.5px;
       font-weight: 700;
-      color: #E2E8F0;
+      color: #FFFFFF;
       z-index: 50;
     }
 
@@ -110,8 +110,11 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: var(--gold);
+      color: #FFFFFF; /* 🌟 تم التغيير للأبيض */
       font-family: 'Outfit', 'Cairo', sans-serif;
+    }
+    .status-time-date i {
+      color: #FFFFFF;
     }
 
     .status-actions {
@@ -126,56 +129,83 @@
       border: 1px solid var(--gold);
       color: var(--gold);
       border-radius: 12px;
-      padding: 3px 8px;
+      padding: 4px 8px;
       font-size: 11px;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 4px;
+      transition: all 0.2s ease;
     }
+    .theme-picker-btn:hover { background: rgba(233, 195, 73, 0.25); }
 
     .theme-dropdown {
       position: absolute;
       top: 48px;
-      left: 20px;
-      background: rgba(0, 0, 0, 0.92);
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 10px;
+      left: 18px;
+      background: rgba(2, 28, 21, 0.96);
+      border: 1.5px solid var(--gold);
+      border-radius: 18px;
+      padding: 12px;
       display: none;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 12px;
       z-index: 99;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
     }
 
-    .theme-dot {
-      width: 28px;
-      height: 28px;
-      border-radius: 14px;
+    /* تصميم دوائر الثيمات بالنجمة الإسلامية المطابقة لكود settings.tsx */
+    .theme-rosette-btn {
+      background: transparent;
+      border: none;
       cursor: pointer;
-      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      outline: none;
+      padding: 2px;
     }
-    .theme-dot.active { border-color: #FFF; box-shadow: 0 0 8px #FFF; }
+    .theme-rosette-svg {
+      width: 38px;
+      height: 38px;
+      transition: transform 0.2s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+    .theme-rosette-btn:hover .theme-rosette-svg {
+      transform: scale(1.12);
+    }
+    .theme-rosette-name {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
 
-    /* زر تبديل اللغة */
+    /* كبسولة اللغة المعتمدة بنفس شكل كبسولة التطبيق */
     .lang-pill-btn {
-      background: rgba(233, 195, 73, 0.18);
-      border: 1px solid var(--gold);
+      background: rgba(233, 195, 73, 0.16);
+      border: 1.2px solid var(--gold);
       color: var(--gold);
       font-family: inherit;
       font-size: 11px;
       font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 12px;
+      padding: 4px 10px;
+      border-radius: 14px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s ease;
     }
+    .lang-pill-btn:hover { background: rgba(233, 195, 73, 0.28); transform: translateY(-1px); }
 
     /* المحتوى القابل للتمرير */
     .app-scroll-body {
       flex: 1;
       overflow-y: auto;
-      padding: 8px 16px 100px 16px;
+      padding: 8px 16px 110px 16px;
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -183,23 +213,23 @@
     }
     .app-scroll-body::-webkit-scrollbar { display: none; }
 
-    /* 🕌 1. هيدر المحراب الإسلامي 🕌 */
+    /* 🕌 1. هيدر المحراب الإسلامي الأصلي المطابق لـ HomeBackgrounds.tsx 🕌 */
     .mihrab-header {
       width: 100%;
       background: linear-gradient(180deg, var(--container-bg) 0%, rgba(2, 44, 34, 0.95) 100%);
       border: 1.5px solid var(--gold);
       border-radius: 28px;
-      padding: 22px 14px 18px 14px;
+      padding: 24px 14px 20px 14px;
       position: relative;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
       overflow: hidden;
     }
 
     .mihrab-arch-svg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none; opacity: 0.18;
+      pointer-events: none; opacity: 0.35;
     }
 
     .mihrab-basmala {
@@ -207,6 +237,8 @@
       font-size: 17px;
       color: var(--gold);
       margin-bottom: 4px;
+      position: relative;
+      z-index: 2;
     }
 
     .mihrab-app-title {
@@ -217,10 +249,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      position: relative;
+      z-index: 2;
     }
 
     .mihrab-app-title i { color: var(--gold); font-size: 20px; }
-    .mihrab-subtitle { font-size: 12px; color: var(--accent-light); font-weight: 700; margin-top: 4px; }
+    .mihrab-subtitle { font-size: 12px; color: var(--accent-light); font-weight: 700; margin-top: 4px; position: relative; z-index: 2; }
 
     /* 🌟 2. بطاقة المطور المركزية الفخمة 🌟 */
     .central-prayer-card {
@@ -261,20 +295,20 @@
     .dev-item-value { color: #FFFFFF; font-weight: 700; direction: ltr; }
     .dev-item-value a { color: var(--accent-light); text-decoration: none; }
 
-    /* زر المتجر الذهبي المعتمد */
+    /* زر متجر Google Play الذهبي المعتمد */
     .gold-store-button {
       display: flex; align-items: center; justify-content: center; gap: 8px;
       background: var(--gold-gradient); color: #1A1202; text-decoration: none;
       font-size: 12.5px; font-weight: 900; padding: 12px 14px; border-radius: 16px;
       box-shadow: 0 6px 18px rgba(184, 135, 57, 0.45); border: 1px solid #FFF1C5;
-      text-align: center;
+      text-align: center; transition: transform 0.2s ease;
     }
     .gold-store-button:hover { transform: translateY(-2px); }
 
-    /* 🌟 3. شبكة بطاقات الصلوات الشاملة (10 بطاقات متخصصة) 🌟 */
+    /* 🌟 3. شبكة بطاقات الخدمات والمحتوى والخصوصية (20 بطاقة شاملة) 🌟 */
     .section-headline {
       font-size: 13.5px; font-weight: 800; color: var(--gold);
-      display: flex; align-items: center; gap: 8px; margin-top: 4px;
+      display: flex; align-items: center; gap: 8px; margin-top: 6px;
     }
 
     .prayer-cards-grid {
@@ -291,8 +325,9 @@
       display: flex; flex-direction: column; gap: 7px;
       position: relative; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
       cursor: pointer; overflow: hidden;
+      transition: all 0.2s ease;
     }
-    .prayer-policy-tile:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .prayer-policy-tile:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45); }
 
     .tile-arabic-star {
       position: absolute; top: -8px; right: -8px; width: 44px; height: 44px;
@@ -317,7 +352,7 @@
       font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 6px;
     }
 
-    /* 🕌 4. شريط التنقل السفلي المقوس الفخم 🕌 */
+    /* 🕌 4. شريط التنقل السفلي المقوس 🕌 */
     .curved-bottom-bar-wrapper {
       position: absolute; bottom: 0; left: 0; width: 100%; height: 74px;
       z-index: 40; pointer-events: auto;
@@ -346,30 +381,33 @@
       box-shadow: 0 6px 18px rgba(233, 195, 73, 0.5);
       display: flex; align-items: center; justify-content: center;
       color: #1A1202; font-size: 20px; margin-top: -26px; cursor: pointer;
+      transition: transform 0.2s ease;
     }
+    .center-elevated-tab:hover { transform: scale(1.08); }
 
     /* النافذة المنبثقة التفصيلية (Sheet Modal) */
     .policy-modal-overlay {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(8px);
       z-index: 60; display: none; align-items: flex-end; padding: 12px;
     }
 
     .policy-modal-sheet {
       width: 100%; background: var(--bg-dark);
-      border: 1.5px solid var(--gold); border-radius: 26px; padding: 22px 18px;
-      max-height: 82%; overflow-y: auto; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.85);
+      border: 1.5px solid var(--gold); border-radius: 26px; padding: 24px 18px;
+      max-height: 84%; overflow-y: auto; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.85);
       position: relative;
     }
 
     .modal-close-btn {
       position: absolute; top: 14px; left: 14px;
       background: rgba(255, 255, 255, 0.12); border: none; color: #FFF;
-      width: 30px; height: 30px; border-radius: 15px; cursor: pointer;
+      width: 32px; height: 32px; border-radius: 16px; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
     }
 
-    .modal-title { font-size: 15px; font-weight: 800; color: var(--gold); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .modal-title { font-size: 15.5px; font-weight: 800; color: var(--gold); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
     .modal-text { font-size: 12.5px; color: #E2E8F0; line-height: 1.85; }
     .modal-text ul { margin: 8px 16px; display: flex; flex-direction: column; gap: 6px; }
 
@@ -389,10 +427,10 @@
   <!-- 📱 إطار التطبيق المحاكي للشاشة الرئيسية 📱 -->
   <div class="phone-mockup">
 
-    <!-- شريط الحالة (Status Bar) مع الوقت والتاريخ الحي ومنتقي الثيمات وزر اللغة -->
+    <!-- شريط الحالة (Status Bar) مع الوقت والتاريخ الحي باللون الأبيض النقي، منتقي الثيمات، وزر اللغة -->
     <div class="status-bar">
       <div class="status-time-date">
-        <i class="fa-regular fa-clock" style="font-size: 10px;"></i>
+        <i class="fa-regular fa-clock" style="font-size: 11px;"></i>
         <span id="currentTime">--:--</span>
         <span style="opacity: 0.6;">•</span>
         <span id="currentDate">--/--/----</span>
@@ -404,16 +442,68 @@
           <i class="fa-solid fa-palette"></i>
         </button>
 
+        <!-- قائمة الثيمات بالنجمة الإسلامية المطابقة لـ settings.tsx -->
         <div class="theme-dropdown" id="themeDropdown">
-          <div class="theme-dot active" style="background:#063A27;" onclick="setTheme('emerald')" title="الزمردي"></div>
-          <div class="theme-dot" style="background:#012a4a;" onclick="setTheme('blue')" title="الأزرق"></div>
-          <div class="theme-dot" style="background:#2d1b4e;" onclick="setTheme('purple')" title="البنفسجي"></div>
-          <div class="theme-dot" style="background:#4a1528;" onclick="setTheme('rose')" title="الوردي"></div>
-          <div class="theme-dot" style="background:#004040;" onclick="setTheme('turquoise')" title="الفيروزي"></div>
-          <div class="theme-dot" style="background:#7a101c;" onclick="setTheme('ruby')" title="الياقوتي"></div>
+          
+          <!-- زمردي -->
+          <button class="theme-rosette-btn" onclick="setTheme('emerald', this)" title="الزمردي">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#022C22" stroke="#10B981" stroke-width="1"/>
+              <path class="theme-check-mark" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">زمردي</span>
+          </button>
+
+          <!-- أزرق -->
+          <button class="theme-rosette-btn" onclick="setTheme('blue', this)" title="الأزرق">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#012a4a" stroke="#3B82F6" stroke-width="1"/>
+              <path class="theme-check-mark" style="display:none;" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">أزرق</span>
+          </button>
+
+          <!-- بنفسجي -->
+          <button class="theme-rosette-btn" onclick="setTheme('purple', this)" title="البنفسجي">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#2d1b4e" stroke="#8B5CF6" stroke-width="1"/>
+              <path class="theme-check-mark" style="display:none;" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">بنفسجي</span>
+          </button>
+
+          <!-- وردي -->
+          <button class="theme-rosette-btn" onclick="setTheme('rose', this)" title="الوردي">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#4a1528" stroke="#F43F5E" stroke-width="1"/>
+              <path class="theme-check-mark" style="display:none;" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">وردي</span>
+          </button>
+
+          <!-- فيروزي -->
+          <button class="theme-rosette-btn" onclick="setTheme('turquoise', this)" title="الفيروزي">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#004040" stroke="#06B6D4" stroke-width="1"/>
+              <path class="theme-check-mark" style="display:none;" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">فيروزي</span>
+          </button>
+
+          <!-- ياقوتي -->
+          <button class="theme-rosette-btn" onclick="setTheme('ruby', this)" title="الياقوتي">
+            <svg class="theme-rosette-svg" viewBox="0 0 24 24">
+              <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#7a101c" stroke="#EF4444" stroke-width="1"/>
+              <path class="theme-check-mark" style="display:none;" d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1 1 0 111.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33z" fill="#ffffff" />
+            </svg>
+            <span class="theme-rosette-name">ياقوتي</span>
+          </button>
+
         </div>
 
-        <button class="lang-pill-btn" onclick="toggleLanguage()">
+        <!-- زر كبسولة اللغة بنفس أسلوب كبسولة التطبيق الأصلية -->
+        <button class="lang-pill-btn" onclick="toggleLanguage()" title="تغيير اللغة">
+          <i class="fa-solid fa-globe"></i>
           <span id="langBtnText">English</span>
         </button>
 
@@ -423,23 +513,50 @@
     </div>
 
     <!-- جسم التطبيق القابل للتمرير -->
-    <div class="app-scroll-body">
+    <div class="app-scroll-body" id="appScrollBody">
 
-      <!-- 🕌 1. المحراب الإسلامي الشريف في الأعلى 🕌 -->
+      <!-- 🕌 1. المحراب الإسلامي الشريف الأصلي المطابق لـ HomeBackgrounds.tsx 🕌 -->
       <section class="mihrab-header">
-        <svg class="mihrab-arch-svg" viewBox="0 0 100 60" preserveAspectRatio="none">
-          <path d="M 0,60 L 0,20 Q 50,-10 100,20 L 100,60 Z" fill="none" stroke="#e9c349" stroke-width="1.5" />
-          <path d="M 10,60 L 10,25 Q 50,2 90,25 L 90,60 Z" fill="none" stroke="#e9c349" stroke-width="0.8" stroke-dasharray="2,2" />
+        <svg class="mihrab-arch-svg" viewBox="0 0 375 220" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="mihrabArchGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--container-bg)" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="var(--bg-dark)" stop-opacity="0.4" />
+            </linearGradient>
+            <pattern id="archIslamicPat" x="0" y="0" width="46" height="46" patternUnits="userSpaceOnUse">
+              <g stroke="var(--gold)" stroke-width="0.8" fill="none" opacity="0.12">
+                <circle cx="23" cy="23" r="16" />
+                <circle cx="23" cy="23" r="23" />
+                <path d="M 23,0 L 23,46 M 0,23 L 46,23" />
+                <rect x="7" y="7" width="32" height="32" transform="rotate(45 23 23)" />
+              </g>
+            </pattern>
+          </defs>
+
+          <!-- خلفية المحراب المقوسة الدقيقة -->
+          <path d="M 0,0 L 0,210 C 25,210 48,188 68,158 C 90,125 115,112 138,112 C 158,112 172,82 187.5,32 C 203,82 217,112 237,112 C 260,112 285,125 307,158 C 327,188 350,210 375,210 L 375,0 Z" fill="url(#mihrabArchGrad)" />
+          <path d="M 0,0 L 0,210 C 25,210 48,188 68,158 C 90,125 115,112 138,112 C 158,112 172,82 187.5,32 C 203,82 217,112 237,112 C 260,112 285,125 307,158 C 327,188 350,210 375,210 L 375,0 Z" fill="url(#archIslamicPat)" />
+
+          <!-- إطار المحراب الذهبي الأصلي من كود التطبيق -->
+          <path d="M 0,210 C 25,210 48,188 68,158 C 90,125 115,112 138,112 C 158,112 172,82 187.5,32 C 203,82 217,112 237,112 C 260,112 285,125 307,158 C 327,188 350,210 375,210" fill="none" stroke="var(--gold)" stroke-width="1.8" opacity="0.85" />
+          <path d="M 20,180 C 38,180 58,162 76,136 C 96,107 118,96 140,96 C 160,96 174,68 187.5,42 C 201,68 215,96 235,96 C 257,96 279,107 299,136 C 317,162 337,180 355,180" fill="none" stroke="var(--gold)" stroke-width="0.9" stroke-dasharray="3,3" opacity="0.5" />
+
+          <!-- النجمة الماسية في قمة المحراب -->
+          <g transform="translate(187.5, 26)">
+            <rect x="-7" y="-7" width="14" height="14" transform="rotate(45)" fill="var(--container-bg)" stroke="var(--gold)" stroke-width="1.4" opacity="0.95" />
+            <circle cx="0" cy="0" r="3" fill="var(--gold)" opacity="0.95" />
+          </g>
         </svg>
+
         <div class="mihrab-basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
         <h1 class="mihrab-app-title">
           <i class="fa-solid fa-kaaba"></i>
           <span data-key="appName">بيان المسلم</span>
         </h1>
-        <div class="mihrab-subtitle" data-key="policyLabel">وثيقة سياسة الخصوصية وشروط الاستخدام الرسمية</div>
+        <div class="mihrab-subtitle" data-key="policyLabel">دليل الخدمات الإسلامية وسياسة الخصوصية الرسمية</div>
       </section>
 
-      <!-- 🌟 2. البطاقة المركزية (تصميم بطاقة الصلاة المركزية بالتطبيق) 🌟 -->
+      <!-- 🌟 2. البطاقة المركزية (بطاقة المطور والاعتماد الرسمي) 🌟 -->
       <section class="central-prayer-card">
         <svg class="corner-ornament c-top-left" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
         <svg class="corner-ornament c-top-right" viewBox="0 0 24 24"><path d="M2,2 L14,2 L14,6 L6,6 L6,14 L2,14 Z M8,8 L14,8 L14,14 L8,14 Z"/></svg>
@@ -466,7 +583,7 @@
           </div>
         </div>
 
-        <!-- رابط متجر Play بالنص الصريح المطلوب ليوجه للمتجر -->
+        <!-- رابط متجر Play بالنص الصريح ليوجه للمتجر -->
         <a href="https://play.google.com/store/apps/developer?id=Slmdroid" target="_blank" rel="noopener noreferrer" class="gold-store-button">
           <i class="fa-brands fa-google-play"></i>
           <span data-key="storeBtnText">تطبيقات Android بواسطة Slmdroid على Google Play</span>
@@ -474,121 +591,231 @@
         </a>
       </section>
 
-      <!-- 🌟 3. شبكة بطاقات الصلوات الشاملة (10 بطاقات متخصصة) 🌟 -->
+      <!-- 🌟 3. شبكة بطاقات الخدمات والمحتوى والخصوصية (20 بطاقة شاملة ومفصلة) 🌟 -->
       <div class="section-headline">
-        <i class="fa-solid fa-shield-halved"></i>
-        <span data-key="policyGridTitle">صلاحيات التطبيق وحماية البيانات</span>
+        <i class="fa-solid fa-layer-group"></i>
+        <span data-key="servicesGridTitle">خدمات التطبيق والمحتوى الإسلامي</span>
       </div>
 
       <div class="prayer-cards-grid">
 
-        <!-- بطاقة 1: الموقع ومواقيت الصلاة وآلاف المدن أوفلاين -->
+        <!-- 1. القرآن الكريم والتفاسير -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('quran')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-book-quran"></i></div>
+            <div class="tile-title" data-key="cardQuranTitle">القرآن الكريم والتفاسير</div>
+          </div>
+          <p class="tile-desc" data-key="cardQuranDesc">المصحف كاملاً بالرسم العثماني برواية حفص، مع تفسير السعدي وابن كثير والبغوي والميسر.</p>
+          <span class="tile-status-badge" data-key="badgeQuran">114 سورة + تفاسير</span>
+        </div>
+
+        <!-- 2. مكتبة التلاوات وكبار المقرئين -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('reciters')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-headphones"></i></div>
+            <div class="tile-title" data-key="cardRecitersTitle">تلاوات كبار القراء</div>
+          </div>
+          <p class="tile-desc" data-key="cardRecitersDesc">استماع لأكثر من 200 قارئ مع التحميل المباشر للاستماع أوفلاين وتشغيل الخلفية.</p>
+          <span class="tile-status-badge" data-key="badgeReciters">+200 مقرئ معتمد</span>
+        </div>
+
+        <!-- 3. مواقيت الصلاة والأذان المتقن -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('prayerTimes')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-mosque"></i></div>
+            <div class="tile-title" data-key="cardPrayerTitle">مواقيت الصلاة والأذان</div>
+          </div>
+          <p class="tile-desc" data-key="cardPrayerDesc">حساب فلكي دقيق لجميع الصلوات، ونداء الأذان بأصوات الحرمين والأقصى والمغرب.</p>
+          <span class="tile-status-badge" data-key="badgePrayer">دقة فلكية تامة</span>
+        </div>
+
+        <!-- 4. بوصلة القبلة الذكية -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('qiblaCompass')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-compass"></i></div>
+            <div class="tile-title" data-key="cardQiblaTitle">بوصلة القبلة الذكية</div>
+          </div>
+          <p class="tile-desc" data-key="cardQiblaDesc">تحديد اتجاه الكعبة المشرفة بمستشعرات البوصلة والمجال المغناطيسي واستواء الجهاز.</p>
+          <span class="tile-status-badge" data-key="badgeQibla">مؤشر زمردي تفاعلي</span>
+        </div>
+
+        <!-- 5. حصن المسلم والأذكار اليومية -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('athkar')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-hands-praying"></i></div>
+            <div class="tile-title" data-key="cardAthkarTitle">حصن المسلم والأذكار</div>
+          </div>
+          <p class="tile-desc" data-key="cardAthkarDesc">أذكار الصباح والمساء، النوم والاستيقاظ، وأدعية الكتاب والسنة مع عداد التسبيح.</p>
+          <span class="tile-status-badge" data-key="badgeAthkar">أذكار موثقة كاملة</span>
+        </div>
+
+        <!-- 6. صحيح السنة والأحاديث النبوية -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('hadith')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="tile-title" data-key="cardHadithTitle">موسوعة الحديث الشريف</div>
+          </div>
+          <p class="tile-desc" data-key="cardHadithDesc">صحيح البخاري، صحيح مسلم، رياض الصالحين، والأربعين النووية مع الشرح والسند.</p>
+          <span class="tile-status-badge" data-key="badgeHadith">أمهات كتب السنة</span>
+        </div>
+
+        <!-- 7. الرقية الشرعية الشاملة -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('ruqyah')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-shield-heart"></i></div>
+            <div class="tile-title" data-key="cardRuqyahTitle">الرقية الشرعية الشاملة</div>
+          </div>
+          <p class="tile-desc" data-key="cardRuqyahDesc">رقية العين والحسد والسحر والمس مكتوبة ومسموعة بأصوات خاشعة لعلاج النفس والبدن.</p>
+          <span class="tile-status-badge" data-key="badgeRuqyah">مكتوبة ومسموعة</span>
+        </div>
+
+        <!-- 8. السبحة الإلكترونية الذكية -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('tasbih')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-fingerprint"></i></div>
+            <div class="tile-title" data-key="cardTasbihTitle">السبحة الإلكترونية</div>
+          </div>
+          <p class="tile-desc" data-key="cardTasbihDesc">عداد تسبيح ذكي مع الاهتزاز اللمسي وحفظ الأوراد وسجل الإحصائيات التراكمي.</p>
+          <span class="tile-status-badge" data-key="badgeTasbih">اهتزاز + حفظ الأوراد</span>
+        </div>
+
+        <!-- 9. إذاعات القرآن الكريم المباشرة -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('radio')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-radio"></i></div>
+            <div class="tile-title" data-key="cardRadioTitle">إذاعات القرآن المباشرة</div>
+          </div>
+          <p class="tile-desc" data-key="cardRadioDesc">بث مباشر على مدار 24 ساعة لإذاعات القرآن لكبار المقرئين من مكة والقاهرة وعواصم العالم.</p>
+          <span class="tile-status-badge" data-key="badgeRadio">بث مباشر متواصل</span>
+        </div>
+
+        <!-- 10. قصص الأنبياء والسيرة النبوية -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('stories')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-feather-pointed"></i></div>
+            <div class="tile-title" data-key="cardStoriesTitle">قصص الأنبياء والسيرة</div>
+          </div>
+          <p class="tile-desc" data-key="cardStoriesDesc">قصص المرسلين من آدم إلى محمد ﷺ ميسرة مع العبر الإيمانية والدروس المستفادة.</p>
+          <span class="tile-status-badge" data-key="badgeStories">سير وعبر إيمانية</span>
+        </div>
+
+        <!-- 11. أسماء الله الحسنى وشرحها -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('names')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-solid fa-star-and-crescent"></i></div>
+            <div class="tile-title" data-key="cardNamesTitle">أسماء الله الحسنى</div>
+          </div>
+          <p class="tile-desc" data-key="cardNamesDesc">الـ 99 اسماً وشرح معانيها الإيمانية واللغوية وفضل الدعاء بها والتعبد بجلالها.</p>
+          <span class="tile-status-badge" data-key="badgeNames">99 اسماً بشروحها</span>
+        </div>
+
+        <!-- 12. التقويم الهجري وإمساكية رمضان -->
+        <div class="prayer-policy-tile" onclick="openPolicyModal('calendar')">
+          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
+          <div class="tile-header">
+            <div class="tile-icon-frame"><i class="fa-regular fa-calendar-days"></i></div>
+            <div class="tile-title" data-key="cardCalTitle">التقويم الهجري والإمساكية</div>
+          </div>
+          <p class="tile-desc" data-key="cardCalDesc">التاريخ الهجري القمري، إمساكية رمضان، وتنبيهات صيام الأيام البيض وعاشوراء والخميس.</p>
+          <span class="tile-status-badge" data-key="badgeCal">مناسبات وسنن الصيام</span>
+        </div>
+
+        <!-- 13. آلاف المدن أوفلاين والموقع الاختياري -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('location')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="tile-title" data-key="cardLocTitle">قاعدة آلاف المدن والـ GPS</div>
+            <div class="tile-title" data-key="cardLocTitle">قاعدة المدن والـ GPS</div>
           </div>
-          <p class="tile-desc" data-key="cardLocDesc">بيانات آلاف المدن ومئات الدول في قاعدة مدمجة أوفلاين 100%، وخيار GPS اختياري.</p>
-          <span class="tile-status-badge" data-key="badgeNoTracking">أوفلاين + GPS اختياري</span>
+          <p class="tile-desc" data-key="cardLocDesc">قاعدة بيانات محلية تضم آلاف المدن أوفلاين 100%، وخيار GPS اختياري لمرة واحدة.</p>
+          <span class="tile-status-badge" data-key="badgeLoc">أوفلاين + GPS اختياري</span>
         </div>
 
-        <!-- بطاقة 2: البوصلة ومستشعرات الحركة -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('sensors')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-compass"></i></div>
-            <div class="tile-title" data-key="cardSensTitle">البوصلة والمستشعرات</div>
-          </div>
-          <p class="tile-desc" data-key="cardSensDesc">تحديد الشمال واستواء الهاتف بلحظيتها، وتتلاشى فور مغادرة القبلة.</p>
-          <span class="tile-status-badge" data-key="badgeNoStorage">لحظية بدون تخزين</span>
-        </div>
-
-        <!-- بطاقة 3: الأذان والتنبيهات الدقيقة -->
+        <!-- 14. الأذان والمنبه الدقيق (Exact Alarms) -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('alarms')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-bell"></i></div>
             <div class="tile-title" data-key="cardAlarmTitle">الأذان والمنبه الدقيق</div>
           </div>
-          <p class="tile-desc" data-key="cardAlarmDesc">إذن المنبه الدقيق USE_EXACT_ALARM لرفع النداء في موعده بدقة.</p>
-          <span class="tile-status-badge" data-key="badgeSafeAlarm">دقة تامة في الوقت</span>
+          <p class="tile-desc" data-key="cardAlarmDesc">صلاحية USE_EXACT_ALARM لرفع النداء في موعده بالثانية حتى في وضع سكون الشاشة.</p>
+          <span class="tile-status-badge" data-key="badgeAlarm">دقة تامة في الوقت</span>
         </div>
 
-        <!-- بطاقة 4: خدمة الخلفية والصوتيات (Foreground Service) -->
-        <div class="prayer-policy-tile" onclick="openPolicyModal('streaming')">
-          <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
-          <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-headphones"></i></div>
-            <div class="tile-title" data-key="cardStreamTitle">الصوتيات ومشغل السور</div>
-          </div>
-          <p class="tile-desc" data-key="cardStreamDesc">تشغيل التلاوات والأذان في الخلفية عبر مشغل الوسائط دون إرسال بياناتك.</p>
-          <span class="tile-status-badge" data-key="badgeMediaSafe">محرك صوتي آمن</span>
-        </div>
-
-        <!-- بطاقة 5: استثناء تحسين البطارية ومنبه الفجر (جديدة) -->
+        <!-- 15. استثناء تحسين البطارية وإيقاظ الفجر (الأيقونة الرسمية fa-battery-full) -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('battery')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-battery-bolt"></i></div>
+            <div class="tile-icon-frame"><i class="fa-solid fa-battery-full"></i></div>
             <div class="tile-title" data-key="cardBatteryTitle">تحسين البطارية وإيقاظ الفجر</div>
           </div>
-          <p class="tile-desc" data-key="cardBatteryDesc">إذن اختياري يمنع النظام من حجب نداء الأذان عند نوم الجهاز العميق.</p>
+          <p class="tile-desc" data-key="cardBatteryDesc">إذن اختياري يمنع نظام أندرويد من كتم أو تأخير نداء صلاة الفجر عند نوم الجهاز.</p>
           <span class="tile-status-badge" data-key="badgeBattery">استيقاظ موثوق للأذان</span>
         </div>
 
-        <!-- بطاقة 6: التخزين المحلي والتلاوات أوفلاين -->
+        <!-- 16. التخزين المحلي الآمن وقواعد البيانات -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('storage')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-database"></i></div>
             <div class="tile-title" data-key="cardStorageTitle">التخزين وقواعد البيانات</div>
           </div>
-          <p class="tile-desc" data-key="cardStorageDesc">حفظ تفضيلاتك وتلاوات المقرئين أوفلاين بذاكرة التطبيق المعزولة فقط.</p>
-          <span class="tile-status-badge" data-key="badgeSandboxed">مجلد معزول وآمن</span>
+          <p class="tile-desc" data-key="cardStorageDesc">حفظ تفضيلاتك وتلاواتك في الذاكرة المعزولة الخاصة بالتطبيق فقط وبدون خوادم خارجية.</p>
+          <span class="tile-status-badge" data-key="badgeStorage">مجلد معزول وآمن</span>
         </div>
 
-        <!-- بطاقة 7: أمان وتشفير البيانات والشبكة (جديدة) -->
+        <!-- 17. تشفير الاتصالات وأمان التطبيق -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('security')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-lock"></i></div>
             <div class="tile-title" data-key="cardSecTitle">أمان وتشفير الاتصال</div>
           </div>
-          <p class="tile-desc" data-key="cardSecDesc">اتصالات مشفرة HTTPS، وحماية الأكواد بـ ProGuard، وبناء محلي معزول.</p>
-          <span class="tile-status-badge" data-key="badgeSec">حماية مشفرة صارمة</span>
+          <p class="tile-desc" data-key="cardSecDesc">اتصالات HTTPS مشفرة بالكامل، حماية الأكواد بـ ProGuard، وبناء خالٍ من التتبع.</p>
+          <span class="tile-status-badge" data-key="badgeSec">تشفير SSL/TLS صارم</span>
         </div>
 
-        <!-- بطاقة 8: إعلانات AdMob وسياسة العائلات -->
+        <!-- 18. إعلانات Google AdMob العائلية المحتشمة -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('admob')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-rectangle-ad"></i></div>
-            <div class="tile-title" data-key="cardAdmobTitle">إعلانات Google AdMob</div>
+            <div class="tile-title" data-key="cardAdmobTitle">إعلانات AdMob المحتشمة</div>
           </div>
-          <p class="tile-desc" data-key="cardAdmobDesc">إعلانات ملائمة محتشمة خاضعة لمعايير سياسة العائلات في Google Play.</p>
+          <p class="tile-desc" data-key="cardAdmobDesc">إعلانات محتشمة خاضعة لتصنيف العائلات في Google Play ومناسبة للبيئة الإسلامية.</p>
           <span class="tile-status-badge" data-key="badgeAdSafe">بيئة إسلامية نقية</span>
         </div>
 
-        <!-- بطاقة 9: مصادر المحتوى الإسلامي والقرآن -->
+        <!-- 19. مصادر المحتوى الإسلامي والقرآن الكريم -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('sources')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
             <div class="tile-icon-frame"><i class="fa-solid fa-book-open"></i></div>
             <div class="tile-title" data-key="cardSourceTitle">مصادر المحتوى الإسلامي</div>
           </div>
-          <p class="tile-desc" data-key="cardSourceDesc">مصحف مجمع الملك فهد، وصحيحي البخاري ومسلم، وحصن المسلم الموثقة.</p>
+          <p class="tile-desc" data-key="cardSourceDesc">مصحف مجمع الملك فهد، صحيحي البخاري ومسلم، وحصن المسلم وشبكة MP3Quran.</p>
           <span class="tile-status-badge" data-key="badgeVerified">مصادر معتمدة موثوقة</span>
         </div>
 
-        <!-- بطاقة 10: أمان الأطفال وسلامة العائلة (COPPA & GDPR) -->
+        <!-- 20. حماية الأطفال وسياسة الخصوصية العالمية (COPPA & GDPR) -->
         <div class="prayer-policy-tile" onclick="openPolicyModal('privacy')">
           <svg class="tile-arabic-star" viewBox="0 0 40 40"><polygon points="20,0 25,14 40,20 25,26 20,40 15,26 0,20 15,14" fill="#e9c349"/></svg>
           <div class="tile-header">
-            <div class="tile-icon-frame"><i class="fa-solid fa-user-lock"></i></div>
+            <div class="tile-icon-frame"><i class="fa-solid fa-user-shield"></i></div>
             <div class="tile-title" data-key="cardCoppaTitle">سلامة العائلة وحقوقك</div>
           </div>
-          <p class="tile-desc" data-key="cardCoppaDesc">حماية خصوصية الأطفال (COPPA) وحق مسح بياناتك فوراً بمجرد الحذف.</p>
+          <p class="tile-desc" data-key="cardCoppaDesc">امتثال تام لقانون حماية الأطفال (COPPA)، وحق حذف بياناتك بالكامل بنقرة زر.</p>
           <span class="tile-status-badge" data-key="badgeCoppa">أمان عائلي تام</span>
         </div>
 
@@ -596,40 +823,49 @@
 
     </div>
 
-    <!-- 🕌 4. شريط التنقل السفلي المقوس (Bottom Navigation Bar) 🕌 -->
+    <!-- 🕌 4. شريط التنقل السفلي المقوس (مخصص لخدمات التطبيق الحقيقية بدون أي تكرار) 🕌 -->
     <div class="curved-bottom-bar-wrapper">
       <svg class="curved-tab-svg" viewBox="0 0 440 74" preserveAspectRatio="none">
         <path d="M 0,20 Q 0,0 20,0 L 165,0 C 185,0 190,34 220,34 C 250,34 255,0 275,0 L 420,0 Q 440,0 440,20 L 440,74 L 0,74 Z" fill="#021C15" stroke="#e9c349" stroke-width="1.2" />
       </svg>
       <div class="tab-items-container">
-        <div class="tab-btn active">
-          <i class="fa-solid fa-mosque"></i>
+        
+        <!-- 1. الرئيسية -->
+        <div class="tab-btn active" onclick="scrollToTop()">
+          <i class="fa-solid fa-house-chimney"></i>
           <span data-key="tabHome">الرئيسية</span>
         </div>
-        <div class="tab-btn" onclick="openPolicyModal('sources')">
+
+        <!-- 2. المصحف والتفاسير -->
+        <div class="tab-btn" onclick="openPolicyModal('quran')">
           <i class="fa-solid fa-book-quran"></i>
-          <span data-key="tabQuran">المصادر</span>
+          <span data-key="tabQuran">المصحف</span>
         </div>
         
-        <div class="center-elevated-tab" onclick="openPolicyModal('location')" title="اتجاه القبلة">
+        <!-- 3. القبلة المركزية المرتفعة -->
+        <div class="center-elevated-tab" onclick="openPolicyModal('qiblaCompass')" title="بوصلة القبلة">
           <i class="fa-solid fa-kaaba"></i>
         </div>
 
-        <div class="tab-btn" onclick="openPolicyModal('alarms')">
+        <!-- 4. الأذان والتنبيهات -->
+        <div class="tab-btn" onclick="openPolicyModal('prayerTimes')">
+          <i class="fa-solid fa-mosque"></i>
+          <span data-key="tabAdhan">الأذان</span>
+        </div>
+
+        <!-- 5. الأذكار وحصن المسلم -->
+        <div class="tab-btn" onclick="openPolicyModal('athkar')">
           <i class="fa-solid fa-hands-praying"></i>
-          <span data-key="tabAthkar">التنبيهات</span>
+          <span data-key="tabAthkar">الأذكار</span>
         </div>
-        <div class="tab-btn" onclick="openPolicyModal('dev')">
-          <i class="fa-solid fa-shield-halved"></i>
-          <span data-key="tabPolicy">الخصوصية</span>
-        </div>
+
       </div>
     </div>
 
-    <!-- النافذة المنبثقة التفصيلية (Sheet Modal) -->
+    <!-- النافذة المنبثقة التفصيلية (Sheet Modal) لتقديم الشرح المفصل -->
     <div class="policy-modal-overlay" id="policyModal" onclick="closePolicyModal(event)">
       <div class="policy-modal-sheet" onclick="event.stopPropagation()">
-        <button class="modal-close-btn" onclick="closePolicyModalDirect()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="modal-close-btn" onclick="closePolicyModalDirect()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
         <div class="modal-title" id="modalTitle"></div>
         <div class="modal-text" id="modalBody"></div>
       </div>
@@ -637,7 +873,7 @@
 
   </div>
 
-  <!-- سكربت التحكم بالوقت والتاريخ واللغة والثيمات والنوافذ -->
+  <!-- سكربت التحكم بالوقت، التاريخ، اللغة، الثيمات، والتفاعل -->
   <script>
     let currentLang = 'ar';
 
@@ -671,110 +907,193 @@
     }
 
     document.addEventListener('click', () => {
-      document.getElementById('themeDropdown').style.display = 'none';
+      const dd = document.getElementById('themeDropdown');
+      if (dd) dd.style.display = 'none';
     });
 
-    function setTheme(themeName) {
+    function setTheme(themeName, btnEl) {
       document.body.className = document.body.className.replace(/theme-\w+/g, '').trim();
       if (themeName !== 'emerald') {
         document.body.classList.add(`theme-${themeName}`);
       }
-      document.querySelectorAll('.theme-dot').forEach(d => d.classList.remove('active'));
-      event.target.classList.add('active');
+      
+      // تحديث علامات الصح في النجمة الإسلامية
+      document.querySelectorAll('.theme-check-mark').forEach(mark => mark.style.display = 'none');
+      if (btnEl) {
+        const mark = btnEl.querySelector('.theme-check-mark');
+        if (mark) mark.style.display = 'block';
+      }
     }
 
-    // قاعدة بيانات النصوص التوضيحية التفصيلية للبطاقات العشر المتوافقة مع Google Console
+    function scrollToTop() {
+      const el = document.getElementById('appScrollBody');
+      if (el) el.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // قاعدة بيانات الشرح التفصيلي لجميع الخدمات العشرين بالتفصيل الممل باللغتين
     const detailsDB = {
       ar: {
-        location: {
-          title: "1. قاعدة آلاف المدن وموقع GPS الاختياري (Location Policy)",
-          text: "<strong>قاعدة بيانات محلية مدمجة (Offline First):</strong> يحتوي تطبيق 'بيان المسلم' على قاعدة بيانات فلكية وجغرافية محلية مدمجة وشاملة تضم آلاف المدن عبر مئات الدول حول العالم. يتيح لك ذلك اختيار دولتك ومدينتك يدوياً واستخراج مواقيت الصلاة واتجاه القبلة بدقة 100% دون الحاجة إلى تشغيل الإنترنت أو خدمة GPS إطلاقاً.<br><br><strong>موقع GPS اختياري لمرة واحدة:</strong> إذا رغبت في تحديد مدينتك تلقائياً، يطلب التطبيق إذن الموقع لمرة واحدة فقط لمطابقة أقرب مدينة من القاعدة المدمجة. لا نقوم إطلاقاً بتتبع موقعك في الخلفية، ولا نسجل تحركاتك، ولا نرسل خطوط الطول والعرض لأي خادم خارجي نهائياً."
+        quran: {
+          title: "1. المصحف الشريف والتفاسير المعتمدة (The Holy Quran & Tafsir)",
+          text: "<strong>النص القرآني الموثق:</strong> يتيح تطبيق 'بيان المسلم' قراءة القرآن الكريم كاملاً بجميع سوره الـ 114 برواية حفص عن عاصم بالرسم العثماني المطابق لطبعة مجمع الملك فهد لطباعة المصحف الشريف بالمدينة المنورة.<br><br><strong>موسوعة التفاسير المعتمدة:</strong> يوفر التطبيق تفسير الآيات بمجرد النقر عليها، ويشمل مكتبة تفاسير معتمدة: (تفسير السعدي 'تيسير الكريم الرحمن'، تفسير ابن كثير، تفسير البغوي، والتفسير الميسر) مع أسباب النزول وعلامات الوقف وإمكانية البحث السريع في الآيات والكلمات ووضع علامات الحفظ المرجعية، وتدوين الختمات، وكل ذلك يعمل محلياً في هاتفك أوفلاين دون الحاجة للإنترنت."
         },
-        sensors: {
-          title: "2. مستشعرات البوصلة والتسارع (Sensors & Orientation)",
-          text: "يستخدم التطبيق مستشعر المجال المغناطيسي (Magnetometer) ومستشعر التسارع (Accelerometer) فقط داخل شاشة 'بوصلة القبلة' لتوجيهك بدقة نحو مكة المكرمة وضمان استواء الهاتف أفقياً عبر النقطة الزمردية المشعة.<br><br><strong>الخصوصية:</strong> يتم إيقاف المستشعرات فور مغادرة شاشة القبلة ولا يتم حفظ أي بيانات ناتجة عنها."
+        reciters: {
+          title: "2. مكتبة كبار القراء والتلاوات (Reciters & Offline Audio)",
+          text: "<strong>أكثر من 200 مقرئ:</strong> يضم التطبيق نخبة من أشهر قراء العالم الإسلامي (مثل الشيخ عبد الباسط عبد الصمد، محمود خليل الحصري، مشاري العفاسي، ماهر المعيقلي، أبو بكر الشاطري، ياسر الدوسري، سعد الغامدي، ومحمد صديق المنشاوي) بروايات مختلفة.<br><br><strong>الاستماع والتحميل الأوفلاين:</strong> يمكنك الاستماع المباشر أو تحميل السور بنقرة واحدة لتشغيلها بدون إنترنت نهائياً. يتم استخدام خدمة التشغيل في الواجهة الأمامية (Foreground Service) لتشغيل التلاوات بسلاسة في الخلفية وعند قفل الشاشة مع إشعار تحكم رسمي يدعم التحكم بالصوت والإيقاف دون جمع أي بيانات شخصية."
+        },
+        prayerTimes: {
+          title: "3. مواقيت الصلاة الدقيقة والأذان (Prayer Times & Accurate Adhan)",
+          text: "<strong>دقة فلكية معتمدة:</strong> يحسب التطبيق مواقيت الصلوات الخمس بدقة متناهية (الفجر، الشروق، الظهر، العصر، المغرب، العشاء) استناداً إلى كبرى الهيئات الإسلامية العالمية (جامعة أم القرى، رابطة العالم الإسلامي، الهيئة العامة المصرية للمساحة، ديانة تركيا، الاتحاد الإسلامي بأمريكا الشمالية، وغيرها).<br><br><strong>أصوات الأذان المتعددة:</strong> رفع نداء الأذان في وقته بأصوات أشهر المؤذنين (الحرم المكي، الحرم المدني، المسجد الأقصى، الأذان المصري، والأذان المغربي)، مع منبهات الاستعداد للوضوء قبل الأذان بـ 15 دقيقة، وتنبيهات صلاة الضحى وقيام الليل."
+        },
+        qiblaCompass: {
+          title: "4. بوصلة القبلة الذكية (Smart Qibla Compass)",
+          text: "<strong>تحديد فوري باتجاه الكعبة المشرفة:</strong> تستخدم بوصلة بيان المسلم مستشعر المجال المغناطيسي (Magnetometer) ومستشعر التسارع (Accelerometer) في الهاتف لحساب الزاوية الجغرافية الدقيقة نحو الكعبة المشرفة من أي نقطة على وجه الأرض.<br><br><strong>مؤشر الاستواء الزمردي:</strong> زودت البوصلة بمؤشر إلكتروني يوضح استواء الهاتف أفقياً لضمان أعلى درجات الدقة وتجنب التشتت المغناطيسي، وتعمل البوصلة محلياً 100% بدون إنترنت، وتتوقف المستشعرات فور مغادرة الشاشة حفاظاً على البطارية والخصوصية."
+        },
+        athkar: {
+          title: "5. حصن المسلم والأذكار اليومية (Hisn Al-Muslim & Daily Athkar)",
+          text: "<strong>أذكار المسلم اليومية:</strong> يشتمل التطبيق على الأذكار والأدعية الواردة في كتاب 'حصن المسلم من أذكار الكتاب والسنة'، وتشمل أذكار الصباح والمساء، أذكار النوم والاستيقاظ، أذكار ما بعد الصلاة المفروضة، أذكار المسجد، وأدعية الهم والحزن والسفر.<br><br><strong>العداد التفاعلي وفضائل الذكر:</strong> كل ذكر مجهز بعداد لمسي ذكي ينبض عند الإتمام، مع تخريج نص الحديث وفضله وسنده الصحيح، مع تنبيهات يومية مجدولة لتذكيرك بأذكار الصباح والمساء في وقتها."
+        },
+        hadith: {
+          title: "6. موسوعة الحديث النبوي الشريف (Prophetic Hadith Library)",
+          text: "<strong>أمهات كتب السنة:</strong> يحتوي التطبيق على مكتبة حديثية قيمة تضم: صحيح البخاري كاملاً، صحيح مسلم كاملاً، الأربعين النووية، ورياض الصالحين للإمام النووي.<br><br><strong>البحث والتخريج:</strong> جميع الأحاديث مفهرسة حسب الأبواب الفقهية والموضوعية مع السند الكامل والمتن، مع محرك بحث سريع بدون إنترنت وميزة مشاركة الأحاديث النبوية الصحيحة بسهولة مع الأهل والأصدقاء."
+        },
+        ruqyah: {
+          title: "7. الرقية الشرعية الشاملة (Comprehensive Ruqyah)",
+          text: "<strong>علاج وتحصين من الكتاب والسنة:</strong> قسم مخصص للرقية الشرعية لعلاج العين، الحسد، المس، والسحر، وفق الضوابط الشرعية الثابتة عن النبي ﷺ وأصحابه.<br><br><strong>مكتوبة ومسموعة:</strong> تشتمل الرقية على الآيات القرآنية والأدعية النبوية مرتبة ومكتوبة بوضوح، بالإضافة إلى تلاوات صوتية مهدئة وخاشعة بصوت كبار المشايخ للاستماع المباشر أوفلاين مع إرشادات التحصين اليومي للمنزل والأطفال."
+        },
+        tasbih: {
+          title: "8. السبحة الإلكترونية الذكية (Digital Smart Tasbih)",
+          text: "<strong>مسبحة إلكترونية متطورة:</strong> تتيح لك السبحة ذكر الله وتسبيحه بسهولة مع دعم الاهتزاز اللمسي الذكي (Haptic Feedback) الذي يعطيك إشعاراً لمسياً خفيفاً عند كل تسبيحة وعند إتمام دورة الـ 33 أو 100.<br><br><strong>حفظ الإحصائيات والأوراد:</strong> تحفظ السبحة تقدمك تلقائياً في ذاكرة الهاتف المحلية، مع إمكانية إضافة أوراد وأذكار خاصة بك، ومتابعة إجمالي تسبيحاتك اليومية والتراكمية."
+        },
+        radio: {
+          title: "9. إذاعات القرآن الكريم المباشرة (Live Quran Radio)",
+          text: "<strong>بثوث إسلامية مباشرة على مدار الساعة:</strong> استمع إلى محطات وإذاعات القرآن الكريم الرسمية من مكة المكرمة، المدينة المنورة، القاهرة، والرياض، بالإضافة إلى إذاعات مخصصة لكل قارئ، وإذاعات تفسير القرآن، وإذاعات الفتاوى الشرعية.<br><br><strong>صوت نقي عالي الجودة:</strong> يعمل مشغل الإذاعات بأقل استهلاك للبيانات، ويدعم العمل في الخلفية بدون انقطاع أثناء استخدام التطبيقات الأخرى أو عند إطفاء الشاشة."
+        },
+        stories: {
+          title: "10. قصص الأنبياء والسيرة النبوية (Prophets Stories & Seerah)",
+          text: "<strong>تاريخ النبوة والإيمان:</strong> يضم التطبيق قصص الأنبياء والمرسلين عليهم السلام بدءاً من أبينا آدم عليه السلام ومروراً بنوح، إبراهيم، موسى، وعيسى، وصولاً إلى خاتم الأنبياء محمد ﷺ.<br><br><strong>أسلوب شيق ودروس وعبر:</strong> سرد موثق من القرآن الكريم وصحيح السنة بأسلوب ميسر يناسب الكبار والناشئة، مع استخلاص العبر التربوية والدروس الإيمانية من سيرة النبي العطرة وغزواته ومواقفه وأخلاقه."
+        },
+        names: {
+          title: "11. أسماء الله الحسنى وشرحها (99 Names of Allah)",
+          text: "<strong>معرفة الله بأسمائه وصفاته:</strong> عرض كامل لأسماء الله الحسنى التسعة والتسعين مع الأدلة القرآنية والنبوية الثابتة.<br><br><strong>شرح فقهي وإيماني ميسر:</strong> بيان المعنى اللغوي والشرعي لكل اسم، وأثره في حياة المؤمن، وكيفية الدعاء به والتعبد بمقتضاه امتثالاً لقوله تعالى: ﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا﴾."
+        },
+        calendar: {
+          title: "12. التقويم الهجري وإمساكية رمضان (Hijri Calendar & Ramadan)",
+          text: "<strong>تقويم هجري قمري وميلادي:</strong> تقويم دقيق يعرض الأيام والشهور الهجرية مع إمكانية ضبط وتعديل رؤية الهلال بيوم أو يومين وفق بلدك.<br><br><strong>إمساكية رمضان وسنن الصيام:</strong> إمساكية تفصيلية لمواعيد الإمساك والإفطار للشهر الفضيل، وتنبيهات سنن الصيام (الأيام البيض 13 و 14 و 15 من كل شهر هجري، صيام يومي الاثنين والخميس، صيام يوم عرفة، ويوم عاشوراء)."
+        },
+        location: {
+          title: "13. قاعدة آلاف المدن وموقع GPS الاختياري (Location & Offline Cities)",
+          text: "<strong>قاعدة بيانات مدمجة أوفلاين 100%:</strong> يحتوي تطبيق 'بيان المسلم' على قاعدة بيانات فلكية وجغرافية محلية مدمجة وشاملة تضم آلاف المدن عبر مئات الدول حول العالم. يتيح لك ذلك اختيار دولتك ومدينتك يدوياً واستخراج مواقيت الصلاة واتجاه القبلة بدقة 100% دون الحاجة إلى تشغيل الإنترنت أو خدمة GPS إطلاقاً.<br><br><strong>موقع GPS اختياري لمرة واحدة:</strong> إذا رغبت في تحديد مدينتك تلقائياً، يطلب التطبيق إذن الموقع لمرة واحدة فقط لمطابقة أقرب مدينة من القاعدة المدمجة. لا نقوم إطلاقاً بتتبع موقعك في الخلفية، ولا نسجل تحركاتك، ولا نرسل خطوط الطول والعرض لأي خادم خارجي نهائياً."
         },
         alarms: {
-          title: "3. التنبيهات الدقيقة والأذان (Exact Alarms)",
-          text: "لضمان أداء الصلوات في وقتها دون تأخير، يطلب التطبيق صلاحية <code>SCHEDULE_EXACT_ALARM</code> و <code>USE_EXACT_ALARM</code> لجدولة نداء الأذان وأذكار الصباح والمساء بدقة ثانية في موعدها حتى لو كان الهاتف في وضع قفل الشاشة أو توفير الطاقة (Doze Mode). يمكنك كتم أو تفعيل صوت أي أذان وتخصيصه بسهولة."
-        },
-        streaming: {
-          title: "4. مشغل الصوتيات وخدمة الخلفية (Audio & Foreground)",
-          text: "يستخدم التطبيق خدمة التشغيل في الواجهة الأمامية (Foreground Service) لمحرك الصوت، مما يتيح لك مواصلة الاستماع إلى تلاوات القرآن الكريم وإذاعات القرآن الكريم بسلاسة أثناء تصفحك لتطبيقات أخرى أو إغلاق الشاشة مع ظهور إشعار تحكم رسمي.<br><br><strong>الشفافية:</strong> لا يرسل مشغل الصوت أي بيانات تعريفية لجهازك إلى خوادم البث الصوتي."
+          title: "14. التنبيهات الدقيقة والأذان (Exact Alarms & Schedule)",
+          text: "<strong>دقة ثانية في رفع النداء:</strong> لضمان أداء الصلوات في وقتها دون تأخير، يطلب التطبيق صلاحية <code>SCHEDULE_EXACT_ALARM</code> و <code>USE_EXACT_ALARM</code> لجدولة نداء الأذان والتنبيهات المسبقة وأذكار الصباح والمساء بدقة ثانية في موعدها حتى لو كان الهاتف في وضع قفل الشاشة أو توفير الطاقة (Doze Mode). يمكنك كتم أو تفعيل صوت أي صلاة وتخصيص المؤذن بسهولة."
         },
         battery: {
-          title: "5. استثناء تحسين البطارية (Battery Optimization Bypass)",
-          text: "تفرض بعض أجهزة أندرويد الحديثة سياسات إدارة طاقة صارمة قد تمنع إطلاق نداء الأذان في وقت صلاة الفجر عند بقاء الهاتف ساكناً طوال الليل.<br><br><strong>التحكم بيدك:</strong> يوفر التطبيق خياراً اختيارياً للمستخدم لطلب استثناء التطبيق من قيود البطارية لضمان دقة الأذان. يمكنك تفعيل أو إلغاء هذا الإذن في أي وقت من إعدادات جهازك."
+          title: "15. استثناء تحسين البطارية وإيقاظ الفجر (Battery Optimization)",
+          text: "<strong>استيقاظ مضمون لصلاة الفجر:</strong> تفرض أنظمة أندرويد الحديثة سياسات إدارة طاقة صارمة قد تمنع إطلاق نداء الأذان في وقت صلاة الفجر عند بقاء الهاتف ساكناً طوال الليل.<br><br><strong>التحكم بيدك:</strong> يوفر التطبيق خياراً اختيارياً للمستخدم لطلب استثناء التطبيق من قيود البطارية لضمان دقة الأذان. يمكنك تفعيل أو إلغاء هذا الإذن في أي وقت من إعدادات جهازك."
         },
         storage: {
-          title: "6. التخزين المحلي والتلاوات أوفلاين (Local Storage)",
-          text: "يعتمد تطبيقنا على بنية التخزين المحلي (Offline-First)؛ تُحفظ قواعد بيانات القرآن الكريم، الأحاديث، وتفضيلات المستخدم (المدينة، الثيم، الورد) داخل ذاكرة الهاتف عبر SQLite و AsyncStorage.<br><br>عند تحميل سور القرآن للاستماع بدون إنترنت، تُحفظ في مجلد معزول خاص بالتطبيق فقط دون الوصول لملفاتك أو صورك."
+          title: "16. التخزين المحلي الآمن وقواعد البيانات (Local Storage)",
+          text: "<strong>بنية قائمة على الهاتف المحلي (Offline-First):</strong> تُحفظ كافة قواعد بيانات القرآن الكريم، التفاسير، الأحاديث، وتفضيلات المستخدم (المدينة المختارة، الثيم، خط المصحف، الورد اليومي) داخل ذاكرة الهاتف عبر SQLite و AsyncStorage.<br><br>عند تحميل سور القرآن للاستماع بدون إنترنت، تُحفظ في مجلد معزول خاص بالتطبيق فقط دون الوصول إطلاقاً لملفاتك الشخصية أو صورك."
         },
         security: {
-          title: "7. أمان وتشفير البيانات (Data Security & Transport)",
-          text: "نطبق أعلى معايير الحماية لضمان سلامة وأمان تجربة المستخدم:<ul><li><strong>اتصالات مشفرة HTTPS:</strong> جميع الاتصالات الشبكية (لبث السور أو فحص التحديثات) مشفرة تشفيراً تاماً بمعايير SSL/TLS.</li><li><strong>حماية الكود:</strong> الكود البرمجي محمي ومبهم ضد الهندسة العكسية بواسطة R8 و ProGuard.</li><li><strong>صفر خوادم خارجية:</strong> لا نحتفظ بأي خوادم لتخزين بيانات المستخدمين أو هوياتهم.</li></ul>"
+          title: "17. أمان وتشفير البيانات والشبكة (Data Security & Transport)",
+          text: "<strong>أعلى معايير الحماية البرمجية:</strong><ul><li><strong>اتصالات مشفرة HTTPS:</strong> جميع الاتصالات الشبكية (لبث السور أو فحص التحديثات) مشفرة تشفيراً تاماً بمعايير SSL/TLS.</li><li><strong>حماية الكود:</strong> الكود البرمجي محمي ومبهم ضد الهندسة العكسية بواسطة R8 و ProGuard.</li><li><strong>صفر خوادم خارجية:</strong> لا نحتفظ بأي خوادم لتخزين بيانات المستخدمين أو هوياتهم أو سجلاتهم.</li></ul>"
         },
         admob: {
-          title: "8. إعلانات Google AdMob وسياسة العائلات",
-          text: "نعرض إعلانات محتشمة لتغطية تكاليف التطوير وتقديم التطبيق مجاناً لجميع المسلمين عبر شبكة Google AdMob.<br><br><strong>الالتزام الإسلامي والعائلي:</strong> جميع الإعلانات مفلترة وفق تصنيف المحتوى العائلي (Family-Safe) ومحتشمة وخالية تماماً من القمار أو المحتويات غير اللائقة، ومتوافقة 100% مع سياسات Google Play Families Policy."
+          title: "18. إعلانات Google AdMob وسياسة العائلات (Family-Safe Ads)",
+          text: "<strong>إعلانات محتشمة لخدمة التطبيق:</strong> نعرض إعلانات محتشمة لتغطية تكاليف التطوير والصيانة وتقديم التطبيق مجاناً لجميع المسلمين عبر شبكة Google AdMob الرسمية.<br><br><strong>التزام إسلامي وعائلي صارم:</strong> جميع الإعلانات مفلترة وفق تصنيف المحتوى العائلي (Family-Safe) ومحتشمة وخالية تماماً من القمار أو المحتويات غير اللائقة، ومتوافقة 100% مع سياسات Google Play Families Policy."
         },
         sources: {
-          title: "9. مصادر المحتوى الإسلامي والقرآن الكريم",
-          text: "نحرص في 'بيان المسلم' على تحري الدقة الفائقة وأخذ العلم من منابعه الأصيلة:<ul><li><strong>القرآن الكريم:</strong> برواية حفص عن عاصم، بالرسم العثماني المعتمد من مجمع الملك فهد لطباعة المصحف الشريف بالمدينة المنورة.</li><li><strong>الأحاديث النبوية:</strong> صحيحي البخاري ومسلم المعتمدة سنداً ومتناً.</li><li><strong>الأذكار والأدعية:</strong> حصن المسلم من أذكار الكتاب والسنة للشيخ سعيد بن علي بن وهف القحطاني.</li><li><strong>تلاوات القرآن:</strong> من مصادر صوتية إسلامية موثوقة (شبكة MP3Quran).</li></ul>"
+          title: "19. مصادر المحتوى الإسلامي والقرآن الكريم (Verified Sources)",
+          text: "<strong>أمانة علمية ومصادر أصيلة:</strong> نحرص في 'بيان المسلم' على تحري الدقة الفائقة وأخذ العلم من منابعه الأصيلة:<ul><li><strong>القرآن الكريم:</strong> برواية حفص عن عاصم، بالرسم العثماني المعتمد من مجمع الملك فهد لطباعة المصحف الشريف بالمدينة المنورة.</li><li><strong>التفاسير:</strong> تفسير السعدي، ابن كثير، البغوي، والتفسير الميسر المعتمد.</li><li><strong>الأحاديث النبوية:</strong> صحيحي البخاري ومسلم، رياض الصالحين، والأربعين النووية.</li><li><strong>الأذكار والأدعية:</strong> كتاب حصن المسلم للشيخ سعيد بن علي بن وهف القحطاني رحمه الله.</li><li><strong>تلاوات القرآن:</strong> من مصادر صوتية إسلامية موثوقة (شبكة MP3Quran العالمية).</li></ul>"
         },
         privacy: {
-          title: "10. سلامة الأطفال وحقوق المستخدم (COPPA & GDPR)",
-          text: "تطبيق بيان المسلم آمن لجميع أفراد العائلة من مختلف الأعمار، ولا يجمع عن علم أي معلومات من الأطفال دون 13 عاماً امتثالاً لقانون حماية خصوصية الأطفال (COPPA).<br><br><strong>حقوقك (GDPR):</strong> كافة بياناتك وتفضيلاتك مخزنة محلياً بيدك؛ يمكنك محوها فوراً بنقرة زر واحدة عبر خيار 'مسح بيانات التطبيق' من إعدادات هاتفك أو بإلغاء التثبيت."
-        },
-        dev: {
-          title: "بيانات المطور والتواصل الرسمي",
-          text: "<strong>المطور المعتمد:</strong> Salim El Mokadem<br><strong>البريد الرسمي للتواصل:</strong> <a href='mailto:misk.muslim.contact@gmail.com' style='color:#34D399;'>misk.muslim.contact@gmail.com</a><br><strong>متجر المطور على Google Play:</strong> تطبيقات Android بواسطة Slmdroid.<br><br>نحن نرحب بأي استفسار أو مقترح لتطوير التطبيق وخدمة كتاب الله."
+          title: "20. سلامة الأطفال وحقوق المستخدم (COPPA & GDPR Rights)",
+          text: "<strong>بيئة آمنة لجميع أفراد الأسرة:</strong> تطبيق بيان المسلم آمن لجميع أفراد العائلة من مختلف الأعمار، ولا يجمع عن علم أي معلومات من الأطفال دون سن 13 عاماً امتثالاً لقانون حماية خصوصية الأطفال عبر الإنترنت (COPPA).<br><br><strong>حقوقك الكاملة (GDPR):</strong> كافة بياناتك وتفضيلاتك مخزنة محلياً بيدك؛ يمكنك محوها فوراً بنقرة زر واحدة عبر خيار 'مسح بيانات التطبيق' من إعدادات هاتفك أو بمجرد إلغاء التثبيت."
         }
       },
       en: {
-        location: {
-          title: "1. Thousands of Offline Cities & Optional GPS",
-          text: "<strong>Built-in Offline Database:</strong> Bayan Muslim bundles a massive internal astronomical database covering thousands of cities across hundreds of countries. You can manually choose your country and city to calculate prayer times and Qibla direction with 100% precision without needing internet or GPS.<br><br><strong>Optional One-Time GPS:</strong> If you prefer automatic detection, GPS is requested strictly once to match the closest city from the local database. We never track you in the background and never send coordinates to external servers."
+        quran: {
+          title: "1. The Holy Quran & Verified Tafsir",
+          text: "<strong>Authentic Uthmani Text:</strong> Bayan Muslim provides the full Holy Quran across all 114 Surahs in Hafs from Asim narration with authentic calligraphy from the King Fahd Complex for Printing the Holy Quran in Medina.<br><br><strong>Integrated Tafsir Library:</strong> Instant verse tafsir including Al-Saadi, Ibn Kathir, Al-Baghawi, and Al-Muyassar, with stop marks, fast search, bookmarking, and Khatmah tracking—working 100% offline."
         },
-        sensors: {
-          title: "2. Compass & Accelerometer Sensors",
-          text: "Magnetometer and Accelerometer hardware sensors are activated only inside the Qibla Compass interface to identify magnetic North and verify the phone is held flat via the emerald leveler.<br><br><strong>Zero Retention:</strong> Sensors are terminated immediately upon exiting the compass screen."
+        reciters: {
+          title: "2. Renowned Reciters & Offline Audio",
+          text: "<strong>Over 200 Elite Reciters:</strong> Listen to renowned reciters worldwide (Abdulbasit, Al-Hussary, Al-Afasy, Al-Muaiqly, Al-Shatri, Al-Dosari, Al-Ghamdi, and Al-Minshawi).<br><br><strong>Offline Playback & Foreground Service:</strong> Download Surahs with one click to listen without internet. Uses Android Foreground Service for seamless lock-screen and background playback without tracking."
+        },
+        prayerTimes: {
+          title: "3. Punctual Prayer Times & Adhan Calls",
+          text: "<strong>Astronomical Precision:</strong> Accurate prayer calculation (Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha) supporting major global conventions (Umm Al-Qura, MWL, Egyptian Survey, Diyanet, ISNA).<br><br><strong>Multiple Adhan Voices:</strong> Adhan calls from Makkah, Medina, Al-Aqsa, Egypt, and Morocco, with 15-minute wudu reminders, Duha, and Qiyam Al-Layl alerts."
+        },
+        qiblaCompass: {
+          title: "4. Smart Qibla Compass & Leveler",
+          text: "<strong>Instant Kaaba Direction:</strong> Uses phone Magnetometer and Accelerometer sensors to calculate exact geographic direction toward Makkah from anywhere on Earth.<br><br><strong>Emerald Leveler Indicator:</strong> Interactive leveling guide ensuring the device is held completely flat for optimal magnetic accuracy, completely offline with zero data logging."
+        },
+        athkar: {
+          title: "5. Fortress of the Muslim (Hisn Al-Muslim)",
+          text: "<strong>Authentic Daily Remembrances:</strong> Morning, evening, sleep, post-prayer, and travel supplications directly from Hisn Al-Muslim.<br><br><strong>Interactive Digital Counter:</strong> Smart haptic counter for each dhikr, Hadith references, and scheduled morning/evening notifications."
+        },
+        hadith: {
+          title: "6. Prophetic Hadith Encyclopedia",
+          text: "<strong>Premier Sunnah Collections:</strong> Complete Sahih Al-Bukhari, Sahih Muslim, Riyadh As-Saliheen, and 40 Hadith Nawawi with chapters, Sanad, and explanations.<br><br><strong>Offline Search & Sharing:</strong> Search any keyword offline and share verified Prophetic Hadiths with family and friends."
+        },
+        ruqyah: {
+          title: "7. Comprehensive Islamic Ruqyah",
+          text: "<strong>Spiritual Healing & Protection:</strong> Quranic verses and Prophetic invocations for healing envy, evil eye, and spiritual ailments based on the Sunnah.<br><br><strong>Text & Audio:</strong> Read and listen to soothing recitations offline with practical guidance for family and home protection."
+        },
+        tasbih: {
+          title: "8. Digital Smart Tasbih Counter",
+          text: "<strong>Advanced Digital Rosary:</strong> Keep track of Tasbih with gentle haptic vibration feedback at every tap and milestone (33, 100).<br><br><strong>Local Statistics:</strong> Automatically saves your daily and lifetime dhikr counts locally with custom dhikr creation."
+        },
+        radio: {
+          title: "9. Live Islamic Quran Radios 24/7",
+          text: "<strong>24/7 Live Broadcasts:</strong> Continuous streaming of official Quran radio stations from Cairo, Makkah, Medina, and Riyadh, reciter-specific stations, and Tafsir broadcasts with low data usage."
+        },
+        stories: {
+          title: "10. Stories of the Prophets & Seerah",
+          text: "<strong>Prophetic History & Moral Lessons:</strong> Narratives of the Prophets from Adam to Muhammad ﷺ based on authentic Quranic verses and Hadith, presented in an inspiring, educational style."
+        },
+        names: {
+          title: "11. 99 Beautiful Names of Allah",
+          text: "<strong>Divine Attributes & Meaning:</strong> Comprehensive list of the 99 Names of Allah with scriptural proofs, linguistic meanings, and practical devotional reflection."
+        },
+        calendar: {
+          title: "12. Hijri Calendar & Ramadan Imsakia",
+          text: "<strong>Hijri & Gregorian Calendar:</strong> Accurate lunar Hijri calendar with moon-sighting adjustment (+/- days), complete Ramadan fasting schedules, and White Days fasting reminders."
+        },
+        location: {
+          title: "13. Offline Cities Database & Optional GPS",
+          text: "<strong>Offline-First City Database:</strong> Bayan Muslim bundles thousands of cities across hundreds of countries. Select your city manually for 100% offline prayer calculations without GPS.<br><br><strong>Optional One-Time GPS:</strong> GPS is used strictly once to identify the closest city from the offline database. No background tracking or server transmission."
         },
         alarms: {
-          title: "3. Exact Alarms & Punctual Adhan",
-          text: "To ensure you never miss prayers, the app utilizes <code>SCHEDULE_EXACT_ALARM</code> and <code>USE_EXACT_ALARM</code> permissions to trigger Adhan calls and Athkar reminders at the exact second, even when the device is locked or in battery-saving sleep mode."
-        },
-        streaming: {
-          title: "4. Audio Streaming & Foreground Playback",
-          text: "The application uses Foreground Service playback to let you listen to Quran recitations and Islamic radios seamlessly while using other apps or with the screen off.<br><br><strong>Privacy:</strong> No personal or device identifiers are sent to audio streaming servers."
+          title: "14. Exact Alarms & Punctual Adhan",
+          text: "<strong>Sub-second Precision:</strong> Utilizes <code>SCHEDULE_EXACT_ALARM</code> and <code>USE_EXACT_ALARM</code> permissions so Adhan alarms and reminders trigger exactly on time, even during deep sleep (Doze mode)."
         },
         battery: {
-          title: "5. Battery Optimization Exemption",
-          text: "Modern Android power management may silence alarms if the device remains idle overnight during Fajr prayer.<br><br><strong>User Controlled:</strong> An optional prompt allows the user to exempt the app from battery restrictions to guarantee Adhan alarms trigger on time."
+          title: "15. Battery Optimization Exemption",
+          text: "<strong>Guaranteed Fajr Wakeup:</strong> Modern Android battery savers may delay or mute alarms during overnight phone rest.<br><br><strong>User Control:</strong> An optional prompt lets you exempt the app from battery restrictions to guarantee on-time Fajr alarms."
         },
         storage: {
-          title: "6. Local Storage & Offline Audio Cache",
-          text: "Built with an Offline-First architecture, user preferences (selected city, theme, khatmah progress) are stored locally using SQLite and AsyncStorage.<br><br>Downloaded Quran recitations are saved strictly in the app's sandboxed private storage without accessing your personal photos or files."
+          title: "16. Local Sandboxed Storage & Privacy",
+          text: "<strong>Zero Remote Servers:</strong> User preferences, bookmarking, and offline recitation downloads are saved exclusively in the private sandboxed app folder without access to personal media or photos."
         },
         security: {
-          title: "7. Data Security & Encrypted Transport",
-          text: "We adhere to industry-leading security practices:<ul><li><strong>Strict HTTPS:</strong> All network requests are encrypted over TLS/SSL.</li><li><strong>Code Obfuscation:</strong> Production builds protected via R8/ProGuard.</li><li><strong>Zero Remote Servers:</strong> No user databases or tracking accounts maintained.</li></ul>"
+          title: "17. Data Security & Encrypted Transport",
+          text: "<strong>Top Security Practices:</strong> Strict SSL/TLS HTTPS encryption for audio streaming, code obfuscation via ProGuard/R8, and zero external tracking databases."
         },
         admob: {
-          title: "8. Google AdMob & Family-Safe Ads",
-          text: "Respectful ads are displayed through Google AdMob to keep this app free for Muslims worldwide.<br><br><strong>Family Compliance:</strong> All ads are strictly filtered to G-rated (Family-Safe) content, completely prohibiting gambling, dating, or inappropriate content, in 100% compliance with Google Play Families Policy."
+          title: "18. Google AdMob & Family-Safe Ads",
+          text: "<strong>Clean Islamic Environment:</strong> Respectful, modest ads via Google AdMob strictly compliant with Google Play Families Policies and G-rated content standards."
         },
         sources: {
-          title: "9. Islamic Content Sources & Authenticity",
-          text: "We ensure authentic religious data from premier Islamic sources:<ul><li><strong>Holy Quran:</strong> Hafs recitation, Uthman Taha calligraphy from the King Fahd Complex for Printing the Holy Quran in Medina.</li><li><strong>Hadith:</strong> Authentic Sahih Al-Bukhari and Sahih Muslim collections.</li><li><strong>Adhkar:</strong> Fortress of the Muslim (Hisn Al-Muslim).</li><li><strong>Audio:</strong> Trusted MP3Quran recitation network.</li></ul>"
+          title: "19. Authentic Islamic Content Sources",
+          text: "<strong>Verified Religious References:</strong> Holy Quran from King Fahd Complex, Sahih Bukhari & Muslim, Hisn Al-Muslim by Sheikh Saeed Al-Qahtani, and MP3Quran network."
         },
         privacy: {
-          title: "10. Children's Privacy & GDPR Rights",
-          text: "Bayan Muslim is family-safe for all ages and strictly adheres to COPPA (Children's Online Privacy Protection Act). We do not collect information from children under 13.<br><br><strong>GDPR Rights:</strong> All your data resides locally on your phone. You can erase all data instantly by clearing app data or uninstalling the app."
-        },
-        dev: {
-          title: "Developer Credentials & Contact",
-          text: "<strong>Lead Developer:</strong> Salim El Mokadem<br><strong>Official Email:</strong> <a href='mailto:misk.muslim.contact@gmail.com' style='color:#34D399;'>misk.muslim.contact@gmail.com</a><br><strong>Google Play Store:</strong> Android Apps by Slmdroid on Google Play.<br><br>We are committed to prompt support for any privacy inquiry."
+          title: "20. Family Safety & User Rights (COPPA & GDPR)",
+          text: "<strong>COPPA & GDPR Compliance:</strong> Safe for all ages, no data collected from children under 13, and instant full data deletion simply by clearing app data or uninstalling."
         }
       }
     };
@@ -806,91 +1125,151 @@
       const strings = {
         ar: {
           appName: "بيان المسلم",
-          policyLabel: "وثيقة سياسة الخصوصية وشروط الاستخدام الرسمية",
+          policyLabel: "دليل الخدمات الإسلامية وسياسة الخصوصية الرسمية",
           devCardTitle: "بطاقة المطور والاعتماد الرسمي",
           devLabel: "المطور المعتمد:",
           mailLabel: "البريد الرسمي:",
           pkgLabel: "معرّف الحزمة:",
           storeBtnText: "تطبيقات Android بواسطة Slmdroid على Google Play",
-          policyGridTitle: "صلاحيات التطبيق وحماية البيانات",
-          cardLocTitle: "قاعدة آلاف المدن والـ GPS",
-          cardLocDesc: "بيانات آلاف المدن ومئات الدول في قاعدة مدمجة أوفلاين 100%، وخيار GPS اختياري.",
-          badgeNoTracking: "أوفلاين + GPS اختياري",
-          cardSensTitle: "البوصلة والمستشعرات",
-          cardSensDesc: "تحديد الشمال واستواء الهاتف بلحظيتها، وتتلاشى فور مغادرة القبلة.",
-          badgeNoStorage: "لحظية بدون تخزين",
+          servicesGridTitle: "خدمات التطبيق والمحتوى الإسلامي",
+          cardQuranTitle: "القرآن الكريم والتفاسير",
+          cardQuranDesc: "المصحف كاملاً بالرسم العثماني برواية حفص، مع تفسير السعدي وابن كثير والبغوي والميسر.",
+          badgeQuran: "114 سورة + تفاسير",
+          cardRecitersTitle: "تلاوات كبار القراء",
+          cardRecitersDesc: "استماع لأكثر من 200 قارئ مع التحميل المباشر للاستماع أوفلاين وتشغيل الخلفية.",
+          badgeReciters: "+200 مقرئ معتمد",
+          cardPrayerTitle: "مواقيت الصلاة والأذان",
+          cardPrayerDesc: "حساب فلكي دقيق لجميع الصلوات، ونداء الأذان بأصوات الحرمين والأقصى والمغرب.",
+          badgePrayer: "دقة فلكية تامة",
+          cardQiblaTitle: "بوصلة القبلة الذكية",
+          cardQiblaDesc: "تحديد اتجاه الكعبة المشرفة بمستشعرات البوصلة والمجال المغناطيسي واستواء الجهاز.",
+          badgeQibla: "مؤشر زمردي تفاعلي",
+          cardAthkarTitle: "حصن المسلم والأذكار",
+          cardAthkarDesc: "أذكار الصباح والمساء، النوم والاستيقاظ، وأدعية الكتاب والسنة مع عداد التسبيح.",
+          badgeAthkar: "أذكار موثقة كاملة",
+          cardHadithTitle: "موسوعة الحديث الشريف",
+          cardHadithDesc: "صحيح البخاري، صحيح مسلم، رياض الصالحين، والأربعين النووية مع الشرح والسند.",
+          badgeHadith: "أمهات كتب السنة",
+          cardRuqyahTitle: "الرقية الشرعية الشاملة",
+          cardRuqyahDesc: "رقية العين والحسد والسحر والمس مكتوبة ومسموعة بأصوات خاشعة لعلاج النفس والبدن.",
+          badgeRuqyah: "مكتوبة ومسموعة",
+          cardTasbihTitle: "السبحة الإلكترونية",
+          cardTasbihDesc: "عداد تسبيح ذكي مع الاهتزاز اللمسي وحفظ الأوراد وسجل الإحصائيات التراكمي.",
+          badgeTasbih: "اهتزاز + حفظ الأوراد",
+          cardRadioTitle: "إذاعات القرآن المباشرة",
+          cardRadioDesc: "بث مباشر على مدار 24 ساعة لإذاعات القرآن لكبار المقرئين من مكة والقاهرة وعواصم العالم.",
+          badgeRadio: "بث مباشر متواصل",
+          cardStoriesTitle: "قصص الأنبياء والسيرة",
+          cardStoriesDesc: "قصص المرسلين من آدم إلى محمد ﷺ ميسرة مع العبر الإيمانية والدروس المستفادة.",
+          badgeStories: "سير وعبر إيمانية",
+          cardNamesTitle: "أسماء الله الحسنى",
+          cardNamesDesc: "الـ 99 اسماً وشرح معانيها الإيمانية واللغوية وفضل الدعاء بها والتعبد بجلالها.",
+          badgeNames: "99 اسماً بشروحها",
+          cardCalTitle: "التقويم الهجري والإمساكية",
+          cardCalDesc: "التاريخ الهجري القمري، إمساكية رمضان، وتنبيهات صيام الأيام البيض وعاشوراء والخميس.",
+          badgeCal: "مناسبات وسنن الصيام",
+          cardLocTitle: "قاعدة المدن والـ GPS",
+          cardLocDesc: "قاعدة بيانات محلية تضم آلاف المدن أوفلاين 100%، وخيار GPS اختياري لمرة واحدة.",
+          badgeLoc: "أوفلاين + GPS اختياري",
           cardAlarmTitle: "الأذان والمنبه الدقيق",
-          cardAlarmDesc: "إذن المنبه الدقيق USE_EXACT_ALARM لرفع النداء في موعده بدقة.",
-          badgeSafeAlarm: "دقة تامة في الوقت",
-          cardStreamTitle: "الصوتيات ومشغل السور",
-          cardStreamDesc: "تشغيل التلاوات والأذان في الخلفية عبر مشغل الوسائط دون إرسال بياناتك.",
-          badgeMediaSafe: "محرك صوتي آمن",
+          cardAlarmDesc: "صلاحية USE_EXACT_ALARM لرفع النداء في موعده بالثانية حتى في وضع سكون الشاشة.",
+          badgeAlarm: "دقة تامة في الوقت",
           cardBatteryTitle: "تحسين البطارية وإيقاظ الفجر",
-          cardBatteryDesc: "إذن اختياري يمنع النظام من حجب نداء الأذان عند نوم الجهاز العميق.",
+          cardBatteryDesc: "إذن اختياري يمنع نظام أندرويد من كتم أو تأخير نداء صلاة الفجر عند نوم الجهاز.",
           badgeBattery: "استيقاظ موثوق للأذان",
           cardStorageTitle: "التخزين وقواعد البيانات",
-          cardStorageDesc: "حفظ تفضيلاتك وتلاوات المقرئين أوفلاين بذاكرة التطبيق المعزولة فقط.",
-          badgeSandboxed: "مجلد معزول وآمن",
+          cardStorageDesc: "حفظ تفضيلاتك وتلاواتك في الذاكرة المعزولة الخاصة بالتطبيق فقط وبدون خوادم خارجية.",
+          badgeStorage: "مجلد معزول وآمن",
           cardSecTitle: "أمان وتشفير الاتصال",
-          cardSecDesc: "اتصالات مشفرة HTTPS، وحماية الأكواد بـ ProGuard، وبناء محلي معزول.",
-          badgeSec: "حماية مشفرة صارمة",
-          cardAdmobTitle: "إعلانات Google AdMob",
-          cardAdmobDesc: "إعلانات ملائمة محتشمة خاضعة لمعايير سياسة العائلات في Google Play.",
+          cardSecDesc: "اتصالات HTTPS مشفرة بالكامل، حماية الأكواد بـ ProGuard، وبناء خالٍ من التتبع.",
+          badgeSec: "تشفير SSL/TLS صارم",
+          cardAdmobTitle: "إعلانات AdMob المحتشمة",
+          cardAdmobDesc: "إعلانات محتشمة خاضعة لتصنيف العائلات في Google Play ومناسبة للبيئة الإسلامية.",
           badgeAdSafe: "بيئة إسلامية نقية",
           cardSourceTitle: "مصادر المحتوى الإسلامي",
-          cardSourceDesc: "مصحف مجمع الملك فهد، وصحيحي البخاري ومسلم، وحصن المسلم الموثقة.",
+          cardSourceDesc: "مصحف مجمع الملك فهد، صحيحي البخاري ومسلم، وحصن المسلم وشبكة MP3Quran.",
           badgeVerified: "مصادر معتمدة موثوقة",
           cardCoppaTitle: "سلامة العائلة وحقوقك",
-          cardCoppaDesc: "حماية خصوصية الأطفال (COPPA) وحق مسح بياناتك فوراً بمجرد الحذف.",
+          cardCoppaDesc: "امتثال تام لقانون حماية الأطفال (COPPA)، وحق حذف بياناتك بالكامل بنقرة زر.",
           badgeCoppa: "أمان عائلي تام",
           tabHome: "الرئيسية",
-          tabQuran: "المصادر",
-          tabAthkar: "التنبيهات",
-          tabPolicy: "الخصوصية"
+          tabQuran: "المصحف",
+          tabAdhan: "الأذان",
+          tabAthkar: "الأذكار"
         },
         en: {
           appName: "Bayan Muslim",
-          policyLabel: "Official Privacy Policy & Terms of Service",
+          policyLabel: "Official Islamic Services & Privacy Policy Document",
           devCardTitle: "Official Developer Legal Badge",
           devLabel: "Verified Developer:",
           mailLabel: "Official Email:",
           pkgLabel: "Package ID:",
           storeBtnText: "Android Apps by Slmdroid on Google Play",
-          policyGridTitle: "App Permissions & Data Protection",
-          cardLocTitle: "Offline Cities & Optional GPS",
+          servicesGridTitle: "Application Services & Islamic Content",
+          cardQuranTitle: "Holy Quran & Tafsir",
+          cardQuranDesc: "Full Uthmani text with Al-Saadi, Ibn Kathir, Al-Baghawi & Al-Muyassar tafsir.",
+          badgeQuran: "114 Surahs + Tafsir",
+          cardRecitersTitle: "Renowned Reciters",
+          cardRecitersDesc: "Stream & download 200+ reciters with background foreground service playback.",
+          badgeReciters: "+200 Elite Reciters",
+          cardPrayerTitle: "Prayer Times & Adhan",
+          cardPrayerDesc: "Astronomical calculation & Adhan calls from Makkah, Medina, Al-Aqsa & Morocco.",
+          badgePrayer: "Astronomical Precision",
+          cardQiblaTitle: "Smart Qibla Compass",
+          cardQiblaDesc: "Real-time Kaaba direction using magnetometer and phone leveling sensor.",
+          badgeQibla: "Emerald Leveler",
+          cardAthkarTitle: "Hisn Al-Muslim & Athkar",
+          cardAthkarDesc: "Morning, evening, sleep supplications with smart haptic digital counter.",
+          badgeAthkar: "Verified Duas",
+          cardHadithTitle: "Prophetic Hadith Library",
+          cardHadithDesc: "Sahih Bukhari, Sahih Muslim, Riyadh As-Saliheen & 40 Hadith Nawawi collections.",
+          badgeHadith: "Premier Sunnah",
+          cardRuqyahTitle: "Comprehensive Ruqyah",
+          cardRuqyahDesc: "Spiritual healing from Quran and Sunnah, available in written and audio formats.",
+          badgeRuqyah: "Text & Audio",
+          cardTasbihTitle: "Smart Digital Tasbih",
+          cardTasbihDesc: "Digital rosary with haptic touch feedback, custom dhikr, and local count logging.",
+          badgeTasbih: "Haptic Feedback",
+          cardRadioTitle: "Live Quran Radios 24/7",
+          cardRadioDesc: "Continuous live broadcasts from Cairo, Makkah, Medina & Riyadh with low data usage.",
+          badgeRadio: "24/7 Live Stream",
+          cardStoriesTitle: "Stories of the Prophets",
+          cardStoriesDesc: "Narratives of the Messengers from Adam to Muhammad ﷺ with practical lessons.",
+          badgeStories: "Moral Lessons",
+          cardNamesTitle: "99 Names of Allah",
+          cardNamesDesc: "Complete 99 divine names with authentic scriptural meanings and devotional value.",
+          badgeNames: "99 Divine Names",
+          cardCalTitle: "Hijri Calendar & Ramadan",
+          cardCalDesc: "Lunar calendar with moon-sighting adjustment, Ramadan Imsakia & fasting alerts.",
+          badgeCal: "Fasting Sunnahs",
+          cardLocTitle: "Offline Cities & GPS",
           cardLocDesc: "Thousands of cities in local offline database with optional one-time GPS.",
-          badgeNoTracking: "Offline DB + Optional GPS",
-          cardSensTitle: "Compass & Sensors",
-          cardSensDesc: "Live magnetic field and flat phone leveling orientation.",
-          badgeNoStorage: "Zero Retention",
+          badgeLoc: "Offline DB + Optional GPS",
           cardAlarmTitle: "Exact Alarms & Adhan",
-          cardAlarmDesc: "USE_EXACT_ALARM permission for punctual Adhan notifications.",
-          badgeSafeAlarm: "Punctual Precision",
-          cardStreamTitle: "Audio & Background Player",
-          cardStreamDesc: "Foreground service for seamless recitation streaming without data collection.",
-          badgeMediaSafe: "Secure Audio Engine",
-          cardBatteryTitle: "Battery Optimization Exemption",
-          cardBatteryDesc: "Optional permission preventing system from muting deep-sleep Fajr alerts.",
+          cardAlarmDesc: "USE_EXACT_ALARM permission for punctual Adhan notifications and Doze mode support.",
+          badgeAlarm: "Punctual Precision",
+          cardBatteryTitle: "Battery Optimization",
+          cardBatteryDesc: "Optional exemption preventing Android from muting or delaying Fajr prayer calls.",
           badgeBattery: "Punctual Fajr Wake",
           cardStorageTitle: "Storage & Databases",
-          cardStorageDesc: "Offline Quran audio recitations stored in sandboxed private storage.",
-          badgeSandboxed: "Sandboxed & Safe",
+          cardStorageDesc: "User preferences & downloaded recitations stored strictly in sandboxed private storage.",
+          badgeStorage: "Sandboxed & Safe",
           cardSecTitle: "Data & Network Security",
           cardSecDesc: "Encrypted HTTPS connections, ProGuard obfuscation, and isolated local storage.",
-          badgeSec: "Encrypted Protection",
-          cardAdmobTitle: "Google AdMob Ads",
-          cardAdmobDesc: "Respectful ads compliant with Google Play Families Policies.",
+          badgeSec: "Strict SSL/TLS",
+          cardAdmobTitle: "Google AdMob Family Ads",
+          cardAdmobDesc: "Family-safe, modest ads compliant with Google Play Families Policies.",
           badgeAdSafe: "Islamic Safe Environment",
-          cardSourceTitle: "Authentic Content Sources",
-          cardSourceDesc: "King Fahd Quran complex, Sahih Bukhari & Muslim, and Hisn Al-Muslim.",
+          cardSourceTitle: "Verified Content Sources",
+          cardSourceDesc: "King Fahd Quran complex, Sahih Bukhari & Muslim, Hisn Al-Muslim & MP3Quran.",
           badgeVerified: "Verified Sources",
           cardCoppaTitle: "Family Safety & Rights",
-          cardCoppaDesc: "Strict COPPA adherence and instant user data deletion rights.",
+          cardCoppaDesc: "Strict COPPA adherence, zero child tracking, and instant user data deletion rights.",
           badgeCoppa: "100% Family Safe",
           tabHome: "Home",
-          tabQuran: "Sources",
-          tabAthkar: "Alerts",
-          tabPolicy: "Privacy"
+          tabQuran: "Quran",
+          tabAdhan: "Adhan",
+          tabAthkar: "Athkar"
         }
       };
 
